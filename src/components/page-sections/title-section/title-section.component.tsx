@@ -1,7 +1,19 @@
 import React from "react";
 
+import { useIntl } from "react-intl";
+
 const TitleSection = () => {
-  return (<div></div>)
+  const intl = useIntl();
+
+  return (
+    <div>
+      {
+        intl.formatMessage({
+          id: "app.message"
+        })
+      }
+    </div>
+  )
 }
 
 export default TitleSection;

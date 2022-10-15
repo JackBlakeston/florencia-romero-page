@@ -1,14 +1,16 @@
 import React from 'react';
 
+import "./styles/global-styles.scss";
+
 import MainLayout from './components/main-layout/main-layout.component';
 
-import './App.css';
+import { LocaleProvider } from './context/locale-context';
 
 function App() {
   return (
-    <div className="App">
+    <LocaleProvider>
       <MainLayout />
-    </div>
+    </LocaleProvider>
   );
 }
 
