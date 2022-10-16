@@ -23,7 +23,7 @@ const ServicesSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   return (
     <div ref={ref} className={classes.mainContainer}>
       <div className={classes.sectionTitle}>{title}</div>
-      <div className={classes.servicesContainer}>{renderServices()}</div>
+      <div className={classes.sectionBodyContainer}>{renderServices()}</div>
     </div>
   );
 });

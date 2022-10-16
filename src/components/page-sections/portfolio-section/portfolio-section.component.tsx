@@ -8,7 +8,7 @@ import './carousel-styles.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import { ATRAE_URL } from '../../../constants/strings';
-import AtraeLogo from '../../../assets/images/atrae-logo.png';
+import AtraeLogo from '../../../assets/images/atrae-logo-db.png';
 
 const importAllImagesFromFolder = (r: __WebpackModuleApi.RequireContext) => {
   return r.keys().map(r);
@@ -34,9 +34,10 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         showThumbs={false}
         showIndicators={false}
         showStatus={false}
-        infiniteLoop
+        // infiniteLoop
         centerMode
-        centerSlidePercentage={25}
+        centerSlidePercentage={20}
+        autoPlay
       >
         {allImagesUrls.map((imageUrl, index) => {
           const itemName = getCarrouselItemName(imageUrl);
@@ -61,13 +62,15 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   return (
     <div ref={ref} className={classes.mainContainer}>
       <div className={classes.sectionTitle}>{title}</div>
-      <div className={classes.portfolioLinkContainer}>
-        <a href={ATRAE_URL} target='_blank' rel='noopener noreferrer'>
-          <img src={AtraeLogo} alt='atrae-logo' />
-        </a>
-        <span>{portfolioLinkText}</span>
+      <div className={classes.sectionBodyContainer}>
+        <div className={classes.portfolioLinkContainer}>
+          <a href={ATRAE_URL} target='_blank' rel='noopener noreferrer'>
+            <img src={AtraeLogo} alt='atrae-logo' />
+          </a>
+          <span>{portfolioLinkText}</span>
+        </div>
+        <div className={classes.carrouselContainer}>{renderPortfolioCarrousel()}</div>
       </div>
-      <div className={classes.carrouselContainer}>{renderPortfolioCarrousel()}</div>
     </div>
   );
 });

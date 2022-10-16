@@ -5,8 +5,8 @@
     @include mixins.sectionTitle;
   }
 
-  .servicesContainer {
+  .sectionBodyContainer {
     display: flex;
-    padding: var(--spacing-2xl) 0;
+    padding: var(--section-body-padding);
   }
 }

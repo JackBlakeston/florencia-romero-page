@@ -5,12 +5,24 @@
     @include mixins.sectionTitle;
   }
 
-  .carrouselContainer {
-    .carrouselItemContainer {
-      margin: 0 1rem;
+  .sectionBodyContainer {
+    padding: var(--section-body-padding);
 
-      .carrouselItemImage {
-        height: 25rem;
+    .portfolioLinkContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-xl);
+      padding-bottom: var(--spacing-xl);
+    }
+
+    .carrouselContainer {
+      .carrouselItemContainer {
+        margin: 0 var(--spacing-6xs);
+
+        .carrouselItemImage {
+          height: 18rem;
+        }
       }
     }
   }
