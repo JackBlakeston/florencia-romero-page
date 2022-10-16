@@ -1,6 +1,7 @@
 {
   "app.title.traductoraProfesional": "TRADUCTORA PROFESIONAL",
 
+  "app.sections.services.sectionTitle": "SERVICIOS",
   "app.sections.services.audiovisual.title": "Traducción audiovisual",
   "app.sections.services.audiovisual.body": "Subtitulación, doblaje y voces superpuestas de películas, series, documentales y todo tipo de contenido",
   "app.sections.services.accessibility.title": "Accesibilidad",
