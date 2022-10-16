@@ -1,0 +1,7 @@
+@use '../../../styles/mixins.scss';
+
+.mainContainer {
+  .sectionTitle {
+    @include mixins.sectionTitle;
+  }
+}

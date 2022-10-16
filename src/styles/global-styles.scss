@@ -39,6 +39,8 @@
 
   // Sizing
   --icon-size: 1.5rem;
+  --services-icons-size: 5rem;
+
   --navbar-height: 3.5rem;
   --navbar-padding-vertical: 1rem;
 
@@ -60,6 +62,9 @@
   // Colors
   --color-primary: #7ec6bf;
   --color-secondary: #4b3e91;
+
+  // Shadows
+  --shadow-primary: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 body {

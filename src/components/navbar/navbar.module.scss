@@ -7,7 +7,7 @@
   height: var(--navbar-height);
   padding: var(--navbar-padding-vertical) 5rem;
   background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: var(--shadow-primary);
   position: fixed;
   top: 0;
   left: 0;
