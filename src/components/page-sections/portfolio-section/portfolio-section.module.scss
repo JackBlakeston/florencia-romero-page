@@ -17,11 +17,14 @@
     }
 
     .carrouselContainer {
+      padding: 0 var(--spacing-m);
+
       .carrouselItemContainer {
         margin: 0 var(--spacing-6xs);
 
         .carrouselItemImage {
-          height: 18rem;
+          height: 14rem;
+          width: 10rem;
         }
       }
     }

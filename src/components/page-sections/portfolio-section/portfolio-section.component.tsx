@@ -1,11 +1,12 @@
 import React, { forwardRef } from 'react';
 
 import { useIntl } from 'react-intl';
-import { Carousel } from 'react-responsive-carousel';
+import Slider from 'react-slick';
 
 import classes from './portfolio-section.module.scss';
 import './carousel-styles.scss';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import { ATRAE_URL } from '../../../constants/strings';
 import AtraeLogo from '../../../assets/images/atrae-logo-db.png';
@@ -30,14 +31,16 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       require.context('../../../assets/images/portfolio-items', false, /\.(png|jpe?g|svg)$/),
     ) as string[];
     return (
-      <Carousel
-        showThumbs={false}
-        showIndicators={false}
-        showStatus={false}
-        // infiniteLoop
-        centerMode
-        centerSlidePercentage={20}
-        autoPlay
+      <Slider
+        infinite
+        arrows
+        slidesToShow={6}
+        focusOnSelect={false}
+        speed={400}
+        slidesToScroll={5}
+        autoplay
+        autoplaySpeed={3000}
+        pauseOnHover
       >
         {allImagesUrls.map((imageUrl, index) => {
           const itemName = getCarrouselItemName(imageUrl);
@@ -47,7 +50,7 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
             </div>
           );
         })}
-      </Carousel>
+      </Slider>
     );
   };
 

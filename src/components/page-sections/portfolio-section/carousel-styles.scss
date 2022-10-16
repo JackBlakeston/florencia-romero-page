@@ -1,32 +1,7 @@
-.carousel-root {
-  .control-arrow {
-    width: 5rem;
-    background-color: rgba(0, 0, 0, 0.15) !important;
-    opacity: 1 !important;
-
-    &.control-next,
-    &.control-prev {
-      &:before {
-        border-top: 15px solid transparent !important;
-        border-bottom: 15px solid transparent !important;
-      }
-    }
-
-    &.control-next:before {
-      border-left: 15px solid #fff !important;
-    }
-    &.control-prev:before {
-      border-right: 15px solid #fff !important;
-    }
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.4) !important;
-    }
-  }
-
-  .slider-wrapper {
-    .slider {
-      // transform: translate3d(0px, 0px, 0px) !important;
+.slick-slider {
+  .slick-arrow {
+    &::before {
+      color: var(--color-primary);
     }
   }
 }
