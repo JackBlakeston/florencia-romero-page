@@ -9,3 +9,5 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/fctrad';
 export const TWITTER_URL = 'https://twitter.com/fctrad';
 export const PROZ_URL = 'https://www.proz.com/translator/1841231';
 export const SKYPE_URL = 'https://join.skype.com/invite/F3MdYMh1enbJ';
+
+export const FORM_SUBMIT_URL = 'https://public.herotofu.com/v1/6e9ab8f0-4d66-11ed-8970-6943e4ac8982';

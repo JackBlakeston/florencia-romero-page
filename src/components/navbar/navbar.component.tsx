@@ -16,12 +16,12 @@ const Navbar = ({ goToSection }: NavbarProps) => {
   return (
     <div className={classes.mainContainer}>
       <div className={classes.contactInfoContainer}>
-        <div className={classes.contactInfoContainer}>
-          <Icon name="phone" />
+        <div className={classes.contactInfo}>
+          <Icon name='phone' />
           <span>{PHONE_NUMBER}</span>
         </div>
-        <div className={classes.contactInfoContainer}>
-          <Icon name="mail" />
+        <div className={classes.contactInfo}>
+          <Icon name='mail' />
           <span>{EMAIL}</span>
         </div>
       </div>
