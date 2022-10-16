@@ -1,3 +1,45 @@
+@use '../../styles/mixins';
+
 .mainContainer {
-  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .contactInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5xs);
+
+    .contactInfo {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-5xs);
+    }
+  }
+
+  .sectionsContainer {
+    display: flex;
+    gap: var(--spacing-2xs);
+
+    span {
+      color: var(--primary-green);
+      cursor: pointer;
+    }
+  }
+
+  .localePickerContainer {
+    display: flex;
+    gap: var(--spacing-4xs);
+    span {
+      cursor: pointer;
+    }
+  }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './navbar.module.scss';
 
 import Icon from '../icon/icon.component';
-import LocalePicker from '../locale-picker/locale-picker.component';
+import LocalePicker from './locale-picker/locale-picker.component';
 
 import { EMAIL, PHONE_NUMBER } from '../../constants/strings';
 import { SECTIONS } from '../../constants/enums';
