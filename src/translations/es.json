@@ -13,5 +13,8 @@
   "app.sections.services.revision.title": "Revisión y corrección",
   "app.sections.services.revision.body": "Revisión, edición y corrección ortotipográfica y de estilo de textos, artículos, libros, trabajos académicos, documentos, etc.",
   "app.sections.services.text.title": "Traducción de textos",
-  "app.sections.services.text.body": "Traducción editorial, literaria, artículos, blogs, guiás turísticas, revistas, cómics, obras de teatro..."
+  "app.sections.services.text.body": "Traducción editorial, literaria, artículos, blogs, guiás turísticas, revistas, cómics, obras de teatro...",
+
+  "app.sections.portfolio.sectionTitle": "TRABAJOS",
+  "app.sections.portfolio.atraeLink": "Aquí encontrarás algunas de las obras audiovisuales y videojuegos en en las que he trabajado."
 }
