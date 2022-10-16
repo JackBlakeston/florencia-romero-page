@@ -6,7 +6,7 @@ import classes from './title-section.module.scss';
 
 import logo from '../../../assets/images/logo.png';
 
-import { NAME_CAPS, TRANSLATOR_LANGUAGES } from '../../../constants/strings';
+import { NAME, TRANSLATOR_LANGUAGES } from '../../../constants/strings';
 
 const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
@@ -14,10 +14,10 @@ const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   return (
     <div className={classes.mainContainer} ref={ref}>
       <img src={logo} alt='logo-florencia-romero' className={classes.logo} />
-      <span>{NAME_CAPS}</span>
+      <span>{NAME}</span>
       <span>
         {intl.formatMessage({
-          id: 'app.title.traductoraProfesional',
+          id: 'app.sections.title.traductoraProfesional',
         })}
       </span>
       <span>{TRANSLATOR_LANGUAGES}</span>

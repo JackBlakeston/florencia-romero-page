@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
+  height: var(--navbar-height);
+  padding: var(--navbar-padding-vertical) 5rem;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   position: fixed;
@@ -30,7 +31,7 @@
     gap: var(--spacing-2xs);
 
     span {
-      color: var(--primary-green);
+      color: var(--color-primary);
       cursor: pointer;
     }
   }

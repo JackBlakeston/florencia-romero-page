@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 
+import classes from './main-layout.module.scss';
+
 import Navbar from '../navbar/navbar.component';
 import AboutMeSection from '../page-sections/about-me-section/about-me-section.component';
 import ContactSection from '../page-sections/contact-section/contact-section.component';
@@ -33,7 +35,7 @@ const MainLayout = () => {
   return (
     <>
       <Navbar goToSection={goToSection} />
-      <div>
+      <div className={classes.mainPageContainer}>
         <TitleSection ref={titleSectionRef} />
         <ServicesSection ref={servicesSectionRef} />
         <PortfolioSection ref={portfolioSectionRef} />

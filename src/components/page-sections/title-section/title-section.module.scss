@@ -1,7 +1,33 @@
 .mainContainer {
+  --section-height: 18rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: var(--section-height);
+  gap: var(--spacing-xs);
+  margin: var(--spacing-2xl) 0;
 
   .logo {
-    width: 25rem;
-    height: 25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--section-height);
+    height: var(--section-height);
+  }
+
+  span {
+    font-family: var(--font-light);
+    color: var(--color-secondary);
+  }
+
+  :nth-child(2) {
+    font-size: var(--font-size-3xl);
+  }
+
+  :nth-child(3),
+  :nth-child(4) {
+    font-size: var(--font-size-xl);
   }
 }
