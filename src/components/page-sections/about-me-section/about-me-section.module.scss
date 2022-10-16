@@ -6,21 +6,47 @@
   }
 
   .sectionBodyContainer {
+    padding: var(--section-body-padding);
     display: flex;
 
     .linkSectionContainer {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      width: 18rem;
 
       .portrait {
-        height: 15rem;
-        width: 15rem;
+        height: 18rem;
+        width: 18rem;
+      }
+
+      .nameText {
+        padding: var(--spacing-3xs) 0 var(--spacing-7xs);
+        font-family: var(--font-bold);
+      }
+
+      .languagesText {
+        font-family: var(--font-demibold);
+        font-size: var(--font-size-s);
+      }
+
+      .linkRow {
+        padding: var(--spacing-3xs) 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
       }
 
       .atraeLogo {
         height: 4rem;
-        width: 10rem;
+        width: 9rem;
       }
+    }
+
+    .textSectionContainer {
+      padding: 0 var(--spacing-xl);
+      white-space: pre-line;
     }
   }
 }

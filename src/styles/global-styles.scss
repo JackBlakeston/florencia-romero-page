@@ -27,9 +27,11 @@
   // Font families
   --font-main: visbyr-medium;
   --font-demibold: visbyr-demibold;
+  --font-bold: visbyr-bold;
   --font-light: visbyr-light;
 
   // Font sizing
+  --font-size-xs: 0.5rem;
   --font-size-s: 0.75rem;
   --font-size-m: 1rem;
   --font-size-l: 1.25rem;
@@ -47,6 +49,7 @@
   --navbar-padding-vertical: 1rem;
 
   // Spacing
+  --spacing-7xs: 0.125rem;
   --spacing-6xs: 0.25rem;
   --spacing-5xs: 0.5rem;
   --spacing-4xs: 0.75rem;
