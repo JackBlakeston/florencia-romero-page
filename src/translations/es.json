@@ -1,3 +1,16 @@
 {
-  "app.title.traductoraProfesional": "TRADUCTORA PROFESIONAL"
+  "app.title.traductoraProfesional": "TRADUCTORA PROFESIONAL",
+
+  "app.sections.services.audiovisual.title": "Traducción audiovisual",
+  "app.sections.services.audiovisual.body": "Subtitulación, doblaje y voces superpuestas de películas, series, documentales y todo tipo de contenido",
+  "app.sections.services.accessibility.title": "Accesibilidad",
+  "app.sections.services.accessibility.body": "Audiodescripción para ciegos y subtitulado para sordos de películas, series, documentales, etc.",
+  "app.sections.services.videogames.title": "Localización de videojuegos",
+  "app.sections.services.videogames.body": "Traducción y adaptación de videojuegos (contenido, menús, créditos, mensajes promocionales...).",
+  "app.sections.services.software.title": "Localización de apps, páginas web y software",
+  "app.sections.services.software.body": "Traducción y adaptación de sitios web, aplicaciones para móviles y programas de ordenador.",
+  "app.sections.services.revision.title": "Revisión y corrección",
+  "app.sections.services.revision.body": "Revisión, edición y corrección ortotipográfica y de estilo de textos, artículos, libros, trabajos académicos, documentos, etc.",
+  "app.sections.services.text.title": "Traducción de textos",
+  "app.sections.services.text.body": "Traducción editorial, literaria, artículos, blogs, guiás turísticas, revistas, cómics, obras de teatro..."
 }

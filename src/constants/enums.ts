@@ -1,7 +1,16 @@
 export enum SECTIONS {
-  TITLE = "title",
-  SERVICES = "services",
-  PORTFOLIO = "portfolio",
-  ABOUT_ME = "aboutMe",
-  CONTACT = "contact",
+  TITLE = 'title',
+  SERVICES = 'services',
+  PORTFOLIO = 'portfolio',
+  ABOUT_ME = 'aboutMe',
+  CONTACT = 'contact',
+}
+
+export enum SERVICES {
+  AUDIOVISUAL = 'audiovisual',
+  ACCESSIBILITY = 'accessibility',
+  VIDEOGAMES = 'videogames',
+  SOFTWARE = 'software',
+  EDITING = 'revision',
+  TEXT = 'text',
 }
