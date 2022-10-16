@@ -1,31 +1,28 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef } from 'react';
 
-import { useIntl } from "react-intl";
+import { useIntl } from 'react-intl';
 
-import classes from "./title-section.module.scss";
+import classes from './title-section.module.scss';
 
-import logo from "../../../assets/images/logo.png";
+import logo from '../../../assets/images/logo.png';
 
-import { NAME, TRANSLATOR_LANGUAGES } from "../../../constants/strings";
+import { NAME_CAPS, TRANSLATOR_LANGUAGES } from '../../../constants/strings';
 
 const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
 
   return (
     <div className={classes.mainContainer} ref={ref}>
-      <img src={logo} alt="logo-florencia-romero" className={classes.logo} />
-      <span>{NAME}</span>
+      <img src={logo} alt='logo-florencia-romero' className={classes.logo} />
+      <span>{NAME_CAPS}</span>
       <span>
-        {
-          intl.formatMessage({
-            id: "app.title.traductoraProfesional"
-          })
-        }
+        {intl.formatMessage({
+          id: 'app.title.traductoraProfesional',
+        })}
       </span>
       <span>{TRANSLATOR_LANGUAGES}</span>
-
     </div>
-  )
-})
+  );
+});
 
 export default TitleSection;

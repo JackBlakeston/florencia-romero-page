@@ -1,0 +1,20 @@
+.mainContainer {
+  .sectionBodyContainer {
+    display: flex;
+
+    .linkSectionContainer {
+      display: flex;
+      flex-direction: column;
+
+      .portrait {
+        height: 15rem;
+        width: 15rem;
+      }
+
+      .atraeLogo {
+        height: 4rem;
+        width: 10rem;
+      }
+    }
+  }
+}

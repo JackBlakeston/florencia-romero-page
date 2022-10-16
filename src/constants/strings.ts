@@ -1,5 +1,11 @@
 export const PHONE_NUMBER = '+34 610 999 034';
 export const EMAIL = 'fctraduce@gmail.com';
-export const NAME = 'FLORENCIA ROMERO';
+export const NAME_CAPS = 'FLORENCIA ROMERO';
+export const NAME = 'Florencia Romero';
 export const TRANSLATOR_LANGUAGES = 'EN, FR > ES';
+
 export const ATRAE_URL = 'https://basededatos.atrae.org/user/florencia-cecilia-romero-gonzalo';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/fctrad';
+export const TWITTER_URL = 'https://twitter.com/fctrad';
+export const PROZ_URL = 'https://www.proz.com/translator/1841231';
+export const SKYPE_URL = 'https://join.skype.com/invite/F3MdYMh1enbJ';
