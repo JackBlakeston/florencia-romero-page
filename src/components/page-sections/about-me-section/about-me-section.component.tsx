@@ -8,7 +8,7 @@ import Icon from '../../icon/icon.component';
 
 import portrait from '../../../assets/images/portrait.jpg';
 import atraeLogoBig from '../../../assets/images/atrae-logo-big.png';
-import { ATRAE_URL, LINKEDIN_URL, NAME, PROZ_URL, SKYPE_URL, TWITTER_URL } from '../../../constants/strings';
+import { ATRAE_URL, GMAIL_URL, LINKEDIN_URL, NAME, PROZ_URL, SKYPE_URL, TWITTER_URL } from '../../../constants/strings';
 
 const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
@@ -34,7 +34,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
           <span className={classes.nameText}>{NAME}</span>
           <span className={classes.languagesText}>{translatorLanguages}</span>
           <div className={classes.linkRow}>
-            <a>
+            <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer'>
               <Icon name='gmail' />
             </a>
             <a href={LINKEDIN_URL} target='_blank' rel='noopener noreferrer'>
