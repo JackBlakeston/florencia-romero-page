@@ -1,10 +1,11 @@
 @mixin sectionTitle {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-bright-3);
+  color: var(--color-primary-dark-2);
   box-shadow: var(--shadow-primary);
   height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-xl);
-  font-family: var(--font-light);
+  font-family: var(--font-demibold);
 }

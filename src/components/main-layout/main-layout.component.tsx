@@ -8,6 +8,7 @@ import ContactSection from '../page-sections/contact-section/contact-section.com
 import PortfolioSection from '../page-sections/portfolio-section/portfolio-section.component';
 import ServicesSection from '../page-sections/services-section/services-section.component';
 import TitleSection from '../page-sections/title-section/title-section.component';
+import Footer from '../footer/footer.component';
 
 import { SECTIONS } from '../../constants/enums';
 
@@ -42,6 +43,7 @@ const MainLayout = () => {
         <AboutMeSection ref={aboutMeSectionRef} />
         <ContactSection ref={contactSectionRef} />
       </div>
+      <Footer />
     </>
   );
 };

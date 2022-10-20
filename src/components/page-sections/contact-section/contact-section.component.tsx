@@ -42,36 +42,32 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   return (
     <div ref={ref} className={classes.mainContainer}>
       <div className={classes.sectionTitle}>{title}</div>
-      <span>{contactSectionText}</span>
-      <span>{letsTalkText}</span>
-      <div className={classes.sectionBodyColumnsContainer}>
-        <div className={classes.contactInfoContainer}>
-          <div className={classes.contactInfo}>
-            <Icon name='phone' />
-            <span>{PHONE_NUMBER}</span>
-          </div>
-          <div className={classes.contactInfo}>
-            <Icon name='mail' />
-            <span>{EMAIL}</span>
-          </div>
+      <div className={classes.sectionBodyContainer}>
+        <div className={classes.sectionSubtitle}>
+          <span>{contactSectionText}</span>
+          <span>{letsTalkText}</span>
         </div>
-        <form action={FORM_SUBMIT_URL} method='post' target='_blank'>
-          <div>
+        <div className={classes.sectionBodyColumnsContainer}>
+          <div className={classes.contactInfoContainer}>
+            <div className={classes.contactInfo}>
+              <Icon name='phone' />
+              <span>{PHONE_NUMBER}</span>
+            </div>
+            <div className={classes.contactInfo}>
+              <Icon name='mail' />
+              <span>{EMAIL}</span>
+            </div>
+          </div>
+          <form className={classes.formContainer} action={FORM_SUBMIT_URL} method='post' target='_blank'>
             <label htmlFor='name'>{formLabelName}</label>
             <input name='Name' id='name' type='text' required />
-          </div>
-          <div>
             <label htmlFor='email'>{formLabelEmail}</label>
             <input name='Email' id='email' type='email' required />
-          </div>
-          <div>
             <label htmlFor='message'>{formLabelMessage}</label>
-            <input name='Message' id='message' type='text' required />
-          </div>
-          <div>
+            <textarea name='Message' id='message' required />
             <input type='submit' value={formSubmitText} />
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );

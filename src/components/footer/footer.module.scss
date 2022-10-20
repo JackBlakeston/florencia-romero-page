@@ -1,0 +1,86 @@
+.mainContainer {
+  .topSection {
+    position: relative;
+    display: flex;
+    background-color: var(--color-primary-bright-3);
+    padding: var(--spacing-3xl) 0;
+
+    .linksContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      gap: var(--spacing-l);
+      font-size: var(--font-size-xl);
+      font-family: var(--font-light);
+
+      .iconsContainer {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-2xs);
+      }
+    }
+
+    .logoContainer {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      .logo {
+        width: 15rem;
+        height: 15rem;
+        justify-self: center;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 6rem);
+      width: 12rem;
+      height: 6rem;
+      background-color: var(--color-background-1);
+      content: '';
+      border-bottom-left-radius: 13rem;
+      border-bottom-right-radius: 13rem;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 1px);
+      height: 19rem;
+      width: 2px;
+      background-color: var(--color-background-1);
+      content: '';
+    }
+  }
+
+  .bottomSection {
+    display: flex;
+    font-size: var(--font-size-s);
+    padding: var(--spacing-l) var(--spacing-10xl);
+    background-color: var(--color-primary-bright-4);
+
+    .contactInfoContainer {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-2xs);
+      width: 50%;
+
+      .contactInfo {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-4xs);
+      }
+    }
+
+    .footnotesContainer {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      width: 50%;
+      gap: var(--spacing-6xs);
+    }
+  }
+}
