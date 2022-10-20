@@ -1,33 +1,58 @@
 .mainContainer {
-  --section-height: 18rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: var(--section-height);
-  gap: var(--spacing-xs);
-  margin: var(--spacing-2xl) 0;
-
-  .logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: var(--section-height);
+  .titleContainer {
+    --section-height: 18rem;
+    position: relative;
+    display: flex;
+    align-items: center;
     height: var(--section-height);
+    gap: var(--spacing-xs);
+    margin: 0 0 var(--spacing-2xl);
+    padding: var(--section-body-padding);
+    background-color: var(--color-primary-bright-3);
+    gap: 8.5%;
+
+    .logo {
+      width: var(--section-height);
+      height: var(--section-height);
+    }
+
+    .titleTextContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        font-family: var(--font-light);
+        color: var(--color-secondary);
+      }
+
+      :nth-child(2) {
+        font-size: var(--font-size-3xl);
+      }
+
+      :nth-child(3),
+      :nth-child(4) {
+        font-size: var(--font-size-xl);
+      }
+    }
   }
 
-  span {
-    font-family: var(--font-light);
-    color: var(--color-secondary);
-  }
+  .sketchesContainer {
+    display: flex;
+    justify-content: center;
+    // padding-left: 3rem;
 
-  :nth-child(2) {
-    font-size: var(--font-size-3xl);
-  }
+    img {
+    }
 
-  :nth-child(3),
-  :nth-child(4) {
-    font-size: var(--font-size-xl);
+    .pcSketch {
+      height: 20rem;
+      width: 40rem;
+    }
+    .plantSketch {
+      margin-top: 1rem;
+      height: 14rem;
+      width: 14rem;
+    }
   }
 }

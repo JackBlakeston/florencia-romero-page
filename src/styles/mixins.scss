@@ -9,3 +9,7 @@
   font-size: var(--font-size-xl);
   font-family: var(--font-demibold);
 }
+
+@mixin sectionBody {
+  padding: var(--section-body-padding);
+}

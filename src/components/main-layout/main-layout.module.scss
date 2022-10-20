@@ -1,9 +1,4 @@
 .mainPageContainer {
-  --extra-padding-top: var(--spacing-m);
-  padding-top: calc(
-    var(--navbar-height) + var(--navbar-padding-vertical) + var(--navbar-padding-vertical) + var(--extra-padding-top)
-  );
-  padding-left: var(--spacing-m);
-  padding-right: var(--spacing-m);
+  padding-top: calc(var(--navbar-height) + var(--navbar-padding-vertical) + var(--navbar-padding-vertical));
   padding-bottom: var(--spacing-10xl);
 }

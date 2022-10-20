@@ -6,7 +6,7 @@
   }
 
   .sectionBodyContainer {
+    @include mixins.sectionBody;
     display: flex;
-    padding: var(--section-body-padding);
   }
 }

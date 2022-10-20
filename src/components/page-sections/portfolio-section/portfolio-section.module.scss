@@ -6,7 +6,7 @@
   }
 
   .sectionBodyContainer {
-    padding: var(--section-body-padding);
+    @include mixins.sectionBody;
 
     .portfolioLinkContainer {
       display: flex;
