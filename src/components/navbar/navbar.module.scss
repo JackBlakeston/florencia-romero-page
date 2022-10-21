@@ -2,7 +2,7 @@
 
 .mainContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: var(--navbar-height);
   padding: var(--navbar-padding-vertical) 5rem;
@@ -15,6 +15,9 @@
   z-index: 100;
 
   .contactInfoContainer {
+    position: absolute;
+    left: 0;
+    padding: inherit;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-5xs);
@@ -37,6 +40,9 @@
   }
 
   .localePickerContainer {
+    position: absolute;
+    padding: inherit;
+    right: inherit;
     display: flex;
     gap: var(--spacing-4xs);
     span {

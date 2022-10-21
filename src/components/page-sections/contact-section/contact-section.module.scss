@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
+    position: relative;
 
     .sectionSubtitle {
       font-size: var(--font-size-l);
@@ -77,5 +79,6 @@
         }
       }
     }
+    @include mixins.bottomShadowBlocker(calc(50% - 96.7px));
   }
 }

@@ -1,49 +1,69 @@
+@import '../../../styles/mixins.scss';
+
 .mainContainer {
   .titleContainer {
-    --section-height: 18rem;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height: var(--section-height);
+    justify-content: center;
     gap: var(--spacing-xs);
     margin: 0 0 var(--spacing-2xl);
     padding: var(--section-body-padding);
     background-color: var(--color-primary-bright-3);
-    gap: 8.5%;
+    box-shadow: var(--shadow-primary);
 
     .logo {
-      width: var(--section-height);
-      height: var(--section-height);
+      position: absolute;
+      top: 10%;
+      left: 3%;
+      height: 80%;
     }
 
-    .titleTextContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    span {
+      font-family: var(--font-light);
+      color: var(--color-secondary);
+    }
 
-      span {
-        font-family: var(--font-light);
-        color: var(--color-secondary);
-      }
+    :nth-child(2) {
+      font-size: var(--font-size-3xl);
+    }
 
-      :nth-child(2) {
-        font-size: var(--font-size-3xl);
-      }
+    :nth-child(3),
+    :nth-child(4) {
+      font-size: var(--font-size-xl);
+    }
 
-      :nth-child(3),
-      :nth-child(4) {
-        font-size: var(--font-size-xl);
-      }
+    &::before {
+      position: absolute;
+      bottom: -2px;
+      right: 4rem;
+      width: 12rem;
+      height: 6rem;
+      background-color: var(--color-background-1);
+      content: '';
+      border-top-left-radius: 13rem;
+      border-top-right-radius: 13rem;
+      box-shadow: var(--shadow-primary-opposite);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 10rem;
+      height: 18rem;
+      width: 2px;
+      background-color: var(--color-background-1);
+      content: '';
     }
   }
 
   .sketchesContainer {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
-    // padding-left: 3rem;
-
-    img {
-    }
+    padding-bottom: var(--spacing-2xl);
 
     .pcSketch {
       height: 20rem;
@@ -54,5 +74,16 @@
       height: 14rem;
       width: 14rem;
     }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -44.3px;
+      right: 4rem;
+      background-color: var(--color-background-1);
+      width: 188.5px;
+      height: 1rem;
+    }
+    @include bottomShadowBlocker(127.3px);
   }
 }

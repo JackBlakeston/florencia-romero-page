@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .mainContainer {
   .topSection {
     position: relative;
@@ -33,27 +35,7 @@
       }
     }
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: calc(50% - 6rem);
-      width: 12rem;
-      height: 6rem;
-      background-color: var(--color-background-1);
-      content: '';
-      border-bottom-left-radius: 13rem;
-      border-bottom-right-radius: 13rem;
-    }
-
-    &::after {
-      position: absolute;
-      top: 0;
-      left: calc(50% - 1px);
-      height: 19rem;
-      width: 2px;
-      background-color: var(--color-background-1);
-      content: '';
-    }
+    @include cutOutTop(calc(50% - 6rem));
   }
 
   .bottomSection {

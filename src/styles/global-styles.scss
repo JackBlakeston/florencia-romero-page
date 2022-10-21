@@ -48,6 +48,7 @@
 
   --navbar-height: 3.5rem;
   --navbar-padding-vertical: 1rem;
+  --navbar-total-height: calc(var(--navbar-height) + var(--navbar-padding-vertical) + var(--navbar-padding-vertical));
 
   // Spacing
   --spacing-7xs: 0.125rem;
@@ -90,6 +91,8 @@
 
   // Shadows
   --shadow-primary: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  --shadow-primary-opposite: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px inset;
+  --shadow-primary-opposite-no-top: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px inset;
   --shadow-interior: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 
   // Borders

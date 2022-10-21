@@ -17,15 +17,13 @@ const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     <div className={classes.mainContainer}>
       <div className={classes.titleContainer} ref={ref}>
         <img src={logo} alt='logo-florencia-romero' className={classes.logo} />
-        <div className={classes.titleTextContainer}>
-          <span>{NAME}</span>
-          <span>
-            {intl.formatMessage({
-              id: 'app.sections.title.traductoraProfesional',
-            })}
-          </span>
-          <span>{TRANSLATOR_LANGUAGES}</span>
-        </div>
+        <span>{NAME}</span>
+        <span>
+          {intl.formatMessage({
+            id: 'app.sections.title.traductoraProfesional',
+          })}
+        </span>
+        <span>{TRANSLATOR_LANGUAGES}</span>
       </div>
       <div className={classes.sketchesContainer}>
         <img src={plantSketch} alt='plant-sketch' className={classes.plantSketch} />
