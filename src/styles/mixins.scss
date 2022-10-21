@@ -1,10 +1,57 @@
 @mixin sectionTitle {
-  background-color: var(--color-primary);
+  position: relative;
+  background-color: var(--color-primary-bright-3);
+  color: var(--color-primary-dark-2);
   box-shadow: var(--shadow-primary);
-  height: 10rem;
+  height: 17rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-xl);
-  font-family: var(--font-light);
+  font-family: var(--font-demibold);
+}
+
+@mixin sectionBody {
+  position: relative;
+  padding: var(--section-body-padding);
+}
+
+@mixin cutOutTop($left) {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: $left;
+    width: 12rem;
+    height: 6rem;
+    background-color: var(--color-background-1);
+    content: '';
+    border-bottom-left-radius: 13rem;
+    border-bottom-right-radius: 13rem;
+    box-shadow: var(--shadow-primary-opposite-no-top);
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: calc($left + 6rem + 1px);
+    height: 19rem;
+    width: 2px;
+    background-color: var(--color-background-1);
+    content: '';
+  }
+}
+
+@mixin bottomShadowBlocker($left) {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: $left;
+    background-color: var(--color-background-1);
+    width: 192.5px;
+    height: 1rem;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 7px;
+  }
 }

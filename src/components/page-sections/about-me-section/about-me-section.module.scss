@@ -6,8 +6,10 @@
   }
 
   .sectionBodyContainer {
-    padding: var(--section-body-padding);
+    @include mixins.sectionBody;
     display: flex;
+    flex-direction: row;
+    // align-items: center;
 
     .linkSectionContainer {
       display: flex;
@@ -45,7 +47,7 @@
     }
 
     .textSectionContainer {
-      padding: 0 var(--spacing-xl);
+      padding: 0 var(--spacing-10xl);
       white-space: pre-line;
     }
   }

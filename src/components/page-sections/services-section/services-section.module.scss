@@ -2,11 +2,37 @@
 
 .mainContainer {
   .sectionTitle {
+    position: relative;
     @include mixins.sectionTitle;
+    @include mixins.cutOutTop(8rem);
   }
 
   .sectionBodyContainer {
+    @include mixins.sectionBody;
     display: flex;
-    padding: var(--section-body-padding);
+
+    &::before {
+      content: '';
+      width: 20rem;
+      height: 20rem;
+      border-radius: 100rem;
+      position: absolute;
+      right: -2rem;
+      bottom: -5rem;
+      background-color: var(--color-primary-bright-3);
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      width: 13rem;
+      height: 13rem;
+      border-radius: 100rem;
+      position: absolute;
+      left: 15rem;
+      bottom: -5rem;
+      background-color: var(--color-primary-bright-3);
+      z-index: -1;
+    }
   }
 }
