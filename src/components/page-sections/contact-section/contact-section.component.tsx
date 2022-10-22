@@ -36,9 +36,11 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     id: 'app.sections.contact.form.message',
   });
 
-  const formSubmitText = intl.formatMessage({
-    id: 'app.sections.contact.form.send',
-  });
+  const formSubmitText = intl
+    .formatMessage({
+      id: 'app.sections.contact.form.send',
+    })
+    .toUpperCase();
 
   return (
     <div ref={ref} className={classes.mainContainer}>
@@ -67,7 +69,9 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
             <input name='Email' id='email' type='email' required />
             <label htmlFor='message'>{formLabelMessage}</label>
             <textarea name='Message' id='message' required />
-            <input type='submit' value={formSubmitText} />
+            <button type='submit' className={classes.sendButton}>
+              {formSubmitText}
+            </button>
           </form>
         </div>
       </div>
