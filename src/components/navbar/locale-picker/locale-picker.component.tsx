@@ -7,7 +7,7 @@ import { LocaleContext } from '../../../context/locale-context';
 import { LOCALES } from '../../../constants/enums';
 
 const LocalePicker = () => {
-  const { setLocale } = useContext(LocaleContext);
+  const { setLocale, locale } = useContext(LocaleContext);
 
   const handleEnglishClick = () => {
     setLocale(LOCALES.EN);
@@ -17,14 +17,17 @@ const LocalePicker = () => {
     setLocale(LOCALES.ES);
   };
 
+  const enClasses = locale === LOCALES.EN ? classes.selectedLocale : '';
+  const esClasses = locale === LOCALES.ES ? classes.selectedLocale : '';
+
   return (
     <div className={classes.localePickerContainer}>
-      <span onClick={handleEnglishClick} className={classes.localePickerItem}>
+      <div onClick={handleEnglishClick} className={enClasses}>
         {LOCALES.EN.toUpperCase()}
-      </span>
-      <span onClick={handleSpanishClick} className={classes.localePickerItem}>
+      </div>
+      <div onClick={handleSpanishClick} className={esClasses}>
         {LOCALES.ES.toUpperCase()}
-      </span>
+      </div>
     </div>
   );
 };

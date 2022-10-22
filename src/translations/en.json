@@ -1,1 +1,6 @@
-{}
+{
+  "app.sections.services": "Servicios",
+  "app.sections.portfolio": "Trabajos",
+  "app.sections.aboutMe": "Sobre mí",
+  "app.sections.contact": "Contacto"
+}
