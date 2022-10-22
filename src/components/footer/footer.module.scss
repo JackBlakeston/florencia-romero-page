@@ -32,6 +32,8 @@
         width: 15rem;
         height: 15rem;
         justify-self: center;
+        fill: var(--color-primary);
+        filter: drop-shadow(var(--shadow-primary));
       }
     }
 

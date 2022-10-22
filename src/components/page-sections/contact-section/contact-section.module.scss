@@ -25,15 +25,18 @@
     .sectionBodyColumnsContainer {
       display: flex;
       width: 85%;
+      gap: 20%;
 
       .contactInfoContainer {
         box-sizing: border-box;
-        width: 50%;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
         gap: var(--spacing-s);
-        padding-top: var(--spacing-10xl);
-        padding-left: var(--spacing-8xl);
+        margin: 0 100px 0 0;
+        // box-shadow: var(--shadow-primary);
 
         .contactInfo {
           display: flex;

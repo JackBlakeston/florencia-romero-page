@@ -76,7 +76,7 @@
 
   --color-primary-dark-2: #2c6660;
   --color-primary-dark-1: #4f9991;
-  --color-primary: #7ec6c0;
+  --color-primary: #7ec6bf;
   --color-primary-bright-1: #5fd1c6;
   --color-primary-bright-2: #99c1bd;
   --color-primary-bright-3: #e6f3f2;
@@ -90,9 +90,8 @@
   --color-background-1: #f8f8f8;
 
   // Shadows
-  --shadow-primary: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  --shadow-primary-opposite: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px inset;
-  --shadow-primary-opposite-no-top: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px inset;
+  --shadow-primary: rgba(0, 0, 0, 0.12) 1.5px 1.95px 2.6px;
+  --shadow-primary-opposite: rgba(0, 0, 0, 0.12) 1.5px 1.4px 2.6px inset;
   --shadow-interior: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 
   // Borders

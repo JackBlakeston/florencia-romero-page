@@ -1,6 +1,7 @@
 import React from 'react';
 
 import classes from './footer.module.scss';
+
 import Icon from '../icon/icon.component';
 
 import {
@@ -16,7 +17,7 @@ import {
   TWITTER_URL,
   WEB_DESIGN,
 } from '../../constants/strings';
-import Logo from '../../assets/images/logo-green.png';
+import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
 
 const Footer = () => {
   return (
@@ -43,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.logoContainer}>
-          <img src={Logo} alt='logo' className={classes.logo} />
+          <Logo className={classes.logo} />
         </div>
       </div>
       <div className={classes.bottomSection}>
