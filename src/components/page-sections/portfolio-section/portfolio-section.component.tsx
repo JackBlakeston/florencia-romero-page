@@ -34,13 +34,14 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <Slider
         infinite
         arrows
-        slidesToShow={6}
-        focusOnSelect={false}
-        speed={400}
-        slidesToScroll={5}
+        slidesToShow={5}
+        slidesToScroll={4}
+        speed={1400}
         autoplay
-        autoplaySpeed={3000}
+        autoplaySpeed={4000}
         pauseOnHover
+        draggable
+        focusOnSelect={false}
       >
         {allImagesUrls.map((imageUrl, index) => {
           const itemName = getCarrouselItemName(imageUrl);

@@ -20,11 +20,13 @@
       padding: 0 var(--spacing-m);
 
       .carrouselItemContainer {
-        margin: 0 var(--spacing-6xs);
+        display: flex;
+        justify-content: center;
+        margin: 0 var(--spacing-s);
 
         .carrouselItemImage {
-          height: 14rem;
-          width: 10rem;
+          height: 20vw;
+          width: 15vw;
         }
       }
     }
