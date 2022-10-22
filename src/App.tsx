@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./styles/global-styles.scss";
+import './styles/global-styles.scss';
 
 import MainLayout from './components/main-layout/main-layout.component';
 
