@@ -17,7 +17,7 @@ const ServicesSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   };
 
   const title = intl.formatMessage({
-    id: 'app.sections.services.sectionTitle',
+    id: 'app.sections.services',
   });
 
   return (

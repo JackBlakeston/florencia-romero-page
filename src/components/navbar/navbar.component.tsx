@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useIntl } from 'react-intl';
+
 import classes from './navbar.module.scss';
 
 import Icon from '../icon/icon.component';
@@ -12,7 +14,22 @@ type NavbarProps = {
   goToSection: (section: SECTIONS) => void;
 };
 
+const sections = [SECTIONS.SERVICES, SECTIONS.PORTFOLIO, SECTIONS.ABOUT_ME, SECTIONS.CONTACT];
+
 const Navbar = ({ goToSection }: NavbarProps) => {
+  const intl = useIntl();
+
+  const renderSectionButtons = () => {
+    return sections.map((section) => {
+      const sectionName = intl
+        .formatMessage({
+          id: `app.sections.${section}`,
+        })
+        .toUpperCase();
+      return <span onClick={() => goToSection(section)}>{sectionName}</span>;
+    });
+  };
+
   return (
     <div className={classes.mainContainer}>
       <div className={classes.contactInfoContainer}>
@@ -25,12 +42,7 @@ const Navbar = ({ goToSection }: NavbarProps) => {
           <span>{EMAIL}</span>
         </div>
       </div>
-      <div className={classes.sectionsContainer}>
-        <span onClick={() => goToSection(SECTIONS.SERVICES)}>SERVICIOS</span>
-        <span onClick={() => goToSection(SECTIONS.PORTFOLIO)}>TRABAJOS</span>
-        <span onClick={() => goToSection(SECTIONS.ABOUT_ME)}>SOBRE MÍ</span>
-        <span onClick={() => goToSection(SECTIONS.CONTACT)}>CONTACTO</span>
-      </div>
+      <div className={classes.sectionsContainer}>{renderSectionButtons()}</div>
       <LocalePicker />
     </div>
   );

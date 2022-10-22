@@ -13,7 +13,6 @@ export const GMAIL_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}
 
 export const FORM_SUBMIT_URL = 'https://public.herotofu.com/v1/6e9ab8f0-4d66-11ed-8970-6943e4ac8982';
 
-export const COPYRIGHT = 'Copyright 2022 Florencia C. Romero Gonzalo.';
-export const WEB_DESIGN = 'Diseño web: Jack Blakeston';
-export const LOGO_DESIGN = 'Diseño logo: Mario Figueredo';
-export const LEGAL = 'Avisos legales / Cookies';
+export const COPYRIGHT = 'Copyright 2022 Florencia C. Romero Gonzalo';
+export const WEB_DESIGNER = 'Jack Blakeston';
+export const LOGO_DESIGNER = 'Mario Figueredo';

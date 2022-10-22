@@ -13,7 +13,7 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
 
   const title = intl.formatMessage({
-    id: 'app.sections.contact.sectionTitle',
+    id: 'app.sections.contact',
   });
 
   const contactSectionText = intl.formatMessage({

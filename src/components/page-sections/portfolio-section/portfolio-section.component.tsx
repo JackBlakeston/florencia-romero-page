@@ -55,7 +55,7 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   };
 
   const title = intl.formatMessage({
-    id: 'app.sections.portfolio.sectionTitle',
+    id: 'app.sections.portfolio',
   });
 
   const portfolioLinkText = intl.formatMessage({

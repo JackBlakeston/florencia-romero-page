@@ -1,7 +1,11 @@
 {
+  "app.sections.services": "Servicios",
+  "app.sections.portfolio": "Trabajos",
+  "app.sections.aboutMe": "Sobre mí",
+  "app.sections.contact": "Contacto",
+
   "app.sections.title.traductoraProfesional": "Traductora Profesional",
 
-  "app.sections.services.sectionTitle": "SERVICIOS",
   "app.sections.services.audiovisual.title": "Traducción audiovisual",
   "app.sections.services.audiovisual.body": "Subtitulación, doblaje y voces superpuestas de películas, series, documentales y todo tipo de contenido",
   "app.sections.services.accessibility.title": "Accesibilidad",
@@ -28,5 +32,10 @@
   "app.sections.contact.form.name": "Nombre",
   "app.sections.contact.form.email": "Correo electrónico",
   "app.sections.contact.form.message": "Mensaje",
-  "app.sections.contact.form.send": "Enviar"
+  "app.sections.contact.form.send": "Enviar",
+
+  "app.footer.followMe": "Sígueme",
+  "app.footer.webDesign": "Diseño web",
+  "app.footer.logoDesign": "Diseño logo",
+  "app.footer.legal": "Avisos legales / Cookies"
 }

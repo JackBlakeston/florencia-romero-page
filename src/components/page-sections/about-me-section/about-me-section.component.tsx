@@ -14,7 +14,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
 
   const title = intl.formatMessage({
-    id: 'app.sections.aboutMe.sectionTitle',
+    id: 'app.sections.aboutMe',
   });
 
   const translatorLanguages = intl.formatMessage({
