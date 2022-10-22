@@ -1,0 +1,20 @@
+.localePickerContainer {
+  position: absolute;
+  padding: inherit;
+  right: inherit;
+  display: flex;
+  gap: var(--spacing-4xs);
+
+  div {
+    text-align: center;
+    padding: calc(var(--spacing-6xs) + 3px);
+    padding-right: var(--spacing-6xs);
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+  }
+
+  .selectedLocale {
+    border: 2px solid var(--color-primary-dark-1);
+  }
+}

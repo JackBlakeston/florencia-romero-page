@@ -1,29 +1,49 @@
 import React from 'react';
 
+import { useIntl } from 'react-intl';
+
 import classes from './footer.module.scss';
+
 import Icon from '../icon/icon.component';
 
 import {
   COPYRIGHT,
   EMAIL,
   GMAIL_URL,
-  LEGAL,
   LINKEDIN_URL,
-  LOGO_DESIGN,
+  LOGO_DESIGNER,
   PHONE_NUMBER,
   PROZ_URL,
   SKYPE_URL,
   TWITTER_URL,
-  WEB_DESIGN,
+  WEB_DESIGNER,
 } from '../../constants/strings';
-import Logo from '../../assets/images/logo-green.png';
+import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
 
 const Footer = () => {
+  const intl = useIntl();
+
+  const followMeText = intl.formatMessage({
+    id: 'app.footer.followMe',
+  });
+
+  const webDesignTExt = `${intl.formatMessage({
+    id: 'app.footer.webDesign',
+  })}: ${WEB_DESIGNER}`;
+
+  const logoDesignTExt = `${intl.formatMessage({
+    id: 'app.footer.logoDesign',
+  })}: ${LOGO_DESIGNER}`;
+
+  const legalText = intl.formatMessage({
+    id: 'app.footer.legal',
+  });
+
   return (
     <div className={classes.mainContainer}>
       <div className={classes.topSection}>
         <div className={classes.linksContainer}>
-          <span>Sígueme:</span>
+          <span>{followMeText}:</span>
           <div className={classes.iconsContainer}>
             <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer'>
               <Icon name='gmail' />
@@ -43,7 +63,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.logoContainer}>
-          <img src={Logo} alt='logo' className={classes.logo} />
+          <Logo className={classes.logo} />
         </div>
       </div>
       <div className={classes.bottomSection}>
@@ -59,9 +79,9 @@ const Footer = () => {
         </div>
         <div className={classes.footnotesContainer}>
           <span>{COPYRIGHT}</span>
-          <span>{WEB_DESIGN}</span>
-          <span>{LOGO_DESIGN}</span>
-          <span>{LEGAL}</span>
+          <span>{webDesignTExt}</span>
+          <span>{logoDesignTExt}</span>
+          <span>{legalText}</span>
         </div>
       </div>
     </div>

@@ -1,14 +1,16 @@
 @mixin sectionTitle {
   position: relative;
-  background-color: var(--color-primary-bright-3);
   color: var(--color-primary-dark-2);
   box-shadow: var(--shadow-primary);
   height: 17rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--font-size-xl);
-  font-family: var(--font-demibold);
+  font-size: var(--font-size-2xl);
+  font-family: var(--font-light);
+  background-color: var(--color-primary-bright-3);
+  letter-spacing: 10px;
+  text-transform: uppercase;
 }
 
 @mixin sectionBody {
@@ -27,7 +29,7 @@
     content: '';
     border-bottom-left-radius: 13rem;
     border-bottom-right-radius: 13rem;
-    box-shadow: var(--shadow-primary-opposite-no-top);
+    box-shadow: var(--shadow-primary-opposite);
   }
 
   &::after {
@@ -53,5 +55,21 @@
     height: 1rem;
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 7px;
+  }
+}
+
+@mixin blobOverlay() {
+  position: relative;
+  .blobOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--color-primary-bright-3);
+    z-index: -1;
+    filter: drop-shadow(var(--shadow-primary));
   }
 }

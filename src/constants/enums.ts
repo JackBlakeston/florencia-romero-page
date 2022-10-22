@@ -1,3 +1,8 @@
+export enum LOCALES {
+  EN = 'en',
+  ES = 'es',
+}
+
 export enum SECTIONS {
   TITLE = 'title',
   SERVICES = 'services',

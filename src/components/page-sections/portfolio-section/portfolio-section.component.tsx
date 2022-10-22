@@ -26,6 +26,18 @@ const getCarrouselItemName = (imageUrl: string) => {
 const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
 
+  const title = intl.formatMessage({
+    id: 'app.sections.portfolio',
+  });
+
+  const portfolioLinkText = intl.formatMessage({
+    id: 'app.sections.portfolio.here',
+  });
+
+  const text = intl.formatMessage({
+    id: 'app.sections.portfolio.text',
+  });
+
   const renderPortfolioCarrousel = () => {
     const allImagesUrls = importAllImagesFromFolder(
       require.context('../../../assets/images/portfolio-items', false, /\.(png|jpe?g|svg)$/),
@@ -34,13 +46,14 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <Slider
         infinite
         arrows
-        slidesToShow={6}
-        focusOnSelect={false}
-        speed={400}
-        slidesToScroll={5}
+        slidesToShow={5}
+        slidesToScroll={4}
+        speed={1400}
         autoplay
-        autoplaySpeed={3000}
+        autoplaySpeed={4000}
         pauseOnHover
+        draggable
+        focusOnSelect={false}
       >
         {allImagesUrls.map((imageUrl, index) => {
           const itemName = getCarrouselItemName(imageUrl);
@@ -54,14 +67,6 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     );
   };
 
-  const title = intl.formatMessage({
-    id: 'app.sections.portfolio.sectionTitle',
-  });
-
-  const portfolioLinkText = intl.formatMessage({
-    id: 'app.sections.portfolio.atraeLink',
-  });
-
   return (
     <div ref={ref} className={classes.mainContainer}>
       <div className={classes.sectionTitle}>{title}</div>
@@ -70,7 +75,12 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
           <a href={ATRAE_URL} target='_blank' rel='noopener noreferrer'>
             <img src={AtraeLogo} alt='atrae-logo' />
           </a>
-          <span>{portfolioLinkText}</span>
+          <div className={classes.portfolioText}>
+            <a href={ATRAE_URL} target='_blank' rel='noopener noreferrer'>
+              {portfolioLinkText}
+            </a>
+            <span> {text}</span>
+          </div>
         </div>
         <div className={classes.carrouselContainer}>{renderPortfolioCarrousel()}</div>
       </div>

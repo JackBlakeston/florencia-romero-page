@@ -1,43 +1,42 @@
-import React, { createContext, ReactNode, useState } from "react";
+import React, { createContext, ReactNode, useState } from 'react';
 
-import { IntlProvider } from "react-intl";
+import { IntlProvider } from 'react-intl';
 
-import esMessages from "../translations/es.json";
-import enMessages from "../translations/en.json";
+import esMessages from '../translations/es.json';
+import enMessages from '../translations/en.json';
+import { LOCALES } from '../constants/enums';
 
 type JSONType = {
   [key: string]: string;
-}
+};
 
 type LocaleMessagesType = {
   [key: string]: JSONType;
-}
+};
 
 const messages: LocaleMessagesType = {
   en: enMessages as JSONType,
   es: esMessages as JSONType,
 };
 
-type LocaleType = "en" | "es";
-
 type LocaleContextType = {
-  locale: LocaleType;
-  setLocale: React.Dispatch<React.SetStateAction<LocaleType>>;
-}
+  locale: LOCALES;
+  setLocale: React.Dispatch<React.SetStateAction<LOCALES>>;
+};
 
 const defaultLocaleContextState: LocaleContextType = {
-  locale: "es",
-  setLocale: () => { }
-}
+  locale: LOCALES.ES,
+  setLocale: () => {},
+};
 
 const LocaleContext = createContext<LocaleContextType>(defaultLocaleContextState);
 
 type LocaleProviderProps = {
   children: ReactNode;
-}
+};
 
 function LocaleProvider({ children }: LocaleProviderProps) {
-  const [locale, setLocale] = useState<LocaleType>("es");
+  const [locale, setLocale] = useState<LOCALES>(LOCALES.ES);
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale }}>

@@ -10,21 +10,31 @@
 
     .portfolioLinkContainer {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: var(--spacing-xl);
       padding-bottom: var(--spacing-xl);
+
+      .portfolioText {
+        a {
+          color: var(--color-primary-dark-1);
+          text-underline-offset: 10%;
+        }
+      }
     }
 
     .carrouselContainer {
       padding: 0 var(--spacing-m);
 
       .carrouselItemContainer {
-        margin: 0 var(--spacing-6xs);
+        display: flex;
+        justify-content: center;
+        margin: 0 var(--spacing-s);
 
         .carrouselItemImage {
-          height: 14rem;
-          width: 10rem;
+          height: 20vw;
+          width: 15vw;
         }
       }
     }
