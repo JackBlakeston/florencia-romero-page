@@ -18,7 +18,7 @@
   padding: var(--section-body-padding);
 }
 
-@mixin cutOutTop($left) {
+@mixin cutOutTop($left, $lineHeight) {
   &::before {
     position: absolute;
     top: 0;
@@ -36,7 +36,7 @@
     position: absolute;
     top: 0;
     left: calc($left + 6rem + 1px);
-    height: 19rem;
+    height: $lineHeight;
     width: 2px;
     background-color: var(--color-background-1);
     content: '';

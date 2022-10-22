@@ -37,7 +37,7 @@
       }
     }
 
-    @include cutOutTop(calc(50% - 6rem));
+    @include cutOutTop(calc(50% - 6rem), 19rem);
   }
 
   .bottomSection {
