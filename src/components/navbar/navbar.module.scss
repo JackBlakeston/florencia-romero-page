@@ -39,15 +39,4 @@
       cursor: pointer;
     }
   }
-
-  .localePickerContainer {
-    position: absolute;
-    padding: inherit;
-    right: inherit;
-    display: flex;
-    gap: var(--spacing-4xs);
-    span {
-      cursor: pointer;
-    }
-  }
 }

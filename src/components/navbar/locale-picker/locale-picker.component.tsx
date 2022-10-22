@@ -1,27 +1,29 @@
 import React, { useContext } from 'react';
 
-import classes from '../navbar.module.scss';
+import classes from './locale-picker.module.scss';
 
 import { LocaleContext } from '../../../context/locale-context';
+
+import { LOCALES } from '../../../constants/enums';
 
 const LocalePicker = () => {
   const { setLocale } = useContext(LocaleContext);
 
   const handleEnglishClick = () => {
-    setLocale('en');
+    setLocale(LOCALES.EN);
   };
 
   const handleSpanishClick = () => {
-    setLocale('es');
+    setLocale(LOCALES.ES);
   };
 
   return (
     <div className={classes.localePickerContainer}>
       <span onClick={handleEnglishClick} className={classes.localePickerItem}>
-        EN
+        {LOCALES.EN.toUpperCase()}
       </span>
       <span onClick={handleSpanishClick} className={classes.localePickerItem}>
-        ES
+        {LOCALES.ES.toUpperCase()}
       </span>
     </div>
   );
