@@ -10,10 +10,18 @@
 
     .portfolioLinkContainer {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: var(--spacing-xl);
       padding-bottom: var(--spacing-xl);
+
+      .portfolioText {
+        a {
+          color: var(--color-primary-dark-1);
+          text-underline-offset: 10%;
+        }
+      }
     }
 
     .carrouselContainer {

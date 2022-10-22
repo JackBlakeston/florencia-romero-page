@@ -19,14 +19,12 @@
   "app.sections.services.text.title": "Text Translation",
   "app.sections.services.text.body": "Editorial translation, novels, articles, blogs, tourist guides, magazines, comics, plays...",
 
-  "app.sections.portfolio.sectionTitle": "PORTFOLIO",
-  "app.sections.portfolio.atraeLink": "Here you will find some of the movies, TV shows, and video games that I have worked on.",
+  "app.sections.portfolio.here": "Here",
+  "app.sections.portfolio.text": "you will find some of the movies, TV shows, and video games that I have worked on.",
 
-  "app.sections.aboutMe.sectionTitle": "ABOUT ME",
   "app.sections.aboutMe.translatorLanguages": "English and French into Spansih Translator",
   "app.sections.aboutMe.text": "My name is Florencia, and I am officially a translator since 2013, though my vocation started much earlier. \n\nSince I was a little girl I have loved reading, and back in 2003 I discovered that my favorite book saga [was launching in English before], so I thought: \"Why not helping those who can't experience something until it is not available in their own language?\". It was then when I fell in love with translation.\n\nWhile I was studying, I had the opportunity to translate all kinds of texts and content, but the challenges of translating movies or TV shows, the creativity, the play on words, puns and jokes, the difference between cultures and the subtleties of accessibility made me [caer en las redes] of audiovisual translation.\n\nWhen I finished University, I studied a Master's Degree (METAV), and I discovered a new passion for localization, specially for video game localization.\n\nIn addition to all that, my innate perfectionism, my attention to details, and [my liking of] orthography and grammar made me wonder that I might be a good editor and proofreader as well. And, in fact, my first job was as an audiobook editor.\n\nNow I can combine all my passions and I enjoy the fact that I can work on what I really love and that I always have a different project [entre manos].",
 
-  "app.sections.contact.sectionTitle": "CONTACT ME",
   "app.sections.contact.text": "Do you need a translation? Do you have any project in mind?",
   "app.sections.contact.letsTalk": "Let's talk!",
   "app.sections.contact.form.name": "Name",
