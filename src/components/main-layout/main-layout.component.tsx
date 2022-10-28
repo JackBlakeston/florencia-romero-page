@@ -10,7 +10,10 @@ import ServicesSection from '../page-sections/services-section/services-section.
 import TitleSection from '../page-sections/title-section/title-section.component';
 import Footer from '../footer/footer.component';
 
+import useIsInViewport from '../../hooks/useIsInViewport';
+
 import { SECTIONS } from '../../constants/enums';
+import { ViewportStatusType } from '../../types';
 
 const MainLayout = () => {
   const titleSectionRef = useRef<null | HTMLDivElement>(null);
@@ -18,6 +21,20 @@ const MainLayout = () => {
   const portfolioSectionRef = useRef<null | HTMLDivElement>(null);
   const aboutMeSectionRef = useRef<null | HTMLDivElement>(null);
   const contactSectionRef = useRef<null | HTMLDivElement>(null);
+
+  const isTitleSectionInViewport = useIsInViewport(titleSectionRef);
+  const isServicesSectionInViewport = useIsInViewport(servicesSectionRef);
+  const isPortfolioSectionInViewport = useIsInViewport(portfolioSectionRef);
+  const isAboutMeSectionInViewport = useIsInViewport(aboutMeSectionRef);
+  const isContactSectionInViewport = useIsInViewport(contactSectionRef);
+
+  let viewportStatus: ViewportStatusType = {
+    [SECTIONS.TITLE]: isTitleSectionInViewport,
+    [SECTIONS.SERVICES]: isServicesSectionInViewport,
+    [SECTIONS.PORTFOLIO]: isPortfolioSectionInViewport,
+    [SECTIONS.ABOUT_ME]: isAboutMeSectionInViewport,
+    [SECTIONS.CONTACT]: isContactSectionInViewport,
+  };
 
   const sectionRefs = {
     titleSectionRef,
@@ -31,11 +48,18 @@ const MainLayout = () => {
     const sectionRefName = `${section}SectionRef`;
     const thisSectionRef = sectionRefs[sectionRefName as keyof typeof sectionRefs];
     thisSectionRef?.current?.scrollIntoView({ behavior: 'smooth' });
+    viewportStatus = {
+      [SECTIONS.TITLE]: false,
+      [SECTIONS.SERVICES]: false,
+      [SECTIONS.PORTFOLIO]: false,
+      [SECTIONS.ABOUT_ME]: false,
+      [SECTIONS.CONTACT]: false,
+    };
   };
 
   return (
     <>
-      <Navbar goToSection={goToSection} />
+      <Navbar goToSection={goToSection} viewportStatus={viewportStatus} />
       <div className={classes.mainPageContainer}>
         <TitleSection ref={titleSectionRef} />
         <ServicesSection ref={servicesSectionRef} />
