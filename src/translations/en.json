@@ -7,9 +7,9 @@
   "app.sections.title.traductoraProfesional": "Audiovisual translator and localization specialist",
 
   "app.sections.services.audiovisual.title": "Audiovisual translation",
-  "app.sections.services.audiovisual.body": "Subtitling, dubbing and voice over of movies, TV shows, documentaries and any kind of audiovisual content",
+  "app.sections.services.audiovisual.body": "Subtitling, dubbing and voice over for movies, TV shows, documentaries and any kind of audiovisual content",
   "app.sections.services.accessibility.title": "Accessibility",
-  "app.sections.services.accessibility.body": "Audio description for persons who are blind or low vision, subtitles for the deaf and hard of hearing (SDH) and closed captions (CC) for movies, TV shows, TV programs, documentaries, etc.",
+  "app.sections.services.accessibility.body": "Audio description for visually impaired people, subtitles for the deaf and hard of hearing (SDH) and closed captions (CC) for movies, TV shows, TV programs, documentaries, etc.",
   "app.sections.services.videogames.title": "Video Game Localization",
   "app.sections.services.videogames.body": "Video game translation and adaptation (content, menus, credits, banners...)",
   "app.sections.services.software.title": "General localization",
@@ -23,9 +23,9 @@
   "app.sections.portfolio.text": "you will find some of the movies, TV shows, and video games that I have worked on.",
 
   "app.sections.aboutMe.translatorLanguages": "English and French into Spansih Translator",
-  "app.sections.aboutMe.text": "My name is Florencia, and I am officially a translator since 2013, though my vocation started much earlier. \n\nSince I was a little girl I have loved reading, and back in 2003 I discovered that my favorite book saga [was launching in English before], so I thought: \"Why not helping those who can't experience something until it is not available in their own language?\". It was then when I fell in love with translation.\n\nWhile I was studying, I had the opportunity to translate all kinds of texts and content, but the challenges of translating movies or TV shows, the creativity, the play on words, puns and jokes, the difference between cultures and the subtleties of accessibility made me [caer en las redes] of audiovisual translation.\n\nWhen I finished University, I studied a Master's Degree (METAV), and I discovered a new passion for localization, specially for video game localization.\n\nIn addition to all that, my innate perfectionism, my attention to details, and [my liking of] orthography and grammar made me wonder that I might be a good editor and proofreader as well. And, in fact, my first job was as an audiobook editor.\n\nNow I can combine all my passions and I enjoy the fact that I can work on what I really love and that I always have a different project [entre manos].",
+  "app.sections.aboutMe.text": "My name is Florencia, and I am officially a translator since 2013, though my vocation started much earlier. \n\nSince I was a little girl I have been passionate about reading, and back in 2003 I discovered that my favorite book saga was being released in English earlier than in Spanish, so I thought: \"How nice would it be to help people experience these stories in their own language?\". It was then when I fell in love with translation.\n\nWhile I was studying, I translated all kinds of texts and content. The challenges of translating movies and TV shows, the creativity, the play on words, the puns and jokes, the differences between cultures and the nuances of accessibility made me fall in love with audiovisual translation.\n\nWhen I finished University, I studied a Master's Degree (METAV), and I discovered a new passion for localization, specifically for video game localization.\n\nIn addition to all that, my innate perfectionism, my attention to details, and focus on orthography and grammar made me wonder if I might be a good editor and proofreader as well. And, in fact, my first job was as an audiobook editor.\n\nNow I combine all my passions and I enjoy the fact that I work on what I really love and always have a different project to tinker with.",
 
-  "app.sections.contact.text": "Do you need a translation? Do you have any project in mind?",
+  "app.sections.contact.text": "Do you need a translation? Do you have a project in mind?",
   "app.sections.contact.letsTalk": "Let's talk!",
   "app.sections.contact.form.name": "Name",
   "app.sections.contact.form.email": "E-Mail",
