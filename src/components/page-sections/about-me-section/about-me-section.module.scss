@@ -25,16 +25,6 @@
         width: 18rem;
       }
 
-      .nameText {
-        padding: var(--spacing-3xs) 0 var(--spacing-7xs);
-        font-family: var(--font-bold);
-      }
-
-      .languagesText {
-        font-family: var(--font-demibold);
-        font-size: var(--font-size-s);
-      }
-
       .linkRow {
         padding: var(--spacing-3xs) 0;
         display: flex;
@@ -52,6 +42,7 @@
     .textSectionContainer {
       padding: 0 var(--spacing-10xl);
       white-space: pre-line;
+      text-align: justify;
     }
   }
 }
