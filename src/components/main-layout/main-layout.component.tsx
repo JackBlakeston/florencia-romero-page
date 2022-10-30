@@ -9,6 +9,7 @@ import PortfolioSection from '../page-sections/portfolio-section/portfolio-secti
 import ServicesSection from '../page-sections/services-section/services-section.component';
 import TitleSection from '../page-sections/title-section/title-section.component';
 import Footer from '../footer/footer.component';
+import GoTopButton from '../go-top-button/go-top-button.component';
 
 import useIsInViewport from '../../hooks/useIsInViewport';
 
@@ -47,14 +48,17 @@ const MainLayout = () => {
   const goToSection = (section: SECTIONS) => {
     const sectionRefName = `${section}SectionRef`;
     const thisSectionRef = sectionRefs[sectionRefName as keyof typeof sectionRefs];
-    thisSectionRef?.current?.scrollIntoView({ behavior: 'smooth' });
-    viewportStatus = {
-      [SECTIONS.TITLE]: false,
-      [SECTIONS.SERVICES]: false,
-      [SECTIONS.PORTFOLIO]: false,
-      [SECTIONS.ABOUT_ME]: false,
-      [SECTIONS.CONTACT]: false,
-    };
+    var targetSection = thisSectionRef?.current;
+    if (targetSection) {
+      var headerOffset = 90;
+      var elementPosition = targetSection.getBoundingClientRect().top;
+      var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -68,6 +72,7 @@ const MainLayout = () => {
         <ContactSection ref={contactSectionRef} />
       </div>
       <Footer />
+      <GoTopButton goToSection={goToSection} isVisible={!isTitleSectionInViewport} />
     </>
   );
 };

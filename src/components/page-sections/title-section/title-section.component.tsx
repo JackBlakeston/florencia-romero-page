@@ -14,8 +14,8 @@ const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
 
   return (
-    <div className={classes.mainContainer}>
-      <div className={classes.titleContainer} ref={ref}>
+    <div className={classes.mainContainer} ref={ref}>
+      <div className={classes.titleContainer}>
         <img src={logo} alt='logo-florencia-romero' className={classes.logo} />
         <span>{NAME}</span>
         <span>
