@@ -17,9 +17,44 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     id: 'app.sections.aboutMe',
   });
 
-  const aboutMeText = intl.formatMessage({
-    id: 'app.sections.aboutMe.text',
+  const textPart1 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part1',
   });
+  const textPart2 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part2',
+  });
+  const textPart3 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part3',
+  });
+  const textPart4 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part4',
+  });
+  const textPart5 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part5',
+  });
+  const textPart6 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part6',
+  });
+  const textPart7 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part7',
+  });
+  const textPart8 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part8',
+  });
+  const textPart9 = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part9',
+  });
+
+  const renderAboutMeText = () => {
+    return (
+      <div className={classes.textSectionContainer}>
+        {textPart1} <b>{textPart2}</b>
+        {textPart3} <b>{textPart4}</b>
+        {textPart5} <b>{textPart6}</b>
+        {textPart7} <b>{textPart8}</b> {textPart9}
+      </div>
+    );
+  };
 
   return (
     <div ref={ref} className={classes.mainContainer}>
@@ -48,7 +83,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
             <img src={atraeLogoBig} alt='atrae' className={classes.atraeLogo} />
           </a>
         </div>
-        <div className={classes.textSectionContainer}>{aboutMeText}</div>
+        {renderAboutMeText()}
       </div>
     </div>
   );
