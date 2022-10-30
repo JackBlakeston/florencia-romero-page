@@ -8,17 +8,13 @@ import Icon from '../../icon/icon.component';
 
 import portrait from '../../../assets/images/portrait.jpg';
 import atraeLogoBig from '../../../assets/images/atrae-logo-big.png';
-import { ATRAE_URL, GMAIL_URL, LINKEDIN_URL, NAME, PROZ_URL, SKYPE_URL, TWITTER_URL } from '../../../constants/strings';
+import { ATRAE_URL, GMAIL_URL, LINKEDIN_URL, PROZ_URL, SKYPE_URL, TWITTER_URL } from '../../../constants/strings';
 
 const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
 
   const title = intl.formatMessage({
     id: 'app.sections.aboutMe',
-  });
-
-  const translatorLanguages = intl.formatMessage({
-    id: 'app.sections.aboutMe.translatorLanguages',
   });
 
   const aboutMeText = intl.formatMessage({
@@ -31,8 +27,6 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <div className={classes.sectionBodyContainer}>
         <div className={classes.linkSectionContainer}>
           <img src={portrait} alt='florencia-romero-portrait' className={classes.portrait} />
-          <span className={classes.nameText}>{NAME}</span>
-          <span className={classes.languagesText}>{translatorLanguages}</span>
           <div className={classes.linkRow}>
             <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer'>
               <Icon name='gmail' />

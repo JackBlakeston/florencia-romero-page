@@ -2,15 +2,30 @@
   position: relative;
   color: var(--color-primary-dark-2);
   box-shadow: var(--shadow-primary);
-  height: 17rem;
+  width: 30%;
+  height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
   font-family: var(--font-light);
   background-color: var(--color-primary-bright-3);
   letter-spacing: 10px;
   text-transform: uppercase;
+}
+
+@mixin sectionTitleRight {
+  padding-left: 2%;
+  border-bottom-left-radius: 120px;
+  border-top-left-radius: 15px;
+  align-self: flex-end;
+}
+
+@mixin sectionTitleLeft {
+  padding-right: 2%;
+  border-bottom-right-radius: 120px;
+  border-top-right-radius: 15px;
+  align-self: flex-start;
 }
 
 @mixin sectionBody {

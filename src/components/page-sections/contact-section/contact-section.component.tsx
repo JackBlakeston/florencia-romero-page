@@ -62,17 +62,19 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
               <span>{EMAIL}</span>
             </div>
           </div>
-          <form className={classes.formContainer} action={FORM_SUBMIT_URL} method='post' target='_blank'>
-            <label htmlFor='name'>{formLabelName}</label>
-            <input name='Name' id='name' type='text' required />
-            <label htmlFor='email'>{formLabelEmail}</label>
-            <input name='Email' id='email' type='email' required />
-            <label htmlFor='message'>{formLabelMessage}</label>
-            <textarea name='Message' id='message' required />
-            <button type='submit' className={classes.sendButton}>
-              {formSubmitText}
-            </button>
-          </form>
+          <div className={classes.formContainer}>
+            <form className={classes.form} action={FORM_SUBMIT_URL} method='post' target='_blank'>
+              <label htmlFor='name'>{formLabelName}</label>
+              <input name='Name' id='name' type='text' required />
+              <label htmlFor='email'>{formLabelEmail}</label>
+              <input name='Email' id='email' type='email' required />
+              <label htmlFor='message'>{formLabelMessage}</label>
+              <textarea name='Message' id='message' required />
+              <button type='submit' className={classes.sendButton}>
+                {formSubmitText}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

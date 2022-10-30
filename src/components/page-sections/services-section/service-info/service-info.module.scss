@@ -1,18 +1,28 @@
 .mainContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0 var(--spacing-2xs);
   gap: var(--spacing-xs);
-  text-align: center;
+  background-color: var(--color-primary-bright-4);
+  padding: var(--spacing-4xl) var(--spacing-6xl);
+  box-shadow: var(--shadow-primary);
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
 
   img {
     height: var(--services-icons-size);
     width: var(--services-icons-size);
+    align-self: center;
   }
 
-  :nth-child(2) {
+  .title {
     height: var(--spacing-xl);
-    font-family: var(--font-demibold);
+    font-family: var(--font-bold);
+  }
+
+  .bodyText,
+  .title {
+    padding-left: 10%;
   }
 }

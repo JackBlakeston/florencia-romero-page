@@ -3,6 +3,7 @@
 .mainContainer {
   .sectionTitle {
     @include mixins.sectionTitle;
+    @include mixins.sectionTitleLeft;
   }
 
   .sectionBodyContainer {

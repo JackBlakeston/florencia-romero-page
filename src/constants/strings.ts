@@ -1,6 +1,5 @@
 export const PHONE_NUMBER = '+34 610 999 034';
 export const EMAIL = 'fctraduce@gmail.com';
-export const NAME_CAPS = 'FLORENCIA ROMERO';
 export const NAME = 'Florencia Romero';
 export const TRANSLATOR_LANGUAGES = 'EN, FR > ES';
 

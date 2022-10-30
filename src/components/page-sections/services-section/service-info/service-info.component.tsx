@@ -25,8 +25,8 @@ const ServiceInfo = ({ service }: ServiceInfoProps) => {
   return (
     <div className={classes.mainContainer}>
       <Icon name={service} />
-      <span>{title}</span>
-      <span>{body}</span>
+      <span className={classes.title}>{title}</span>
+      <span className={classes.bodyText}>{body}</span>
     </div>
   );
 };
