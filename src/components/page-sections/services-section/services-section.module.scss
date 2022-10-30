@@ -1,39 +1,18 @@
 @use '../../../styles/mixins.scss';
 
 .mainContainer {
+  display: flex;
+  flex-direction: column;
+
   .sectionTitle {
     position: relative;
     @include mixins.sectionTitle;
-    @include mixins.cutOutTop(8rem, 16rem);
+    @include mixins.sectionTitleRight;
   }
 
   .sectionBodyContainer {
     @include mixins.sectionBody;
     display: flex;
     overflow: hidden;
-
-    &::before {
-      content: '';
-      width: 20rem;
-      height: 20rem;
-      border-radius: 100rem;
-      position: absolute;
-      right: -2rem;
-      bottom: -5rem;
-      background-color: var(--color-primary-bright-3);
-      z-index: -1;
-    }
-
-    &::after {
-      content: '';
-      width: 13rem;
-      height: 13rem;
-      border-radius: 100rem;
-      position: absolute;
-      left: 15rem;
-      bottom: -5rem;
-      background-color: var(--color-primary-bright-3);
-      z-index: -1;
-    }
   }
 }
