@@ -21,7 +21,7 @@
       width: 20rem;
 
       .portrait {
-        height: 65%;
+        height: 20rem;
         width: 20rem;
         border-radius: 10px;
         border-top-right-radius: 100px;
@@ -48,6 +48,10 @@
       padding: 0 var(--spacing-10xl);
       white-space: pre-line;
       text-align: justify;
+
+      b {
+        font-family: var(--font-bold);
+      }
     }
   }
 }
