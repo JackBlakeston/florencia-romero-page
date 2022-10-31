@@ -16,7 +16,11 @@ const useIsInViewport = (ref: RefObject<any>) => {
     };
   }, [ref, observer]);
 
-  return isInViewport;
+  if (ref.current) {
+    return isInViewport;
+  } else {
+    return true;
+  }
 };
 
 export default useIsInViewport;
