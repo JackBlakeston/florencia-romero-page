@@ -27,12 +27,10 @@
     }
 
     .carrouselContainer {
-      padding: 0 var(--spacing-m);
-
       .carrouselItemContainer {
-        display: flex;
+        display: flex !important;
         justify-content: center;
-        margin: 0 var(--spacing-xl);
+        align-items: center;
 
         .carrouselItemImage {
           height: 20vw;
