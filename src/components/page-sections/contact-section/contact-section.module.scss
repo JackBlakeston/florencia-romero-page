@@ -13,6 +13,8 @@
 
   .sectionBodyContainer {
     @include mixins.sectionBody;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +27,7 @@
       flex-direction: column;
       align-items: center;
       gap: var(--spacing-5xs);
-      margin: var(--spacing-2xs) 0 var(--spacing-m);
+      margin: 0 0 var(--spacing-10xl);
     }
 
     .sectionBodyColumnsContainer {

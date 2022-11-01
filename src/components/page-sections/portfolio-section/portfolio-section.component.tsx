@@ -46,8 +46,8 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <Slider
         infinite
         arrows
-        slidesToShow={5}
-        slidesToScroll={4}
+        slidesToShow={4}
+        slidesToScroll={2}
         speed={1400}
         autoplay
         autoplaySpeed={4000}

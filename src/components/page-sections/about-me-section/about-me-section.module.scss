@@ -12,17 +12,18 @@
     @include mixins.sectionBody;
     display: flex;
     flex-direction: row;
+    padding-top: 8rem;
 
     .linkSectionContainer {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      width: 20rem;
+      width: 25rem;
 
       .portrait {
-        height: 20rem;
-        width: 20rem;
+        height: 25rem;
+        width: 25rem;
         border-radius: 10px;
         border-top-right-radius: 100px;
         border-bottom-left-radius: 100px;
@@ -32,10 +33,11 @@
 
       .linkRow {
         padding: var(--spacing-3xs) 0;
+        margin-top: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 70%;
+        width: 59%;
       }
 
       .atraeLogo {
@@ -45,7 +47,7 @@
     }
 
     .textSectionContainer {
-      padding: 0 var(--spacing-10xl);
+      padding: 0 0 0 var(--spacing-20xl);
       white-space: pre-line;
       text-align: justify;
 

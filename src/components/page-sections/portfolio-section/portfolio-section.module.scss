@@ -8,6 +8,7 @@
 
   .sectionBodyContainer {
     @include mixins.sectionBody;
+    padding-top: 3rem;
 
     .portfolioLinkContainer {
       display: flex;
@@ -15,7 +16,7 @@
       align-items: center;
       justify-content: center;
       gap: var(--spacing-xl);
-      padding-bottom: var(--spacing-xl);
+      padding-bottom: var(--spacing-9xl);
 
       .portfolioText {
         a {
@@ -31,7 +32,7 @@
       .carrouselItemContainer {
         display: flex;
         justify-content: center;
-        margin: 0 var(--spacing-s);
+        margin: 0 var(--spacing-xl);
 
         .carrouselItemImage {
           height: 20vw;
