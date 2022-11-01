@@ -12,6 +12,8 @@
     padding: var(--section-body-padding);
     background-color: var(--color-primary-bright-3);
     box-shadow: var(--shadow-primary);
+    font-family: var(--font-light);
+    color: var(--color-secondary);
 
     .logo {
       position: absolute;
@@ -20,17 +22,18 @@
       height: 80%;
     }
 
-    span {
-      font-family: var(--font-light);
-      color: var(--color-secondary);
-    }
-
     :nth-child(2) {
       font-size: var(--font-size-3xl);
     }
 
+    :nth-child(3) {
+      text-align: center;
+      // text-align-last: center;
+    }
+
     :nth-child(3),
     :nth-child(4) {
+      white-space: pre-wrap;
       font-size: var(--font-size-xl);
     }
 
