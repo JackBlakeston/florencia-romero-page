@@ -1,22 +1,19 @@
 .mainContainer {
-  visibility: hidden;
   position: fixed;
-  bottom: 35px;
-  right: 30px;
-  width: 0;
-  height: 0;
-  background-color: black;
+  bottom: 12px;
+  right: 19px;
+  width: 1.5vw;
+  height: 1.5vw;
   z-index: 100;
-  border-radius: 4px;
-  box-shadow: var(--shadow-primary);
   opacity: 0;
   transition: opacity 0.3s;
+  background-color: transparent;
+  filter: drop-shadow(var(--shadow-primary));
+  pointer-events: none;
 
   &.visible {
-    width: 2.3vw;
-    height: 2.3vw;
     opacity: 0.3;
-    visibility: visible;
+    pointer-events: all;
   }
 
   &:hover {
@@ -26,18 +23,5 @@
 
   &:active {
     transform: translateY(3px) scale(1.07);
-  }
-
-  &::before {
-    content: '\2303';
-    color: var(--color-background-1);
-    width: 100%;
-    height: 100%;
-    display: block;
-    font-size: 220%;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }

@@ -15,8 +15,6 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-rows: 1fr;
-    grid-gap: var(--spacing-7xl);
-    padding-left: var(--spacing-10xl);
-    padding-right: var(--spacing-10xl);
+    grid-gap: var(--spacing-9xl);
   }
 }

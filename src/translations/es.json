@@ -4,20 +4,20 @@
   "app.sections.aboutMe": "Sobre mí",
   "app.sections.contact": "Contacto",
 
-  "app.sections.title.traductoraProfesional": "Traductora audiovisual y especialista en localización",
+  "app.sections.title.traductoraProfesional": "Traductora audiovisual\ny especialista en localización",
 
   "app.sections.services.audiovisual.title": "Traducción audiovisual",
   "app.sections.services.audiovisual.body": "Subtitulación, doblaje y voces superpuestas de películas, series, documentales y todo tipo de contenido audiovisual",
-  "app.sections.services.accessibility.title": "Accesibilidad",
+  "app.sections.services.accessibility.title": "Accesibilidad (AD, SPS)",
   "app.sections.services.accessibility.body": "Audiodescripción para ciegos y subtitulado para sordos de películas, series, documentales, etc.",
   "app.sections.services.videogames.title": "Localización de videojuegos",
   "app.sections.services.videogames.body": "Traducción y adaptación de videojuegos (contenido, menús, créditos, mensajes promocionales...).",
   "app.sections.services.software.title": "Localización general",
-  "app.sections.services.software.body": "Traducción y adaptación de sitios web, aplicaciones para móviles y software.",
+  "app.sections.services.software.body": "Traducción y adaptación de páginas web, aplicaciones para móviles, software, programas...",
   "app.sections.services.revision.title": "Revisión y corrección",
-  "app.sections.services.revision.body": "Revisión, edición y corrección ortotipográfica y de estilo de textos, artículos, libros, trabajos académicos, documentos, etc.",
+  "app.sections.services.revision.body": "Revisión, edición y corrección de estilo y ortotipográfica de textos, artículos, libros, trabajos académicos, documentos, etc.",
   "app.sections.services.text.title": "Traducción de textos",
-  "app.sections.services.text.body": "Traducción editorial, literaria, artículos, blogs, guías turísticas, revistas, cómics, obras de teatro...",
+  "app.sections.services.text.body": "Traducción editorial, literaria, artículos, blogs, revistas, guías turísticas, cómics, obras de teatro...",
 
   "app.sections.portfolio.here": "Aquí",
   "app.sections.portfolio.text": "encontrarás algunas de las obras audiovisuales y videojuegos en en los que he trabajado.",
@@ -25,7 +25,7 @@
   "app.sections.aboutMe.translatorLanguages": "Traductora de inglés y francés a español",
   "app.sections.aboutMe.text.part1": "Me llamo Florencia, y oficialmente soy traductora",
   "app.sections.aboutMe.text.part2": "desde 2013",
-  "app.sections.aboutMe.text.part3": ", aunque mi vocación empezó mucho antes. \n\nDesde pequeña me ha encantado leer, y allá por el año 2003 descubrí que mi saga de libros favorita llegaba antes en inglés a las tiendas, así que pensé: «¿Por qué no ayudar a quienes no pueden experimentar algo hasta que no está disponible en su idioma?». Fue entonces cuando me enamoré de la traducción.\n\nDurante la carrera tuve la oportunidad de traducir todo tipo de textos y contenido, pero los retos que plantean las series o las películas, la creatividad, los juegos de palabras, las bromas, el trasvase de una cultura a otra y las sutilezas de la accesibilidad hicieron que cayera en las redes de la",
+  "app.sections.aboutMe.text.part3": ", aunque mi vocación empezó mucho antes. \n\nDesde pequeña me ha encantado leer, y allá por el año 2003 descubrí que mi saga de libros favorita llegaba antes en inglés a las tiendas, así que pensé: «¿Por qué no ayudar a que la gente pueda vivir las mismas experiencias en su propio idioma?». Fue entonces cuando me enamoré de la traducción.\n\nDurante la carrera tuve la oportunidad de traducir todo tipo de textos y contenido, pero los retos que plantean las series o las películas, la creatividad, los juegos de palabras, las bromas, el trasvase de una cultura a otra y las sutilezas de la accesibilidad hicieron que cayera en las redes de la",
   "app.sections.aboutMe.text.part4": "traducción audiovisual",
   "app.sections.aboutMe.text.part5": ".\n\nTras la carrera, cursé el Máster Europeo en Traducción Audiovisual (METAV), y descubrí una nueva pasión por la localización, sobre todo por la de",
   "app.sections.aboutMe.text.part6": "videojuegos",
@@ -34,7 +34,7 @@
   "app.sections.aboutMe.text.part9": "de audiolibros.\n\nAhora combino todas mis pasiones y disfruto de poder dedicarme a lo que me gusta y tener siempre un proyecto distinto entre manos.",
 
   "app.sections.contact.text": "¿Necesitas una traducción? ¿Tienes algún proyecto en mente?",
-  "app.sections.contact.letsTalk": "¡Hablemos!",
+  "app.sections.contact.letsTalk": "¡Cuenta conmigo!",
   "app.sections.contact.form.name": "Nombre",
   "app.sections.contact.form.email": "Correo electrónico",
   "app.sections.contact.form.message": "Mensaje",
@@ -44,5 +44,7 @@
   "app.footer.webDesign": "Web",
   "app.footer.logoDesign": "Logotipo",
   "app.footer.photoDesign": "Fotografía",
-  "app.footer.legal": "Avisos legales / Política de cookies"
+  "app.footer.legal": "Aviso legal",
+  "app.footer.privacy": "Política de privacidad",
+  "app.footer.cookies": "Política de cookies"
 }

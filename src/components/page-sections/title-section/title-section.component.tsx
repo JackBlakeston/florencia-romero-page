@@ -5,8 +5,7 @@ import { useIntl } from 'react-intl';
 import classes from './title-section.module.scss';
 
 import logo from '../../../assets/images/logo.png';
-import pcSketch from '../../../assets/images/pc-sketch.png';
-import plantSketch from '../../../assets/images/plant-sketch.png';
+import bookSketch from '../../../assets/images/book-sketch.png';
 
 import { NAME, TRANSLATOR_LANGUAGES } from '../../../constants/strings';
 
@@ -26,8 +25,7 @@ const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         <span>{TRANSLATOR_LANGUAGES}</span>
       </div>
       <div className={classes.sketchesContainer}>
-        <img src={plantSketch} alt='plant-sketch' className={classes.plantSketch} />
-        <img src={pcSketch} alt='pc-sketch' className={classes.pcSketch} />
+        <img src={bookSketch} alt='book-sketch' className={classes.bookSketch} />
       </div>
     </div>
   );

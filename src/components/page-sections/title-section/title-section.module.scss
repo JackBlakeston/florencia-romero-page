@@ -9,9 +9,11 @@
     justify-content: center;
     gap: var(--spacing-xs);
     margin: 0 0 var(--spacing-2xl);
-    padding: var(--section-body-padding);
+    padding: var(--spacing-9xl) var(--spacing-20xl);
     background-color: var(--color-primary-bright-3);
     box-shadow: var(--shadow-primary);
+    font-family: var(--font-light);
+    color: var(--color-secondary);
 
     .logo {
       position: absolute;
@@ -20,28 +22,28 @@
       height: 80%;
     }
 
-    span {
-      font-family: var(--font-light);
-      color: var(--color-secondary);
-    }
-
     :nth-child(2) {
       font-size: var(--font-size-3xl);
     }
 
+    :nth-child(3) {
+      text-align: center;
+    }
+
     :nth-child(3),
     :nth-child(4) {
+      white-space: pre-wrap;
       font-size: var(--font-size-xl);
     }
 
     &::before {
+      content: '';
       position: absolute;
       bottom: -2px;
       right: 4rem;
       width: 12rem;
       height: 6rem;
       background-color: var(--color-background-1);
-      content: '';
       border-top-left-radius: 13rem;
       border-top-right-radius: 13rem;
       box-shadow: var(--shadow-primary-opposite);
@@ -65,14 +67,9 @@
     justify-content: center;
     padding-bottom: var(--spacing-2xl);
 
-    .pcSketch {
-      height: 20rem;
-      width: 40rem;
-    }
-    .plantSketch {
-      margin-top: 1rem;
-      height: 14rem;
-      width: 14rem;
+    .bookSketch {
+      height: 25rem;
+      width: 75rem;
     }
 
     &::before {
