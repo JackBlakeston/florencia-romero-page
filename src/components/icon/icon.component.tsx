@@ -15,6 +15,11 @@ import revision from '../../assets/icons/revision.png';
 import skype from '../../assets/icons/skype.png';
 import text from '../../assets/icons/text.png';
 import twitter from '../../assets/icons/twitter.png';
+import skypeGreen from '../../assets/icons/skype-green.png';
+import gmailGreen from '../../assets/icons/gmail-green.png';
+import twitterGreen from '../../assets/icons/twitter-green.png';
+import linkedinGreen from '../../assets/icons/linkedin-green.png';
+import prozGreen from '../../assets/icons/proz-green.png';
 
 import { SERVICES } from '../../constants/enums';
 
@@ -31,7 +36,12 @@ type IconNameType =
   | 'revision'
   | 'skype'
   | 'text'
-  | 'twitter';
+  | 'twitter'
+  | 'skypeGreen'
+  | 'gmailGreen'
+  | 'twitterGreen'
+  | 'linkedinGreen'
+  | 'prozGreen';
 
 type IconObjectType = {
   [key in IconNameType]: string;
@@ -51,6 +61,11 @@ const iconObject: IconObjectType = {
   skype,
   text,
   twitter,
+  skypeGreen,
+  gmailGreen,
+  twitterGreen,
+  linkedinGreen,
+  prozGreen,
 };
 
 type IconProps = {

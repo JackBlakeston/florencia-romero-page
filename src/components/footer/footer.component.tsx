@@ -24,7 +24,7 @@ const Footer = () => {
   const intl = useIntl();
 
   const followMeText = intl.formatMessage({
-    id: 'app.footer.followMe',
+    id: 'app.footer.letsTalk',
   });
 
   const webDesignTExt = `${intl.formatMessage({
@@ -43,22 +43,22 @@ const Footer = () => {
     <div className={classes.mainContainer}>
       <div className={classes.topSection}>
         <div className={classes.linksContainer}>
-          <span>{followMeText}:</span>
+          <span>{followMeText}</span>
           <div className={classes.iconsContainer}>
             <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer'>
-              <Icon name='gmail' />
+              <Icon name='gmailGreen' />
             </a>
             <a href={LINKEDIN_URL} target='_blank' rel='noopener noreferrer'>
-              <Icon name='linkedin' />
+              <Icon name='linkedinGreen' />
             </a>
             <a href={TWITTER_URL} target='_blank' rel='noopener noreferrer'>
-              <Icon name='twitter' />
+              <Icon name='twitterGreen' />
             </a>
             <a href={PROZ_URL} target='_blank' rel='noopener noreferrer'>
-              <Icon name='proz' />
+              <Icon name='prozGreen' />
             </a>
             <a href={SKYPE_URL} target='_blank' rel='noopener noreferrer'>
-              <Icon name='skype' />
+              <Icon name='skypeGreen' />
             </a>
           </div>
         </div>
