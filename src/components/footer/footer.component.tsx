@@ -46,13 +46,13 @@ const Footer = () => {
           <span>{followMeText}</span>
           <div className={classes.iconsContainer}>
             <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer'>
-              <Icon name='gmailGreen' />
+              <Icon name='gmailGreen' className='gmailIcon' />
             </a>
             <a href={LINKEDIN_URL} target='_blank' rel='noopener noreferrer'>
               <Icon name='linkedinGreen' />
             </a>
             <a href={TWITTER_URL} target='_blank' rel='noopener noreferrer'>
-              <Icon name='twitterGreen' />
+              <Icon name='twitterGreen' className='twitterIcon' />
             </a>
             <a href={PROZ_URL} target='_blank' rel='noopener noreferrer'>
               <Icon name='prozGreen' />

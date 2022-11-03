@@ -70,12 +70,13 @@ const iconObject: IconObjectType = {
 
 type IconProps = {
   name: IconNameType | SERVICES;
+  className?: string;
 };
 
-const Icon = ({ name }: IconProps) => {
+const Icon = ({ name, className }: IconProps) => {
   const imgSource = iconObject[name as IconNameType];
 
-  return <img src={imgSource} className={classes.icon} alt={name} />;
+  return <img src={imgSource} className={`${classes.icon} ${classes[className as string]}`} alt={name} />;
 };
 
 export default Icon;
