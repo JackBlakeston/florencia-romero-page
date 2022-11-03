@@ -16,11 +16,16 @@
       gap: var(--spacing-l);
       font-size: var(--font-size-xl);
       font-family: var(--font-light);
+      color: var(--color-primary-dark-2);
 
       .iconsContainer {
         display: flex;
         align-items: center;
         gap: var(--spacing-2xs);
+
+        svg {
+          box-shadow: var(--shadow-primary);
+        }
       }
     }
 
