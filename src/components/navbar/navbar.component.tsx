@@ -5,7 +5,6 @@ import { useIntl } from 'react-intl';
 import classes from './navbar.module.scss';
 
 import LocalePicker from './locale-picker/locale-picker.component';
-import Icon from '../icon/icon.component';
 import NavbarDropdown from './navbar-dropdown/navbar-dropdown.component';
 
 import { formatSectionName, getCurrentViewedSection } from './utils';
@@ -13,8 +12,8 @@ import useScreenType from '../../hooks/use-screen-type.hook';
 
 import { ReactComponent as BurgerMenuIcon } from '../../assets/icons/burger-menu.svg';
 import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
+import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
 
-import { EMAIL, PHONE_NUMBER } from '../../constants/strings';
 import { sections } from '../../constants/constants';
 
 import { SCREENS, SECTIONS } from '../../constants/enums';
@@ -66,15 +65,8 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
 
   return (
     <div className={classes.mainContainer}>
-      <div className={classes.contactInfoContainer}>
-        <div className={classes.contactInfo}>
-          <Icon name='phone' />
-          <span>{PHONE_NUMBER}</span>
-        </div>
-        <div className={classes.contactInfo}>
-          <Icon name='mail' />
-          <span>{EMAIL}</span>
-        </div>
+      <div className={classes.logoContainer}>
+        <Logo className={classes.logo} />
       </div>
       <div className={classes.sectionsContainer}>{renderSectionButtons()}</div>
       {renderLocalePicker()}

@@ -15,19 +15,14 @@
   right: 0;
   z-index: 100;
 
-  .contactInfoContainer {
+  .logoContainer {
     position: absolute;
-    left: 0;
     padding: inherit;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-5xs);
-    font-size: var(--font-size-xs);
+    left: 0;
 
-    .contactInfo {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-5xs);
+    .logo {
+      width: 60px;
+      fill: var(--color-primary);
     }
   }
 
@@ -68,17 +63,15 @@
   }
 }
 
-@media (max-width: 1240px) {
-  .mainContainer {
-    .contactInfoContainer {
-      display: none;
-    }
-  }
-}
-
 @media (max-width: 768px) {
   .mainContainer {
     justify-content: space-between;
+
+    .logoContainer {
+      position: relative;
+      padding: unset;
+    }
+
     .sectionsContainer {
       display: none;
     }
