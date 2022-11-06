@@ -2,7 +2,7 @@
   position: relative;
   color: var(--color-primary-dark-2);
   box-shadow: var(--shadow-primary);
-  width: 30%;
+  width: 600px;
   height: 15rem;
   display: flex;
   align-items: center;
@@ -19,6 +19,10 @@
   border-bottom-left-radius: 120px;
   border-top-left-radius: 15px;
   align-self: flex-end;
+
+  @media (max-width: 768px) {
+    width: 78%;
+  }
 }
 
 @mixin sectionTitleLeft {
@@ -26,6 +30,10 @@
   border-bottom-right-radius: 120px;
   border-top-right-radius: 15px;
   align-self: flex-start;
+
+  @media (max-width: 768px) {
+    width: 85%;
+  }
 }
 
 @mixin sectionBody {

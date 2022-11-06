@@ -21,7 +21,7 @@ const LocalePicker = () => {
   const esClasses = locale === LOCALES.ES ? classes.selectedLocale : '';
 
   return (
-    <div className={classes.localePickerContainer}>
+    <div className={classes.mainContainer}>
       <div onClick={handleEnglishClick} className={enClasses}>
         {LOCALES.EN.toUpperCase()}
       </div>

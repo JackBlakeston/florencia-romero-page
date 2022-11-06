@@ -51,4 +51,31 @@
       transform: scaleX(1);
     }
   }
+
+  .dropdownIcon {
+    display: none;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .mainContainer {
+    .contactInfoContainer {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    justify-content: space-between;
+    .sectionsContainer {
+      display: none;
+    }
+
+    .dropdownIcon {
+      display: initial;
+    }
+  }
 }

@@ -14,20 +14,16 @@
     box-shadow: var(--shadow-primary);
     font-family: var(--font-light);
     color: var(--color-secondary);
+    text-align: center;
 
     .logo {
       position: absolute;
-      top: 10%;
       left: 3%;
-      height: 80%;
+      height: 330px;
     }
 
     :nth-child(2) {
       font-size: var(--font-size-4xl);
-    }
-
-    :nth-child(3) {
-      text-align: center;
     }
 
     :nth-child(3),
@@ -68,8 +64,8 @@
     padding-bottom: var(--spacing-2xl);
 
     .bookSketch {
-      height: 25rem;
-      width: 75rem;
+      width: 70vw;
+      height: 90%;
     }
 
     &::before {
@@ -80,6 +76,18 @@
       background-color: var(--color-background-1);
       width: 188.5px;
       height: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  .mainContainer {
+    .titleContainer {
+      padding-top: var(--spacing-xs);
+
+      .logo {
+        position: relative;
+      }
     }
   }
 }

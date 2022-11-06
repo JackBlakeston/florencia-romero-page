@@ -1,4 +1,4 @@
-.localePickerContainer {
+.mainContainer {
   position: absolute;
   padding: inherit;
   right: inherit;
@@ -16,5 +16,12 @@
 
   .selectedLocale {
     border: 2px solid var(--color-primary-dark-1);
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    position: relative;
+    padding: 0;
   }
 }
