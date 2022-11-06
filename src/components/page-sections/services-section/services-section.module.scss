@@ -18,3 +18,30 @@
     grid-gap: var(--spacing-9xl);
   }
 }
+
+@media (max-width: 1240px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      padding-left: 80px;
+      padding-right: 80px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

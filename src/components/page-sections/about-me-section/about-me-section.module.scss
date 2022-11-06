@@ -12,7 +12,6 @@
     @include mixins.sectionBody;
     display: flex;
     flex-direction: row;
-    padding-top: 8rem;
 
     .linkSectionContainer {
       display: flex;
@@ -25,9 +24,9 @@
         height: 25rem;
         width: 25rem;
         border-radius: 10px;
-        border-top-right-radius: 100px;
-        border-bottom-left-radius: 100px;
-        border-top-left-radius: 100px;
+        border-top-right-radius: 25%;
+        border-bottom-left-radius: 25%;
+        border-top-left-radius: 25%;
         box-shadow: var(--shadow-primary);
       }
 
@@ -53,6 +52,38 @@
 
       b {
         font-family: var(--font-bold);
+      }
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      flex-direction: column;
+      align-items: center;
+
+      .textSectionContainer {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    .sectionBodyContainer {
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    .linkSectionContainer {
+      width: 100% !important;
+      .portrait {
+        width: 100% !important;
+        height: unset !important;
       }
     }
   }

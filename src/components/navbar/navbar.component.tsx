@@ -4,8 +4,10 @@ import { useIntl } from 'react-intl';
 
 import classes from './navbar.module.scss';
 
-import Icon from '../icon/icon.component';
 import LocalePicker from './locale-picker/locale-picker.component';
+import Icon from '../icon/icon.component';
+
+import { ReactComponent as BurgerMenuIcon } from '../../assets/icons/burger-menu.svg';
 
 import { EMAIL, PHONE_NUMBER } from '../../constants/strings';
 import { SECTIONS } from '../../constants/enums';
@@ -55,6 +57,7 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
       </div>
       <div className={classes.sectionsContainer}>{renderSectionButtons()}</div>
       <LocalePicker />
+      <BurgerMenuIcon className={classes.dropdownIcon} />
     </div>
   );
 };

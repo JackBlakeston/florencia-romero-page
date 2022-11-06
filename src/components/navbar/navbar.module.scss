@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: var(--navbar-height);
-  padding: var(--navbar-padding-vertical) 5rem;
+  padding: var(--navbar-padding-vertical) 3rem;
   background-color: rgb(255, 255, 255);
   box-shadow: var(--shadow-primary);
   position: fixed;
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-5xs);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xs);
 
     .contactInfo {
       display: flex;
@@ -49,6 +49,33 @@
 
     .currentSection::after {
       transform: scaleX(1);
+    }
+  }
+
+  .dropdownIcon {
+    display: none;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .mainContainer {
+    .contactInfoContainer {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    justify-content: space-between;
+    .sectionsContainer {
+      display: none;
+    }
+
+    .dropdownIcon {
+      display: initial;
     }
   }
 }

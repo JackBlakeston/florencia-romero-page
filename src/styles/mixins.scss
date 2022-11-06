@@ -2,16 +2,24 @@
   position: relative;
   color: var(--color-primary-dark-2);
   box-shadow: var(--shadow-primary);
-  width: 30%;
+  width: 600px;
   height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-5xl);
   font-family: var(--font-light);
   background-color: var(--color-primary-bright-3);
   letter-spacing: 10px;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    width: 78%;
+    font-size: var(--font-size-4xl);
+  }
+  @media (max-width: 480px) {
+    width: 90%;
+    font-size: var(--font-size-3xl);
+  }
 }
 
 @mixin sectionTitleRight {
@@ -55,6 +63,10 @@
     width: 2px;
     background-color: var(--color-background-1);
     content: '';
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
