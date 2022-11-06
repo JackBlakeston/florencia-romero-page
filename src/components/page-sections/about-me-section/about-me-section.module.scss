@@ -12,7 +12,6 @@
     @include mixins.sectionBody;
     display: flex;
     flex-direction: row;
-    padding-top: 8rem;
 
     .linkSectionContainer {
       display: flex;
@@ -74,6 +73,18 @@
 @media (max-width: 768px) {
   .mainContainer {
     .sectionBodyContainer {
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    .linkSectionContainer {
+      width: 100% !important;
+      .portrait {
+        width: 100% !important;
+        height: unset !important;
+      }
     }
   }
 }

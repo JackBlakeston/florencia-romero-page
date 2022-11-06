@@ -22,6 +22,7 @@
     position: relative;
 
     .sectionSubtitle {
+      text-align: center;
       font-size: var(--font-size-l);
       display: flex;
       flex-direction: column;
@@ -42,6 +43,7 @@
         align-items: center;
         justify-content: center;
         width: 40%;
+        height: 210px;
         gap: var(--spacing-s);
         background-color: var(--color-primary-bright-4);
         margin: 70px 0;
@@ -50,7 +52,6 @@
         border-bottom-right-radius: 6rem;
         border-top-left-radius: 6rem;
         box-shadow: var(--shadow-primary);
-        max-height: initial;
 
         .contactInfo {
           display: flex;
@@ -66,7 +67,7 @@
         .form {
           display: flex;
           flex-direction: column;
-          width: 65%;
+          width: 480px;
 
           input,
           textarea {
@@ -130,5 +131,90 @@
       }
     }
     @include mixins.bottomShadowBlocker(calc(50% - 96.7px));
+  }
+}
+
+@media (max-width: 1240px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      padding-top: 4rem;
+      padding-bottom: 8rem;
+
+      .sectionSubtitle {
+        margin-bottom: var(--spacing-5xl);
+      }
+
+      .sectionBodyColumnsContainer {
+        .contactInfoContainer {
+        }
+        .formContainer {
+          .form {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      padding-bottom: 6rem;
+      .sectionSubtitle {
+        margin-bottom: var(--spacing-xl);
+      }
+      .sectionBodyColumnsContainer {
+        flex-direction: column;
+        align-items: center;
+        .contactInfoContainer {
+          width: 400px;
+          margin: 0 0 var(--spacing-l);
+        }
+        .formContainer {
+          width: 100%;
+          .form {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      .sectionSubtitle {
+      }
+      .sectionBodyColumnsContainer {
+        .contactInfoContainer {
+        }
+        .formContainer {
+          .form {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      .sectionSubtitle {
+      }
+      .sectionBodyColumnsContainer {
+        .contactInfoContainer {
+          width: 100%;
+        }
+        .formContainer {
+          .form {
+            width: 95%;
+          }
+        }
+      }
+    }
   }
 }

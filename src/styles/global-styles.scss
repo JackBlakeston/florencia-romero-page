@@ -37,8 +37,10 @@
   --font-size-l: 1.5rem;
   --font-size-xl: 1.75rem;
   --font-size-2xl: 2rem;
-  --font-size-3xl: 3.5rem;
-  --font-size-4xl: 4rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 3.5rem;
+  --font-size-6xl: 4rem;
   // --viewport-factor: 0.65898vw;
   // --font-size-xs: calc(0.25rem + var(--viewport-factor));
   // --font-size-s: calc(0.375rem + var(--viewport-factor));
@@ -46,8 +48,8 @@
   // --font-size-l: calc(0.75rem + var(--viewport-factor));
   // --font-size-xl: calc(1rem + var(--viewport-factor));
   // --font-size-2xl: calc(1.5rem + var(--viewport-factor));
-  // --font-size-3xl: calc(2.75rem + var(--viewport-factor));
-  // --font-size-4xl: calc(3.25rem + var(--viewport-factor));
+  // --font-size-5xl: calc(2.75rem + var(--viewport-factor));
+  // --font-size-6xl: calc(3.25rem + var(--viewport-factor));
 
   // Sizing
   --icon-size: 1.5rem;
@@ -80,6 +82,7 @@
   --spacing-8xl: 4.25rem;
   --spacing-9xl: 4.5rem;
   --spacing-10xl: 6rem;
+  --spacing-11xl: 7rem;
   --spacing-20xl: 12rem;
 
   // Colors
@@ -123,12 +126,18 @@ body {
 
 @media (max-width: 1240px) {
   :root {
-    --section-body-padding: 8rem var(--spacing-3xl);
+    --section-body-padding: 6rem var(--spacing-3xl);
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --section-body-padding: 8rem var(--spacing-s);
+    --section-body-padding: 4rem var(--spacing-s);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-body-padding: 4rem var(--spacing-4xs);
   }
 }

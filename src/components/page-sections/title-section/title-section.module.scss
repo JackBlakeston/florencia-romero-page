@@ -23,7 +23,7 @@
     }
 
     :nth-child(2) {
-      font-size: var(--font-size-4xl);
+      font-size: var(--font-size-6xl);
     }
 
     :nth-child(3),
@@ -87,6 +87,41 @@
 
       .logo {
         position: relative;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    .titleContainer {
+      padding-left: var(--spacing-l);
+      padding-right: var(--spacing-l);
+      padding-bottom: var(--spacing-11xl);
+
+      &::before {
+        right: calc(50% - 6rem);
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .sketchesContainer {
+      &::before {
+        right: calc(50% - 6rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    .titleContainer {
+      .logo {
+        width: 100%;
+        height: 100%;
       }
     }
   }

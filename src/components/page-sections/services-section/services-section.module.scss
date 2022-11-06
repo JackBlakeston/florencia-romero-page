@@ -36,3 +36,12 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .mainContainer {
+    .sectionBodyContainer {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

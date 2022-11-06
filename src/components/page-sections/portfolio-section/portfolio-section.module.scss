@@ -33,8 +33,8 @@
         align-items: center;
 
         .carrouselItemImage {
-          height: 20vw;
-          width: 15vw;
+          height: 327px;
+          width: 245px;
         }
       }
     }
@@ -43,8 +43,20 @@
 
 @media (max-width: 1240px) {
   .mainContainer {
+    .sectionBodyContainer {
+      .portfolioLinkContainer {
+        padding-bottom: var(--spacing-m);
+      }
+      .carrouselContainer {
+        padding: 5%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .mainContainer {
     .carrouselContainer {
-      padding: 5%;
+      padding: 0 10%;
     }
   }
 }
