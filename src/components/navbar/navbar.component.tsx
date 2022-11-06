@@ -8,13 +8,17 @@ import LocalePicker from './locale-picker/locale-picker.component';
 import Icon from '../icon/icon.component';
 import NavbarDropdown from './navbar-dropdown/navbar-dropdown.component';
 
+import { formatSectionName, getCurrentViewedSection } from './utils';
+import useScreenType from '../../hooks/use-screen-type.hook';
+
 import { ReactComponent as BurgerMenuIcon } from '../../assets/icons/burger-menu.svg';
 import { ReactComponent as CloseIcon } from '../../assets/icons/close.svg';
 
-import { EMAIL, PHONE_NUMBER, sections } from '../../constants/strings';
-import { SECTIONS } from '../../constants/enums';
+import { EMAIL, PHONE_NUMBER } from '../../constants/strings';
+import { sections } from '../../constants/constants';
+
+import { SCREENS, SECTIONS } from '../../constants/enums';
 import { ViewportStatusType } from '../../types';
-import { formatSectionName, getCurrentViewedSection } from './utils';
 
 type NavbarProps = {
   goToSection: (section: SECTIONS) => void;
@@ -23,6 +27,8 @@ type NavbarProps = {
 
 const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
   const intl = useIntl();
+  const screenType = useScreenType();
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleBurgerMenuClick = () => {
@@ -50,6 +56,14 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
     }
   };
 
+  const renderLocalePicker = () => {
+    if (screenType === SCREENS.MOBILE || screenType === SCREENS.TABLET) {
+      return null;
+    } else {
+      return <LocalePicker />;
+    }
+  };
+
   return (
     <div className={classes.mainContainer}>
       <div className={classes.contactInfoContainer}>
@@ -63,7 +77,7 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
         </div>
       </div>
       <div className={classes.sectionsContainer}>{renderSectionButtons()}</div>
-      <LocalePicker />
+      {renderLocalePicker()}
       <div className={classes.dropdownIconContainer} onClick={handleBurgerMenuClick}>
         {renderDropdownButton()}
       </div>

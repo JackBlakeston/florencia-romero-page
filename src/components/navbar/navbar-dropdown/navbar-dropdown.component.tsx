@@ -3,12 +3,14 @@ import { useIntl } from 'react-intl';
 
 import classes from './navbar-dropdown.module.scss';
 
+import LocalePicker from '../locale-picker/locale-picker.component';
+
 import { formatSectionName } from '../utils';
 
-import { sections } from '../../../constants/strings';
+import { sections } from '../../../constants/constants';
+
 import { SECTIONS } from '../../../constants/enums';
 import { ViewportStatusType } from '../../../types';
-import LocalePicker from '../locale-picker/locale-picker.component';
 
 type NavbarDropdownProps = {
   isOpen: boolean;

@@ -1,6 +1,6 @@
 .mainContainer {
   position: absolute;
-  top: var(--navbar-total-height);
+  top: calc(var(--navbar-total-height) - 1px);
   left: 0;
   right: 0;
   display: flex;
