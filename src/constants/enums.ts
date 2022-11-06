@@ -19,3 +19,18 @@ export enum SERVICES {
   EDITING = 'revision',
   TEXT = 'text',
 }
+
+export enum BREAKPOINTS {
+  SCREEN = 1240,
+  SMALL_SCREEN = 1024,
+  TABLET = 768,
+  MOBILE = 480,
+}
+
+export enum SCREENS {
+  BIG_SCREEN = 'big screen',
+  SCREEN = 'screen',
+  SMALL_SCREEN = 'small screen',
+  TABLET = 'tablet',
+  MOBILE = 'mobile',
+}

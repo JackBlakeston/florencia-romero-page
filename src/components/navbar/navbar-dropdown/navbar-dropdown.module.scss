@@ -1,0 +1,29 @@
+.mainContainer {
+  position: absolute;
+  top: calc(var(--navbar-total-height) - 1px);
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding-bottom: var(--spacing-2xs);
+  box-shadow: var(--shadow-primary);
+
+  .sectionButton {
+    padding: var(--spacing-2xs) 0;
+    color: var(--color-primary-dark-1);
+
+    &::after {
+      display: block;
+      border-bottom: solid 1px var(--color-primary-dark-1);
+      content: '';
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
+    }
+  }
+
+  .currentSection::after {
+    transform: scaleX(1);
+  }
+}
