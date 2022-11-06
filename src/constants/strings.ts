@@ -1,3 +1,5 @@
+import { SECTIONS } from './enums';
+
 export const PHONE_NUMBER = '+34 610 999 034';
 export const EMAIL = 'fctraduce@gmail.com';
 export const NAME = 'Florencia Romero';
@@ -19,3 +21,5 @@ export const LOGO_DESIGNER = 'Mario Figueredo';
 //Web Mario: https://marioefe.com
 export const PHOTOGRAPHY = 'Sara Garrido';
 //Instagram Sara: https://www.instagram.com/saaragf
+
+export const sections = Object.values(SECTIONS).slice(1);
