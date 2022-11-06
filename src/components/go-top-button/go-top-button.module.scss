@@ -6,7 +6,7 @@
   height: 1.5vw;
   z-index: 100;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
   background-color: transparent;
   filter: drop-shadow(var(--shadow-primary));
   pointer-events: none;

@@ -23,7 +23,7 @@
     }
 
     :nth-child(2) {
-      font-size: var(--font-size-3xl);
+      font-size: var(--font-size-4xl);
     }
 
     :nth-child(3) {
@@ -33,7 +33,7 @@
     :nth-child(3),
     :nth-child(4) {
       white-space: pre-wrap;
-      font-size: var(--font-size-xl);
+      font-size: var(--font-size-2xl);
     }
 
     &::before {

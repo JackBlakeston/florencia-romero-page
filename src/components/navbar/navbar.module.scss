@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: var(--navbar-height);
-  padding: var(--navbar-padding-vertical) 5rem;
+  padding: var(--navbar-padding-vertical) 3rem;
   background-color: rgb(255, 255, 255);
   box-shadow: var(--shadow-primary);
   position: fixed;
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-5xs);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xs);
 
     .contactInfo {
       display: flex;

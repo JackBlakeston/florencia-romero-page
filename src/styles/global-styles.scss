@@ -31,14 +31,14 @@
   --font-light: visbyr-light;
 
   // Font sizing
-  --viewport-factor: 0.65898vw;
-  --font-size-xs: calc(0.25rem + var(--viewport-factor));
-  --font-size-s: calc(0.375rem + var(--viewport-factor));
-  --font-size-m: calc(0.5rem + var(--viewport-factor)); // 16px / 1rem with a vw of 1214px;
-  --font-size-l: calc(0.75rem + var(--viewport-factor));
-  --font-size-xl: calc(1rem + var(--viewport-factor));
-  --font-size-2xl: calc(1.5rem + var(--viewport-factor));
-  --font-size-3xl: calc(2.75rem + var(--viewport-factor));
+  --font-size-xs: 1rem;
+  --font-size-s: 1.125rem;
+  --font-size-m: 1.25rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3.5rem;
+  --font-size-4xl: 4rem;
 
   // Sizing
   --icon-size: 1.5rem;
