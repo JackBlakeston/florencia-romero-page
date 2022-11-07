@@ -26,7 +26,7 @@ type NavbarProps = {
 
 const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
   const intl = useIntl();
-  const screenType = useScreenType();
+  const { screenType } = useScreenType();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
