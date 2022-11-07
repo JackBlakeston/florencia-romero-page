@@ -34,13 +34,17 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const handleSectionClick = (section: SECTIONS) => () => {
+    goToSection(section);
+  };
+
   const renderSectionButtons = () => {
     const currentViewedSection = getCurrentViewedSection(viewportStatus);
     return sections.map((section) => {
       const sectionButtonClasses = currentViewedSection === section ? classes.currentSection : '';
       const sectionName = formatSectionName(intl, section);
       return (
-        <div className={sectionButtonClasses} key={sectionName} onClick={() => goToSection(section)}>
+        <div className={sectionButtonClasses} key={sectionName} onClick={handleSectionClick(section)}>
           {sectionName}
         </div>
       );
@@ -66,19 +70,14 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
   return (
     <div className={classes.mainContainer}>
       <div className={classes.logoContainer}>
-        <Logo className={classes.logo} />
+        <Logo className={classes.logo} onClick={handleSectionClick(SECTIONS.TITLE)} />
       </div>
       <div className={classes.sectionsContainer}>{renderSectionButtons()}</div>
       {renderLocalePicker()}
       <div className={classes.dropdownIconContainer} onClick={handleBurgerMenuClick}>
         {renderDropdownButton()}
       </div>
-      <NavbarDropdown
-        setIsOpen={setIsDropdownOpen}
-        isOpen={isDropdownOpen}
-        goToSection={goToSection}
-        viewportStatus={viewportStatus}
-      />
+      <NavbarDropdown setIsOpen={setIsDropdownOpen} isOpen={isDropdownOpen} goToSection={goToSection} />
     </div>
   );
 };

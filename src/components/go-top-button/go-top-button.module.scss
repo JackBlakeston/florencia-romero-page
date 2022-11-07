@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 12px;
   right: 19px;
-  width: 1.5vw;
-  height: 1.5vw;
+  width: 28.5px;
+  height: 28.5px;
   z-index: 100;
   opacity: 0;
   transition: all 0.3s;
@@ -23,5 +23,11 @@
 
   &:active {
     transform: translateY(3px) scale(1.07);
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    display: none;
   }
 }
