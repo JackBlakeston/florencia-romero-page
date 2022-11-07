@@ -18,17 +18,20 @@ const useScreenType = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  let screenType: SCREENS;
   if (windowWidth > BREAKPOINTS.SCREEN) {
-    return SCREENS.BIG_SCREEN;
+    screenType = SCREENS.BIG_SCREEN;
   } else if (windowWidth > BREAKPOINTS.SMALL_SCREEN) {
-    return SCREENS.SCREEN;
+    screenType = SCREENS.SCREEN;
   } else if (windowWidth > BREAKPOINTS.TABLET) {
-    return SCREENS.SMALL_SCREEN;
+    screenType = SCREENS.SMALL_SCREEN;
   } else if (windowWidth > BREAKPOINTS.MOBILE) {
-    return SCREENS.TABLET;
+    screenType = SCREENS.TABLET;
   } else {
-    return SCREENS.MOBILE;
+    screenType = SCREENS.MOBILE;
   }
+
+  return { windowWidth, screenType };
 };
 
 export default useScreenType;
