@@ -6,7 +6,7 @@ import classes from './title-section.module.scss';
 
 import logo from '../../../assets/images/logo.png';
 
-import { NAME /* TRANSLATOR_LANGUAGES */ } from '../../../constants/strings';
+import { NAME } from '../../../constants/strings';
 
 const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
@@ -75,7 +75,6 @@ const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
             <p>{wordSoup3a}</p>
             <p>{wordSoup3b}</p>
           </div>
-          <div>{'TEST'}</div>
           <div className={classes.wordSoup4}>
             <p>{wordSoup4a}</p>
             <p>{wordSoup4b}</p>
