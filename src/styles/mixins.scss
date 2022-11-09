@@ -2,8 +2,8 @@
   position: relative;
   color: var(--color-primary-dark-2);
   box-shadow: var(--shadow-primary);
-  width: 600px;
-  height: 15rem;
+  width: 37.5rem;
+  height: 12rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +12,7 @@
   background-color: var(--color-primary-bright-3);
   letter-spacing: 10px;
   text-transform: uppercase;
+  background-size: cover;
   @media (max-width: 768px) {
     width: 78%;
     font-size: var(--font-size-4xl);
@@ -24,16 +25,18 @@
 
 @mixin sectionTitleRight {
   padding-left: 2%;
-  border-bottom-left-radius: 120px;
-  border-top-left-radius: 15px;
+  border-bottom-left-radius: 130px;
+  border-top-left-radius: 20px;
   align-self: flex-end;
+  background-image: url(../assets/backgrounds/section-gradient-top.svg);
 }
 
 @mixin sectionTitleLeft {
   padding-right: 2%;
-  border-bottom-right-radius: 120px;
-  border-top-right-radius: 15px;
+  border-bottom-right-radius: 130px;
+  border-top-right-radius: 20px;
   align-self: flex-start;
+  background-image: url(../assets/backgrounds/section-gradient-bottom.svg);
 }
 
 @mixin sectionBody {
@@ -90,12 +93,9 @@
   .blobOverlay {
     position: absolute;
     top: 0;
-    right: 0;
-    left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
-    color: var(--color-primary-bright-3);
     z-index: -1;
     filter: drop-shadow(var(--shadow-primary));
   }

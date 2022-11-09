@@ -10,11 +10,13 @@
     gap: var(--spacing-xs);
     margin: 0 0 var(--spacing-2xl);
     padding: var(--spacing-9xl) var(--spacing-20xl);
-    background-color: var(--color-primary-bright-3);
     box-shadow: var(--shadow-primary);
     font-family: var(--font-light);
     color: var(--color-secondary);
     text-align: center;
+    // background-color: var(--color-primary-bright-3);
+    background-image: url(../../../assets/backgrounds/waves-header.svg);
+    background-size: cover;
 
     .logo {
       position: absolute;
@@ -23,13 +25,13 @@
     }
 
     :nth-child(2) {
-      font-size: var(--font-size-6xl);
+      font-size: var(--font-size-7xl);
     }
 
     :nth-child(3),
     :nth-child(4) {
       white-space: pre-wrap;
-      font-size: var(--font-size-2xl);
+      font-size: var(--font-size-3xl);
     }
 
     &::before {
@@ -49,23 +51,79 @@
       position: absolute;
       bottom: 0;
       right: 10rem;
-      height: 18rem;
+      height: 20rem;
       width: 2px;
       background-color: var(--color-background-1);
       content: '';
     }
   }
 
-  .sketchesContainer {
+  .wordSoupContainer {
     position: relative;
-    z-index: 2;
     display: flex;
-    justify-content: center;
-    padding-bottom: var(--spacing-2xl);
+    flex-direction: column;
+    z-index: 2;
+    padding: var(--spacing-2xs) var(--spacing-20xl);
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-secondary);
+    font-size: var(--font-size-2xl);
+    font-family: var(--font-light);
+    gap: var(--spacing-2xl);
+    line-height: 37px;
 
-    .bookSketch {
-      width: 70vw;
-      height: 90%;
+    p {
+      margin: 0;
+    }
+
+    b {
+      font-family: var(--font-demibold);
+    }
+
+    .wordSoupContainer1 {
+      display: flex;
+      justify-content: space-between;
+
+      .wordSoup1 {
+        p {
+          &:first-child {
+            margin-left: 8.533vw;
+          }
+          &:nth-child(2) {
+            margin-left: 4.267vw;
+          }
+        }
+      }
+
+      .wordSoup2 {
+        text-align: right;
+        p {
+          &:first-child {
+            margin-right: 8.533vw;
+          }
+          &:nth-child(2) {
+            margin-right: 4.267vw;
+          }
+        }
+      }
+    }
+
+    .wordSoupContainer2 {
+      display: flex;
+      justify-content: space-evenly;
+
+      .wordSoup3 {
+        text-align: center;
+      }
+      .wordSoup4 {
+        text-align: center;
+      }
+    }
+
+    .wordSoupContainer3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     &::before {
@@ -80,6 +138,22 @@
   }
 }
 
+@media (max-width: 1600px) {
+  .mainContainer {
+    .wordSoupContainer {
+      padding: var(--spacing-2xs) var(--spacing-10xl);
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .mainContainer {
+    .wordSoupContainer {
+      padding: var(--spacing-2xs) var(--spacing-3xl);
+    }
+  }
+}
+
 @media (max-width: 1240px) {
   .mainContainer {
     .titleContainer {
@@ -88,6 +162,52 @@
       .logo {
         position: relative;
         left: 0;
+      }
+    }
+
+    .wordSoupContainer {
+      padding: var(--spacing-2xs) var(--spacing-xs);
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .mainContainer {
+    .wordSoupContainer {
+      padding: var(--spacing-2xs) var(--spacing-3xl);
+      gap: var(--spacing-xs);
+
+      div {
+        gap: var(--spacing-xs);
+      }
+
+      .wordSoupContainer1 {
+        flex-direction: column;
+        p {
+          margin: 0 !important;
+        }
+
+        .wordSoup2 {
+          text-align: right;
+          p {
+            &:first-child {
+              margin-right: 8.533vw;
+            }
+            &:nth-child(2) {
+              margin-right: 4.267vw;
+            }
+          }
+        }
+      }
+
+      .wordSoupContainer2 {
+        flex-direction: column;
+      }
+
+      .wordSoupContainer3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
@@ -109,9 +229,21 @@
       }
     }
 
-    .sketchesContainer {
+    .wordSoupContainer {
       &::before {
         right: calc(50% - 6rem);
+      }
+
+      .wordSoupContainer1 {
+        align-items: center;
+
+        .wordSoup1 {
+          text-align: center;
+        }
+
+        .wordSoup2 {
+          text-align: center;
+        }
       }
     }
   }

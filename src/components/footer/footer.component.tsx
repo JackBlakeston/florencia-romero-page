@@ -13,11 +13,13 @@ import {
   LINKEDIN_URL,
   LOGO_DESIGNER,
   PHONE_NUMBER,
+  PHONE_URL,
   PROZ_URL,
   SKYPE_URL,
   TWITTER_URL,
   WEB_DESIGNER,
 } from '../../constants/strings';
+
 import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
 
 const Footer = () => {
@@ -34,10 +36,6 @@ const Footer = () => {
   const logoDesignTExt = `${intl.formatMessage({
     id: 'app.footer.logoDesign',
   })}: ${LOGO_DESIGNER}`;
-
-  const legalText = intl.formatMessage({
-    id: 'app.footer.legal',
-  });
 
   return (
     <div className={classes.mainContainer}>
@@ -68,20 +66,19 @@ const Footer = () => {
       </div>
       <div className={classes.bottomSection}>
         <div className={classes.contactInfoContainer}>
-          <div className={classes.contactInfo}>
-            <Icon name='phone' />
-            <span>{PHONE_NUMBER}</span>
-          </div>
-          <div className={classes.contactInfo}>
-            <Icon name='mail' />
+          <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer' className={classes.contactInfo}>
+            <Icon name='mailDark' />
             <span>{EMAIL}</span>
-          </div>
+          </a>
+          <a className={classes.contactInfo} href={PHONE_URL}>
+            <Icon name='phoneDark' />
+            <span>{PHONE_NUMBER}</span>
+          </a>
         </div>
         <div className={classes.footnotesContainer}>
-          <span>{COPYRIGHT}</span>
           <span>{webDesignTExt}</span>
           <span>{logoDesignTExt}</span>
-          <span>{legalText}</span>
+          <span>{COPYRIGHT}</span>
         </div>
       </div>
     </div>
