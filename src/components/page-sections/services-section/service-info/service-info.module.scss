@@ -2,12 +2,14 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
-  background-color: var(--color-primary-bright-4);
   padding: var(--spacing-4xl) var(--spacing-6xl);
   box-shadow: var(--shadow-primary);
   border-radius: 10px;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
+  // background-color: var(--color-primary-bright-4);
+  background-image: url(../../../../assets/backgrounds/gradient-services.svg);
+  background-size: cover;
 
   img {
     height: var(--services-icons-size);
