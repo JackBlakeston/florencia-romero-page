@@ -20,6 +20,8 @@ import gmailGreen from '../../assets/icons/gmail-green.png';
 import twitterGreen from '../../assets/icons/twitter-green.png';
 import linkedinGreen from '../../assets/icons/linkedin-green.png';
 import prozGreen from '../../assets/icons/proz-green.png';
+import phoneDark from '../../assets/icons/phone-dark.png';
+import mailDark from '../../assets/icons/mail-dark.png';
 
 import { SERVICES } from '../../constants/enums';
 
@@ -41,7 +43,9 @@ type IconNameType =
   | 'gmailGreen'
   | 'twitterGreen'
   | 'linkedinGreen'
-  | 'prozGreen';
+  | 'prozGreen'
+  | 'phoneDark'
+  | 'mailDark';
 
 type IconObjectType = {
   [key in IconNameType]: string;
@@ -66,6 +70,8 @@ const iconObject: IconObjectType = {
   twitterGreen,
   linkedinGreen,
   prozGreen,
+  phoneDark,
+  mailDark,
 };
 
 type IconProps = {

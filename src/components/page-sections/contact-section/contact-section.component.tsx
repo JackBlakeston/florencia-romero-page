@@ -8,7 +8,7 @@ import Icon from '../../icon/icon.component';
 
 import { ReactComponent as Blob1 } from '../../../assets/shapes/blob-1.svg';
 
-import { EMAIL, FORM_SUBMIT_URL, PHONE_NUMBER } from '../../../constants/strings';
+import { EMAIL, FORM_SUBMIT_URL, GMAIL_URL, PHONE_NUMBER, PHONE_URL } from '../../../constants/strings';
 
 const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
@@ -54,14 +54,14 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         <div className={classes.sectionBodyColumnsContainer}>
           <div className={classes.contactInfoContainer}>
             <Blob1 className={classes.blobOverlay} />
-            <div className={classes.contactInfo}>
+            <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer' className={classes.contactInfo}>
               <Icon name='mail' />
               <span>{EMAIL}</span>
-            </div>
-            <div className={classes.contactInfo}>
+            </a>
+            <a className={classes.contactInfo} href={PHONE_URL}>
               <Icon name='phone' />
               <span>{PHONE_NUMBER}</span>
-            </div>
+            </a>
           </div>
           <div className={classes.formContainer}>
             <form className={classes.form} action={FORM_SUBMIT_URL} method='post' target='_blank'>
