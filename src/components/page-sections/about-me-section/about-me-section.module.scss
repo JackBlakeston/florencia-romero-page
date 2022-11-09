@@ -79,11 +79,17 @@
 
 @media (max-width: 480px) {
   .mainContainer {
-    .linkSectionContainer {
-      width: 100% !important;
-      .portrait {
+    .sectionBodyContainer {
+      .linkSectionContainer {
         width: 100% !important;
-        height: unset !important;
+        .portrait {
+          width: 100% !important;
+          height: unset !important;
+        }
+      }
+
+      .textSectionContainer {
+        text-align: left;
       }
     }
   }
