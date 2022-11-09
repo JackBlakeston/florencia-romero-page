@@ -44,10 +44,8 @@
         align-items: center;
         justify-content: center;
         width: 40%;
-        height: 210px;
+        height: 300px;
         gap: var(--spacing-s);
-        margin: 50px 0;
-        padding: 50px;
 
         .contactInfo {
           display: flex;
@@ -141,8 +139,6 @@
       }
 
       .sectionBodyColumnsContainer {
-        .contactInfoContainer {
-        }
         .formContainer {
           .form {
             width: 80%;
@@ -181,11 +177,7 @@
 @media (max-width: 768px) {
   .mainContainer {
     .sectionBodyContainer {
-      .sectionSubtitle {
-      }
       .sectionBodyColumnsContainer {
-        .contactInfoContainer {
-        }
         .formContainer {
           .form {
             width: 90%;
@@ -199,8 +191,6 @@
 @media (max-width: 480px) {
   .mainContainer {
     .sectionBodyContainer {
-      .sectionSubtitle {
-      }
       .sectionBodyColumnsContainer {
         .contactInfoContainer {
           width: 100%;

@@ -35,10 +35,6 @@ const Footer = () => {
     id: 'app.footer.logoDesign',
   })}: ${LOGO_DESIGNER}`;
 
-  const legalText = intl.formatMessage({
-    id: 'app.footer.legal',
-  });
-
   return (
     <div className={classes.mainContainer}>
       <div className={classes.topSection}>
@@ -78,10 +74,9 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.footnotesContainer}>
-          <span>{COPYRIGHT}</span>
           <span>{webDesignTExt}</span>
           <span>{logoDesignTExt}</span>
-          <span>{legalText}</span>
+          <span>{COPYRIGHT}</span>
         </div>
       </div>
     </div>
