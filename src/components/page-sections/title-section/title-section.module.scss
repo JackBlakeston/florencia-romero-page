@@ -58,17 +58,9 @@
     }
   }
 
-  .sketchesContainer {
+  .subtitleContainer {
     position: relative;
     z-index: 2;
-    display: flex;
-    justify-content: center;
-    padding-bottom: var(--spacing-2xl);
-
-    .bookSketch {
-      width: 70vw;
-      height: 90%;
-    }
 
     &::before {
       content: '';
