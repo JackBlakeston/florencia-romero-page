@@ -10,11 +10,13 @@
     gap: var(--spacing-xs);
     margin: 0 0 var(--spacing-2xl);
     padding: var(--spacing-9xl) var(--spacing-20xl);
-    background-color: var(--color-primary-bright-3);
     box-shadow: var(--shadow-primary);
     font-family: var(--font-light);
     color: var(--color-secondary);
     text-align: center;
+    // background-color: var(--color-primary-bright-3);
+    background-image: url(../../../assets/backgrounds/waves-header.svg);
+    background-size: cover;
 
     .logo {
       position: absolute;

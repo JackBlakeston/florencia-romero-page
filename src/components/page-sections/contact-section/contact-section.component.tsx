@@ -6,6 +6,8 @@ import classes from './contact-section.module.scss';
 
 import Icon from '../../icon/icon.component';
 
+import { ReactComponent as Blob1 } from '../../../assets/shapes/blob-1.svg';
+
 import { EMAIL, FORM_SUBMIT_URL, PHONE_NUMBER } from '../../../constants/strings';
 
 const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
@@ -51,13 +53,14 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         </div>
         <div className={classes.sectionBodyColumnsContainer}>
           <div className={classes.contactInfoContainer}>
-            <div className={classes.contactInfo}>
-              <Icon name='phone' />
-              <span>{PHONE_NUMBER}</span>
-            </div>
+            <Blob1 className={classes.blobOverlay} />
             <div className={classes.contactInfo}>
               <Icon name='mail' />
               <span>{EMAIL}</span>
+            </div>
+            <div className={classes.contactInfo}>
+              <Icon name='phone' />
+              <span>{PHONE_NUMBER}</span>
             </div>
           </div>
           <div className={classes.formContainer}>

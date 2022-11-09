@@ -4,8 +4,10 @@
   .topSection {
     position: relative;
     display: flex;
-    background-color: var(--color-primary-bright-3);
     padding: var(--spacing-3xl) 0;
+    // background-color: var(--color-primary-bright-3);
+    background-image: url(../../assets/backgrounds/waves-footer.svg);
+    background-size: cover;
 
     .linksContainer {
       display: flex;
@@ -93,9 +95,7 @@
       align-items: center;
       gap: var(--spacing-l);
       padding-top: var(--spacing-11xl);
-
-      .linksContainer {
-      }
+      background-image: url(../../assets/backgrounds/waves-header.svg);
 
       .logoContainer {
         .logo {
@@ -116,16 +116,6 @@
       .footnotesContainer {
         text-align: center;
       }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .mainContainer {
-    .topSection {
-    }
-
-    .bottomSection {
     }
   }
 }
