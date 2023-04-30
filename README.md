@@ -1,6 +1,6 @@
 # florenciaromero.com
 
-Portfolio website for a translator.
+Business website for a translator.
 
 [Check it out!](https://florenciaromero.com)
 
