@@ -15,8 +15,8 @@ export const FORM_SUBMIT_URL = 'https://public.herotofu.com/v1/6e9ab8f0-4d66-11e
 
 export const COPYRIGHT = 'Copyright © 2022 Florencia C. Romero Gonzalo';
 export const WEB_DESIGNER = 'Jack Blakeston';
-//LinkedIn Jack: https://www.linkedin.com/in/jack-blakeston
+export const WEB_DESIGNER_URL = 'https://github.com/JackBlakeston';
 export const LOGO_DESIGNER = 'Mario Figueredo';
-//Web Mario: https://marioefe.com
-export const PHOTOGRAPHY = 'Sara Garrido';
-//Instagram Sara: https://www.instagram.com/saaragf
+export const LOGO_DESIGNER_URL = 'https://marioefe.com';
+export const PHOTOGRAPHER = 'Sara Garrido';
+export const PHOTOGRAPHER_URL = 'https://www.instagram.com/saaragf';

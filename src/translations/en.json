@@ -71,9 +71,9 @@
   "app.sections.contact.form.send": "Send",
 
   "app.footer.letsTalk": "Let's talk!",
-  "app.footer.webDesign": "Website",
-  "app.footer.logoDesign": "Logo",
-  "app.footer.photoDesign": "Photography",
+  "app.footer.webDesign": "Website: ",
+  "app.footer.logoDesign": "Logo: ",
+  "app.footer.photoDesign": "Photography: ",
   "app.footer.legal": "Legal Notice",
   "app.footer.privacy": "Privacy Policy",
   "app.footer.cookies": "Cookie Policy"

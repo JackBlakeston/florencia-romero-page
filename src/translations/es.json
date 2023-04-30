@@ -72,9 +72,9 @@
   "app.sections.contact.form.send": "Enviar",
 
   "app.footer.letsTalk": "¡Hablemos!",
-  "app.footer.webDesign": "Página web",
-  "app.footer.logoDesign": "Logotipo",
-  "app.footer.photoDesign": "Fotografía",
+  "app.footer.webDesign": "Página web: ",
+  "app.footer.logoDesign": "Logotipo: ",
+  "app.footer.photoDesign": "Fotografía: ",
   "app.footer.legal": "Aviso legal",
   "app.footer.privacy": "Política de privacidad",
   "app.footer.cookies": "Política de cookies"

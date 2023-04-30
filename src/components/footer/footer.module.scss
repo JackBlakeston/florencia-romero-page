@@ -5,7 +5,6 @@
     position: relative;
     display: flex;
     padding: var(--spacing-3xl) 0;
-    // background-color: var(--color-primary-bright-3);
     background-image: url(../../assets/backgrounds/waves-footer.svg);
     background-size: cover;
 
@@ -75,6 +74,16 @@
       text-align: right;
       gap: var(--spacing-6xs);
       font-size: var(--font-size-2xs);
+
+      a {
+        color: var(--color-text-gray-darker);
+        text-decoration: none;
+        text-underline-offset: 4px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
 
       span {
         margin: 2px 0;

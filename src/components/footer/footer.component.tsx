@@ -12,13 +12,18 @@ import {
   GMAIL_URL,
   LINKEDIN_URL,
   LOGO_DESIGNER,
+  LOGO_DESIGNER_URL,
   PHONE_NUMBER,
   PHONE_URL,
+  PHOTOGRAPHER,
+  PHOTOGRAPHER_URL,
   PROZ_URL,
   SKYPE_URL,
   TWITTER_URL,
   WEB_DESIGNER,
+  WEB_DESIGNER_URL,
 } from '../../constants/strings';
+import { TARGET_BLANK } from '../../constants/constants';
 
 import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
 
@@ -29,13 +34,17 @@ const Footer = () => {
     id: 'app.footer.letsTalk',
   });
 
-  const webDesignTExt = `${intl.formatMessage({
+  const webDesignText = intl.formatMessage({
     id: 'app.footer.webDesign',
-  })}: ${WEB_DESIGNER}`;
+  });
 
-  const logoDesignTExt = `${intl.formatMessage({
+  const logoDesignText = intl.formatMessage({
     id: 'app.footer.logoDesign',
-  })}: ${LOGO_DESIGNER}`;
+  });
+
+  const photoDesignText = intl.formatMessage({
+    id: 'app.footer.photoDesign',
+  });
 
   return (
     <div className={classes.mainContainer}>
@@ -43,19 +52,19 @@ const Footer = () => {
         <div className={classes.linksContainer}>
           <span>{followMeText}</span>
           <div className={classes.iconsContainer}>
-            <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer'>
+            <a href={GMAIL_URL} target={TARGET_BLANK} rel='noopener noreferrer'>
               <Icon name='gmailGreen' className='gmailIcon' />
             </a>
-            <a href={LINKEDIN_URL} target='_blank' rel='noopener noreferrer'>
+            <a href={LINKEDIN_URL} target={TARGET_BLANK} rel='noopener noreferrer'>
               <Icon name='linkedinGreen' />
             </a>
-            <a href={TWITTER_URL} target='_blank' rel='noopener noreferrer'>
+            <a href={TWITTER_URL} target={TARGET_BLANK} rel='noopener noreferrer'>
               <Icon name='twitterGreen' className='twitterIcon' />
             </a>
-            <a href={PROZ_URL} target='_blank' rel='noopener noreferrer'>
+            <a href={PROZ_URL} target={TARGET_BLANK} rel='noopener noreferrer'>
               <Icon name='prozGreen' />
             </a>
-            <a href={SKYPE_URL} target='_blank' rel='noopener noreferrer'>
+            <a href={SKYPE_URL} target={TARGET_BLANK} rel='noopener noreferrer'>
               <Icon name='skypeGreen' />
             </a>
           </div>
@@ -66,7 +75,7 @@ const Footer = () => {
       </div>
       <div className={classes.bottomSection}>
         <div className={classes.contactInfoContainer}>
-          <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer' className={classes.contactInfo}>
+          <a href={GMAIL_URL} target={TARGET_BLANK} rel='noopener noreferrer' className={classes.contactInfo}>
             <Icon name='mailDark' />
             <span>{EMAIL}</span>
           </a>
@@ -76,8 +85,24 @@ const Footer = () => {
           </a>
         </div>
         <div className={classes.footnotesContainer}>
-          <span>{webDesignTExt}</span>
-          <span>{logoDesignTExt}</span>
+          <span>
+            {webDesignText}{' '}
+            <a target={TARGET_BLANK} href={WEB_DESIGNER_URL}>
+              {WEB_DESIGNER}
+            </a>
+          </span>
+          <span>
+            {logoDesignText}
+            <a target={TARGET_BLANK} href={LOGO_DESIGNER_URL}>
+              {LOGO_DESIGNER}
+            </a>
+          </span>
+          <span>
+            {photoDesignText}
+            <a target={TARGET_BLANK} href={PHOTOGRAPHER_URL}>
+              {PHOTOGRAPHER}
+            </a>
+          </span>
           <span>{COPYRIGHT}</span>
         </div>
       </div>
