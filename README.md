@@ -35,5 +35,3 @@ Editing these files directly modifies the strings on the page for the specified 
 ### Business cards
 
 Physical business cards have been printed, and they link directly to the page via a QR code.
-
-![BusinessCards](https://media-exp1.licdn.com/dms/image/C4D22AQHfznOm0Y552g/feedshare-shrink_2048_1536/0/1668426765891?e=1672272000&v=beta&t=n8vC14pFH91ZAr6tMWCZeoS_DvNHio5FBzsM-qRmYYI)

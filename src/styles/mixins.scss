@@ -100,3 +100,15 @@
     filter: drop-shadow(var(--shadow-primary));
   }
 }
+
+@mixin decoratedTextLink() {
+  a {
+    color: var(--color-text-gray-darker);
+    text-decoration: none;
+    text-underline-offset: 4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

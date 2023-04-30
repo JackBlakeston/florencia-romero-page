@@ -46,6 +46,14 @@ const Footer = () => {
     id: 'app.footer.photoDesign',
   });
 
+  const legalNoticeText = intl.formatMessage({
+    id: 'app.footer.legal',
+  });
+
+  const privacyPolicyText = intl.formatMessage({
+    id: 'app.footer.privacy',
+  });
+
   return (
     <div className={classes.mainContainer}>
       <div className={classes.topSection}>
@@ -104,6 +112,10 @@ const Footer = () => {
             </a>
           </span>
           <span>{COPYRIGHT}</span>
+          <div className={classes.legalSection}>
+            <a href=' '>{legalNoticeText}</a>
+            <a href=' '>{privacyPolicyText}</a>
+          </div>
         </div>
       </div>
     </div>

@@ -65,7 +65,7 @@
           flex-direction: column;
           width: 480px;
 
-          input,
+          input:not([type='checkbox']),
           textarea {
             box-sizing: border-box;
             font-family: var(--font-light);
@@ -89,6 +89,20 @@
             max-height: 20rem;
           }
 
+          .checkBoxContainer {
+            font-size: var(--font-size-xs);
+
+            input {
+              margin: 0 var(--spacing-4xs) 0 0;
+            }
+
+            a {
+              color: var(--color-primary-dark-2);
+              text-decoration: none;
+              font-family: var(--font-bold);
+            }
+          }
+
           .sendButton {
             position: relative;
             box-sizing: border-box;
@@ -106,14 +120,25 @@
             border: 3px solid var(--color-primary-dark-1);
             margin-top: var(--spacing-2xs);
 
-            &:hover {
+            &:hover:not([disabled]) {
               cursor: pointer;
               transform: scale(1.07);
             }
 
-            &:active {
+            &:active:not([disabled]) {
               transform: translateY(3px) scale(1.07);
             }
+          }
+
+          .sendButton[disabled] {
+            opacity: 0.5;
+          }
+
+          .smallTextContainer {
+            margin-top: var(--spacing-3xs);
+            font-size: var(--font-size-2xs);
+            line-height: 1.5;
+            text-align: justify;
           }
 
           input:-webkit-autofill,

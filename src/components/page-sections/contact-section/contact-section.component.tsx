@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { ChangeEvent, forwardRef, useState } from 'react';
 
 import { useIntl } from 'react-intl';
 
@@ -11,6 +11,8 @@ import { ReactComponent as Blob1 } from '../../../assets/shapes/blob-1.svg';
 import { EMAIL, FORM_SUBMIT_URL, GMAIL_URL, PHONE_NUMBER, PHONE_URL } from '../../../constants/strings';
 
 const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
+  const [isCheckboxAccepted, setIsCheckboxAccepted] = useState(false);
+
   const intl = useIntl();
 
   const title = intl.formatMessage({
@@ -43,6 +45,23 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     })
     .toUpperCase();
 
+  const formPrivacyPolicyText = intl.formatMessage({
+    id: 'app.sections.contact.form.privacyPolicy.part1',
+  });
+
+  const formPrivacyPolicyLinkText = intl.formatMessage({
+    id: 'app.sections.contact.form.privacyPolicy.part2',
+  });
+
+  const formPrivacyPolicySmallText = intl.formatMessage({
+    id: 'app.sections.contact.form.privacyPolicy.smallText',
+  });
+
+  const handleFormCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const isChecked = e.target.checked;
+    setIsCheckboxAccepted(isChecked);
+  };
+
   return (
     <div ref={ref} className={classes.mainContainer}>
       <div className={classes.sectionTitle}>{title}</div>
@@ -71,9 +90,15 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
               <input name='Email' id='email' type='email' required />
               <label htmlFor='message'>{formLabelMessage}</label>
               <textarea name='Message' id='message' required />
-              <button type='submit' className={classes.sendButton}>
+              <div className={classes.checkBoxContainer}>
+                <input checked={isCheckboxAccepted} type='checkbox' onChange={handleFormCheckboxChange} />
+                {formPrivacyPolicyText}
+                <a href=' '>{formPrivacyPolicyLinkText}</a>
+              </div>
+              <button type='submit' className={classes.sendButton} disabled={!isCheckboxAccepted}>
                 {formSubmitText}
               </button>
+              <div className={classes.smallTextContainer}>{formPrivacyPolicySmallText}</div>
             </form>
           </div>
         </div>

@@ -70,6 +70,9 @@
   "app.sections.contact.form.email": "Correo electrónico",
   "app.sections.contact.form.message": "Mensaje",
   "app.sections.contact.form.send": "Enviar",
+  "app.sections.contact.form.privacyPolicy.part1": "He leído y acepto la ",
+  "app.sections.contact.form.privacyPolicy.part2": "Política de privacidad",
+  "app.sections.contact.form.privacyPolicy.smallText": "Florencia Cecilia Romero Gonzalo tratará la información que le facilites con la única finalidad de gestionar tu solicitud de información. Podrás ejercer los derechos de acceso, rectificación, supresión, limitación, oposición, portabilidad, o retirar el consentimiento enviando un correo electrónico a fctraduce@gmail.com.",
 
   "app.footer.letsTalk": "¡Hablemos!",
   "app.footer.webDesign": "Página web: ",
