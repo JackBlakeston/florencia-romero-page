@@ -14,14 +14,18 @@ type LocaleMessagesType = {
   [key: string]: JSONType;
 };
 
-const messages: LocaleMessagesType = {
-  en: enMessages as JSONType,
-  es: esMessages as JSONType,
-};
-
 type LocaleContextType = {
   locale: LOCALES;
   setLocale: React.Dispatch<React.SetStateAction<LOCALES>>;
+};
+
+type LocaleProviderProps = {
+  children: ReactNode;
+};
+
+const messages: LocaleMessagesType = {
+  en: enMessages as JSONType,
+  es: esMessages as JSONType,
 };
 
 const defaultLocaleContextState: LocaleContextType = {
@@ -30,10 +34,6 @@ const defaultLocaleContextState: LocaleContextType = {
 };
 
 const LocaleContext = createContext<LocaleContextType>(defaultLocaleContextState);
-
-type LocaleProviderProps = {
-  children: ReactNode;
-};
 
 function LocaleProvider({ children }: LocaleProviderProps) {
   const [locale, setLocale] = useState<LOCALES>(LOCALES.ES);

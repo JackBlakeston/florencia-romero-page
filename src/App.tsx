@@ -5,11 +5,14 @@ import './styles/global-styles.scss';
 import MainLayout from './components/main-layout/main-layout.component';
 
 import { LocaleProvider } from './context/locale-context';
+import { ModalProvider } from './context/modal-context';
 
 function App() {
   return (
     <LocaleProvider>
-      <MainLayout />
+      <ModalProvider>
+        <MainLayout />
+      </ModalProvider>
     </LocaleProvider>
   );
 }

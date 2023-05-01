@@ -15,6 +15,7 @@ import useIsInViewport from '../../hooks/useIsInViewport';
 
 import { SECTIONS } from '../../constants/enums';
 import { ViewportStatusType } from '../../types';
+import { HEADER_OFFSET } from '../../constants/constants';
 
 const MainLayout = () => {
   const titleSectionRef = useRef<null | HTMLDivElement>(null);
@@ -48,11 +49,10 @@ const MainLayout = () => {
   const goToSection = (section: SECTIONS) => {
     const sectionRefName = `${section}SectionRef`;
     const thisSectionRef = sectionRefs[sectionRefName as keyof typeof sectionRefs];
-    var targetSection = thisSectionRef?.current;
+    const targetSection = thisSectionRef?.current;
     if (targetSection) {
-      var headerOffset = 90;
-      var elementPosition = targetSection.getBoundingClientRect().top;
-      var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const elementPosition = targetSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - HEADER_OFFSET;
 
       window.scrollTo({
         top: offsetPosition,

@@ -1,0 +1,13 @@
+.mainContainer {
+  padding: var(--spacing-xs);
+
+  overflow-y: scroll;
+  white-space: pre-line;
+  text-align: justify;
+  font-size: var(--font-size-2xs);
+
+  b {
+    color: var(--color-primary-dark-2);
+    font-size: var(--font-size-xs);
+  }
+}

@@ -34,3 +34,8 @@ export enum SCREENS {
   TABLET = 'tablet',
   MOBILE = 'mobile',
 }
+
+export enum LEGAL_SECTIONS {
+  PRIVACY_POLICY = 'privacy policy',
+  LEGAL_NOTICE = 'legal notice',
+}

@@ -102,13 +102,11 @@
 }
 
 @mixin decoratedTextLink() {
-  a {
-    color: var(--color-text-gray-darker);
-    text-decoration: none;
-    text-underline-offset: 4px;
+  color: var(--color-text-gray-darker);
+  text-decoration: none;
+  text-underline-offset: 4px;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
   }
 }

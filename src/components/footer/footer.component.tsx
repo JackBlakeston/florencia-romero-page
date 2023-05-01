@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { useIntl } from 'react-intl';
 
@@ -26,9 +26,13 @@ import {
 import { TARGET_BLANK } from '../../constants/constants';
 
 import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
+import { ModalContext } from '../../context/modal-context';
+import { LEGAL_SECTIONS } from '../../constants/enums';
+import LegalTextModalContent from '../legal-text-modal-content/legal-text-modal-content.component';
 
 const Footer = () => {
   const intl = useIntl();
+  const { setModalContent, setModalTitle, toggleModal } = useContext(ModalContext);
 
   const followMeText = intl.formatMessage({
     id: 'app.footer.letsTalk',
@@ -53,6 +57,15 @@ const Footer = () => {
   const privacyPolicyText = intl.formatMessage({
     id: 'app.footer.privacy',
   });
+
+  const handleLegalLinkClick = (legalSection: LEGAL_SECTIONS) => () => {
+    const modalContent = <LegalTextModalContent legalTextType={legalSection} />;
+    const isInPrivacyPolicySection = legalSection === LEGAL_SECTIONS.PRIVACY_POLICY;
+    const modalTitle = isInPrivacyPolicySection ? privacyPolicyText : legalNoticeText;
+    setModalTitle(modalTitle);
+    setModalContent(modalContent);
+    toggleModal();
+  };
 
   return (
     <div className={classes.mainContainer}>
@@ -113,8 +126,8 @@ const Footer = () => {
           </span>
           <span>{COPYRIGHT}</span>
           <div className={classes.legalSection}>
-            <a href=' '>{legalNoticeText}</a>
-            <a href=' '>{privacyPolicyText}</a>
+            <span onClick={handleLegalLinkClick(LEGAL_SECTIONS.LEGAL_NOTICE)}>{legalNoticeText}</span>
+            <span onClick={handleLegalLinkClick(LEGAL_SECTIONS.PRIVACY_POLICY)}>{privacyPolicyText}</span>
           </div>
         </div>
       </div>
