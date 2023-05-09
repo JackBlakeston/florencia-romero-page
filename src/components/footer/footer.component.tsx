@@ -28,11 +28,11 @@ import { TARGET_BLANK } from '../../constants/constants';
 import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
 import { ModalContext } from '../../context/modal-context';
 import { LEGAL_SECTIONS } from '../../constants/enums';
-import LegalTextModalContent from '../legal-text-modal-content/legal-text-modal-content.component';
+import { openLegalModal } from '../../utils/open-modal';
 
 const Footer = () => {
   const intl = useIntl();
-  const { setModalContent, setModalTitle, toggleModal } = useContext(ModalContext);
+  const modalContextData = useContext(ModalContext);
 
   const followMeText = intl.formatMessage({
     id: 'app.footer.letsTalk',
@@ -59,12 +59,7 @@ const Footer = () => {
   });
 
   const handleLegalLinkClick = (legalSection: LEGAL_SECTIONS) => () => {
-    const modalContent = <LegalTextModalContent legalTextType={legalSection} />;
-    const isInPrivacyPolicySection = legalSection === LEGAL_SECTIONS.PRIVACY_POLICY;
-    const modalTitle = isInPrivacyPolicySection ? privacyPolicyText : legalNoticeText;
-    setModalTitle(modalTitle);
-    setModalContent(modalContent);
-    toggleModal();
+    openLegalModal(legalSection, intl, modalContextData);
   };
 
   return (

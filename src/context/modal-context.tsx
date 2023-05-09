@@ -2,7 +2,7 @@ import React, { createContext, ReactElement, ReactNode, useState } from 'react';
 import Modal from '../components/modal/modal.component';
 import { EMPTY_STRING } from '../constants/constants';
 
-type ModalContextType = {
+export type ModalContextType = {
   isOpen: boolean;
   toggleModal: () => void;
   modalContent: ModalContentType;

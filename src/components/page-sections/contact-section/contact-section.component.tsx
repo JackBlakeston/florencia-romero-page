@@ -1,4 +1,4 @@
-import React, { ChangeEvent, forwardRef, useState } from 'react';
+import React, { ChangeEvent, forwardRef, useContext, useState } from 'react';
 
 import { useIntl } from 'react-intl';
 
@@ -9,11 +9,15 @@ import Icon from '../../icon/icon.component';
 import { ReactComponent as Blob1 } from '../../../assets/shapes/blob-1.svg';
 
 import { EMAIL, FORM_SUBMIT_URL, GMAIL_URL, PHONE_NUMBER, PHONE_URL } from '../../../constants/strings';
+import { LEGAL_SECTIONS } from '../../../constants/enums';
+import { openLegalModal } from '../../../utils/open-modal';
+import { ModalContext } from '../../../context/modal-context';
 
 const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const [isCheckboxAccepted, setIsCheckboxAccepted] = useState(false);
 
   const intl = useIntl();
+  const modalContextData = useContext(ModalContext);
 
   const title = intl.formatMessage({
     id: 'app.sections.contact',
@@ -62,6 +66,10 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     setIsCheckboxAccepted(isChecked);
   };
 
+  const handlePrivacyPolicyLinkClick = () => {
+    openLegalModal(LEGAL_SECTIONS.PRIVACY_POLICY, intl, modalContextData);
+  };
+
   return (
     <div ref={ref} className={classes.mainContainer}>
       <div className={classes.sectionTitle}>{title}</div>
@@ -93,7 +101,7 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
               <div className={classes.checkBoxContainer}>
                 <input checked={isCheckboxAccepted} type='checkbox' onChange={handleFormCheckboxChange} />
                 {formPrivacyPolicyText}
-                <a href=' '>{formPrivacyPolicyLinkText}</a>
+                <span onClick={handlePrivacyPolicyLinkClick}>{formPrivacyPolicyLinkText}</span>
               </div>
               <button type='submit' className={classes.sendButton} disabled={!isCheckboxAccepted}>
                 {formSubmitText}
