@@ -96,10 +96,17 @@
               margin: 0 var(--spacing-4xs) 0 0;
             }
 
-            a {
-              color: var(--color-primary-dark-2);
+            span {
+              color: var(--color-primary-dark-1);
               text-decoration: none;
               font-family: var(--font-bold);
+            }
+
+            span,
+            input {
+              &:hover {
+                cursor: pointer;
+              }
             }
           }
 
