@@ -12,20 +12,10 @@ import useScreenType from '../../../hooks/use-screen-type.hook';
 
 import { ATRAE_URL } from '../../../constants/strings';
 import AtraeLogo from '../../../assets/images/atrae-logo-db.png';
-
-const importAllImagesFromFolder = (r: __WebpackModuleApi.RequireContext) => {
-  return r.keys().map(r);
-};
-
-const getCarrouselItemName = (imageUrl: string) => {
-  const splitUrl = imageUrl.split('/');
-  const fileName = splitUrl[splitUrl.length - 1];
-  const itemName = fileName.split('.')[0];
-  const itemNameNoPrefix = itemName.split('-')[1];
-  return itemNameNoPrefix;
-};
+import useCarouselImages from '../../../hooks/use-carousel-images';
 
 const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
+  const allImagesUrls = useCarouselImages();
   const intl = useIntl();
   const { windowWidth } = useScreenType();
 
@@ -55,9 +45,6 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   };
 
   const renderPortfolioCarousel = () => {
-    const allImagesUrls = importAllImagesFromFolder(
-      require.context('../../../assets/images/portfolio-items', false, /\.(png|jpe?g|svg)$/),
-    ) as string[];
     return (
       <Slider
         infinite
@@ -71,11 +58,10 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         draggable
         focusOnSelect={false}
       >
-        {allImagesUrls.map((imageUrl, index) => {
-          const itemName = getCarrouselItemName(imageUrl);
+        {allImagesUrls?.map((imageUrl) => {
           return (
-            <div className={classes.carrouselItemContainer} key={index}>
-              <img className={classes.carrouselItemImage} src={imageUrl} alt={itemName} />
+            <div className={classes.carrouselItemContainer} key={imageUrl}>
+              <img className={classes.carrouselItemImage} src={imageUrl} alt={imageUrl} />
             </div>
           );
         })}
