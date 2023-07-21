@@ -71,10 +71,10 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         draggable
         focusOnSelect={false}
       >
-        {allImagesUrls.map((imageUrl, index) => {
+        {allImagesUrls.map((imageUrl) => {
           const itemName = getCarrouselItemName(imageUrl);
           return (
-            <div className={classes.carrouselItemContainer} key={index}>
+            <div className={classes.carrouselItemContainer} key={imageUrl}>
               <img className={classes.carrouselItemImage} src={imageUrl} alt={itemName} />
             </div>
           );
