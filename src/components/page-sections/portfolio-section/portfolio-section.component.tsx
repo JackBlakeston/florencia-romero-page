@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import useScreenType from '../../../hooks/use-screen-type.hook';
 
-import { ATRAE_URL } from '../../../constants/strings';
+import { ATRAE_FLOR_URL } from '../../../constants/strings';
 import AtraeLogo from '../../../assets/images/atrae-logo-db.png';
 import useCarouselImages from '../../../hooks/use-carousel-images';
 
@@ -74,11 +74,11 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <div className={classes.sectionTitle}>{title}</div>
       <div className={classes.sectionBodyContainer}>
         <div className={classes.portfolioLinkContainer}>
-          <a href={ATRAE_URL} target='_blank' rel='noopener noreferrer'>
+          <a href={ATRAE_FLOR_URL} target='_blank' rel='noopener noreferrer'>
             <img src={AtraeLogo} alt='atrae-logo' />
           </a>
           <div className={classes.portfolioText}>
-            <a href={ATRAE_URL} target='_blank' rel='noopener noreferrer'>
+            <a href={ATRAE_FLOR_URL} target='_blank' rel='noopener noreferrer'>
               {portfolioLinkText}
             </a>
             <span> {text}</span>

@@ -8,7 +8,16 @@ import Icon from '../../icon/icon.component';
 
 import portrait from '../../../assets/images/portrait.jpg';
 import atraeLogoBig from '../../../assets/images/atrae-logo-big.png';
-import { ATRAE_URL, GMAIL_URL, LINKEDIN_URL, PROZ_URL, SKYPE_URL, TWITTER_URL } from '../../../constants/strings';
+import {
+  ATRAE_ABOUT_URL,
+  ATRAE_FLOR_URL,
+  GMAIL_URL,
+  LINKEDIN_URL,
+  PROZ_URL,
+  SKYPE_URL,
+  TWITTER_URL,
+  WHITE_SPACE,
+} from '../../../constants/strings';
 
 const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
@@ -28,6 +37,24 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   });
   const textPart4 = intl.formatMessage({
     id: 'app.sections.aboutMe.text.part4',
+  });
+  const textPart4a = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part4a',
+  });
+  const textPart4b = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part4b',
+  });
+  const textPart4c = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part4c',
+  });
+  const textPart4d = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part4d',
+  });
+  const textAtraeName = intl.formatMessage({
+    id: 'ATRAE_NAME',
+  });
+  const textPart4e = intl.formatMessage({
+    id: 'app.sections.aboutMe.text.part4e',
   });
   const textPart5 = intl.formatMessage({
     id: 'app.sections.aboutMe.text.part5',
@@ -50,6 +77,15 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <div className={classes.textSectionContainer}>
         {textPart1} <b>{textPart2}</b>
         {textPart3} <b>{textPart4}</b>
+        {textPart4a}
+        {textPart4b} <b>{textPart4c}</b>
+        {textPart4d}
+        {WHITE_SPACE}
+        <a href={ATRAE_ABOUT_URL} target='_blank' rel='noreferrer'>
+          {textAtraeName}
+        </a>
+        {WHITE_SPACE}
+        {textPart4e}
         {textPart5} <b>{textPart6}</b>
         {textPart7} <b>{textPart8}</b> {textPart9}
       </div>
@@ -79,7 +115,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
               <Icon name='skype' />
             </a>
           </div>
-          <a href={ATRAE_URL} target='_blank' rel='noopener noreferrer'>
+          <a href={ATRAE_FLOR_URL} target='_blank' rel='noopener noreferrer'>
             <img src={atraeLogoBig} alt='atrae' className={classes.atraeLogo} />
           </a>
         </div>

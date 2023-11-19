@@ -4,7 +4,7 @@
   "app.sections.aboutMe": "About me",
   "app.sections.contact": "Contact",
 
-  "app.sections.title.traductoraProfesional": "Audiovisual translator\nand localization specialist",
+  "app.sections.title.traductoraProfesional": "Audiovisual translator\nand accessibility specialist",
   "app.sections.wordSoup1a": "Bringing",
   "app.sections.wordSoup1a.continued": "new experiences",
   "app.sections.wordSoup1b": "to more people",
@@ -55,22 +55,27 @@
   "app.sections.aboutMe.translatorLanguages": "English and French into Spansih Translator",
   "app.sections.aboutMe.text.part1": "My name is Florencia, and I am officially a translator",
   "app.sections.aboutMe.text.part2": "since 2013",
-  "app.sections.aboutMe.text.part3": ", though my vocation started much earlier. \n\nSince I was a little girl I have been passionate about reading, and back in 2003 I discovered that my favorite book saga was being released in English earlier than in Spanish, so I thought: \"How nice would it be to help people experience these stories in their own language?\". It was then when I fell in love with translation.\n\nWhile I was studying, I had the opportunity to translate all kinds of texts and content. The challenges of translating movies and TV shows, the creativity, the play on words, the puns and jokes, the differences between cultures and the nuances of accessibility made me realise that I really liked",
+  "app.sections.aboutMe.text.part3": ", though my vocation started much earlier. \n\nSince I was a little girl I have been passionate about reading, and back in 2003 I discovered that my favorite book saga was being released in English earlier than in Spanish, so I thought: \"How nice would it be to help people experience these stories in their own language?\". It was then when I fell in love with translation.\n\nWhile I was studying, I had the opportunity to translate all kinds of texts and content. The challenges of translating movies and TV shows, the creativity, the play on words, the puns and jokes, and the differences between cultures made me realize that I really liked",
   "app.sections.aboutMe.text.part4": "audiovisual translation",
-  "app.sections.aboutMe.text.part5": " as well.\n\nWhen I finished University, I studied a Master's Degree (METAV), and I discovered a new passion for localization, specifically for",
+  "app.sections.aboutMe.text.part4a": " as well. ",
+  "app.sections.aboutMe.text.part4b": "\n\nFurthermore, I wanted to help people with different capabilities fully enjoy audiovisual products, so I started my formation in",
+  "app.sections.aboutMe.text.part4c": "accessibility",
+  "app.sections.aboutMe.text.part4d": ", and now I work with it in a professional capacity. I am also part of the accessibility committee of",
+  "app.sections.aboutMe.text.part4e": "(Association of Translation and Audiovisual Adaptation in Spain).",
+  "app.sections.aboutMe.text.part5": "\n\nWhen I finished University, I studied a Master's Degree (METAV), and I discovered a new passion for localization, specifically for",
   "app.sections.aboutMe.text.part6": "video game localization",
   "app.sections.aboutMe.text.part7": ".\n\nIn addition to all that, my innate perfectionism, my attention to details, and focus on orthography and grammar made me wonder if I might be a good editor and proofreader as well. And, in fact, my first job was as an audiobook",
   "app.sections.aboutMe.text.part8": "editor",
   "app.sections.aboutMe.text.part9": " and reviewer.\n\nNow I combine all my passions and I enjoy the fact that I work on what I really love and always have a different project to tinker with.",
 
-  "app.sections.contact.text": "Do you need a translation? Do you have a project in mind?",
+  "app.sections.contact.text": "Do you need a translation? Would you like to make your audiovisual content accessible? Do you have a project in mind?",
   "app.sections.contact.letsTalk": "Count on me!",
   "app.sections.contact.form.name": "Name",
   "app.sections.contact.form.email": "E-Mail",
   "app.sections.contact.form.message": "Message",
   "app.sections.contact.form.send": "Send",
   "app.sections.contact.form.privacyPolicy.part1": "I have read and I accept the ",
-  "app.sections.contact.form.privacyPolicy.part2": "Privacy Policy",
+  "app.sections.contact.form.privacyPolicy.part2": "Privacy Policy.",
   "app.sections.contact.form.privacyPolicy.smallText": "Florencia Cecilia Romero Gonzalo will process the information you provide with the sole purpose of managing your request for information. You can exercise the rights of access, rectification, deletion, limitation, opposition, portability, or withdraw consent by sending an email to fctraduce@gmail.com.",
 
   "app.footer.letsTalk": "Let's talk!",
@@ -79,5 +84,7 @@
   "app.footer.photoDesign": "Photography: ",
   "app.footer.legal": "Legal Notice",
   "app.footer.privacy": "Privacy Policy",
-  "app.footer.cookies": "Cookie Policy"
+  "app.footer.cookies": "Cookie Policy",
+
+  "ATRAE_NAME": "ATRAE"
 }
