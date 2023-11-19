@@ -11,6 +11,8 @@ import atraeLogoBig from '../../../assets/images/atrae-logo-big.png';
 import {
   ATRAE_ABOUT_URL,
   ATRAE_FLOR_URL,
+  ATRAE_XI_AWARDS_URL,
+  ATRAE_X_AWARDS_URL,
   GMAIL_URL,
   LINKEDIN_URL,
   PROZ_URL,
@@ -72,6 +74,22 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
     id: 'app.sections.aboutMe.text.part9',
   });
 
+  const awardsTextPart1 = intl.formatMessage({
+    id: 'app.sections.aboutMe.awards.part1',
+  });
+  const awardsTextPart2 = intl.formatMessage({
+    id: 'app.sections.aboutMe.awards.part2',
+  });
+  const awardsTextPart3 = intl.formatMessage({
+    id: 'app.sections.aboutMe.awards.part3',
+  });
+  const awardsTextPart4 = intl.formatMessage({
+    id: 'app.sections.aboutMe.awards.part4',
+  });
+  const awardsTextPart5 = intl.formatMessage({
+    id: 'app.sections.aboutMe.awards.part5',
+  });
+
   const renderAboutMeText = () => {
     return (
       <div className={classes.textSectionContainer}>
@@ -88,6 +106,26 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         {textPart4e}
         {textPart5} <b>{textPart6}</b>
         {textPart7} <b>{textPart8}</b> {textPart9}
+      </div>
+    );
+  };
+
+  const renderAwardsText = () => {
+    return (
+      <div className={classes.awardsText}>
+        {awardsTextPart1}
+        {WHITE_SPACE}
+        <a href={ATRAE_X_AWARDS_URL} target='_blank' rel='noreferrer'>
+          {awardsTextPart2}
+        </a>
+        {WHITE_SPACE}
+        {awardsTextPart3}
+        {WHITE_SPACE}
+        <a href={ATRAE_XI_AWARDS_URL} target='_blank' rel='noreferrer'>
+          {awardsTextPart4}
+        </a>
+        {WHITE_SPACE}
+        {awardsTextPart5}
       </div>
     );
   };
@@ -118,6 +156,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
           <a href={ATRAE_FLOR_URL} target='_blank' rel='noopener noreferrer'>
             <img src={atraeLogoBig} alt='atrae' className={classes.atraeLogo} />
           </a>
+          {renderAwardsText()}
         </div>
         {renderAboutMeText()}
       </div>

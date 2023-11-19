@@ -7,6 +7,9 @@ export const TRANSLATOR_LANGUAGES = 'EN, FR > ES';
 
 export const ATRAE_FLOR_URL = 'https://basededatos.atrae.org/user/florencia-cecilia-romero-gonzalo';
 export const ATRAE_ABOUT_URL = 'https://atrae.org/about';
+export const ATRAE_X_AWARDS_URL = 'https://premios.atrae.org/finalistas-x-edicion';
+export const ATRAE_XI_AWARDS_URL = 'https://premios.atrae.org/finalistas-xi-edicion';
+
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/fctrad';
 export const TWITTER_URL = 'https://twitter.com/fctrad';
 export const PROZ_URL = 'https://www.proz.com/translator/1841231';
