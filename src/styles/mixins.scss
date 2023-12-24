@@ -28,7 +28,7 @@
   border-bottom-left-radius: 130px;
   border-top-left-radius: 20px;
   align-self: flex-end;
-  background-image: url(../assets/backgrounds/section-gradient-top.svg);
+  background-image: url(../../public/backgrounds/section-gradient-top.svg);
 }
 
 @mixin sectionTitleLeft {
@@ -36,7 +36,7 @@
   border-bottom-right-radius: 130px;
   border-top-right-radius: 20px;
   align-self: flex-start;
-  background-image: url(../assets/backgrounds/section-gradient-bottom.svg);
+  background-image: url(../../public/backgrounds/section-gradient-bottom.svg);
 }
 
 @mixin sectionBody {

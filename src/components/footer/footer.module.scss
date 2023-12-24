@@ -5,7 +5,7 @@
     position: relative;
     display: flex;
     padding: var(--spacing-3xl) 0;
-    background-image: url(../../assets/backgrounds/waves-footer.svg);
+    background-image: url(../../../public/backgrounds/waves-footer.svg);
     background-size: cover;
 
     .linksContainer {
@@ -114,7 +114,7 @@
       align-items: center;
       gap: var(--spacing-l);
       padding-top: var(--spacing-11xl);
-      background-image: url(../../assets/backgrounds/waves-header.svg);
+      background-image: url(../../../public/backgrounds/waves-header.svg);
 
       .logoContainer {
         .logo {

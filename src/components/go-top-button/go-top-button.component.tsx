@@ -4,7 +4,7 @@ import classes from './go-top-button.module.scss';
 
 import { SECTIONS } from '../../constants/enums';
 
-import { ReactComponent as ArrowBox } from '../../assets/icons/arrow-box.svg';
+import ArrowBox from '../../../public/icons/arrow-box.svg';
 
 type GoTopButtonProps = {
   goToSection: (section: SECTIONS) => void;

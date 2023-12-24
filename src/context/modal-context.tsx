@@ -1,6 +1,10 @@
+'use client';
+
 import React, { createContext, ReactElement, ReactNode, useState } from 'react';
 import Modal from '../components/modal/modal.component';
 import { EMPTY_STRING } from '../constants/constants';
+
+type ModalContentType = string | ReactElement | undefined;
 
 export type ModalContextType = {
   isOpen: boolean;
@@ -13,8 +17,6 @@ export type ModalContextType = {
 type ModalProviderProps = {
   children: ReactNode;
 };
-
-type ModalContentType = string | ReactElement | undefined;
 
 export const ModalContext = createContext<ModalContextType>({
   isOpen: false,

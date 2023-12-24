@@ -11,8 +11,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import useScreenType from '../../../hooks/use-screen-type.hook';
 
 import { ATRAE_FLOR_URL } from '../../../constants/strings';
-import AtraeLogo from '../../../assets/images/atrae-logo-db.png';
+import AtraeLogo from '../../../../public/images/atrae-logo-db.png';
 import useCarouselImages from '../../../hooks/use-carousel-images';
+import Image from 'next/image';
 
 const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const allImagesUrls = useCarouselImages();
@@ -32,19 +33,23 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   });
 
   const calculateNumberOfSlides = () => {
-    if (windowWidth > 1400) return 4;
-    if (windowWidth > 950) return 3;
-    if (windowWidth > 625) return 2;
+    if (windowWidth) {
+      if (windowWidth > 1400) return 4;
+      if (windowWidth > 950) return 3;
+      if (windowWidth > 625) return 2;
+    }
     return 1;
   };
 
   const calculateSlidesToScroll = () => {
     const numberOfSlides = calculateNumberOfSlides();
     if (numberOfSlides > 2) return 2;
-    else return 1;
+    return 1;
   };
 
   const renderPortfolioCarousel = () => {
+    if (!allImagesUrls) return <></>;
+
     return (
       <Slider
         infinite
@@ -61,7 +66,7 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
         {allImagesUrls?.map((imageUrl) => {
           return (
             <div className={classes.carrouselItemContainer} key={imageUrl}>
-              <img className={classes.carrouselItemImage} src={imageUrl} alt={imageUrl} />
+              <Image width={225} height={327} src={imageUrl} alt={imageUrl} priority />
             </div>
           );
         })}
@@ -75,7 +80,7 @@ const PortfolioSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <div className={classes.sectionBodyContainer}>
         <div className={classes.portfolioLinkContainer}>
           <a href={ATRAE_FLOR_URL} target='_blank' rel='noopener noreferrer'>
-            <img src={AtraeLogo} alt='atrae-logo' />
+            <Image src={AtraeLogo} alt='atrae-logo' />
           </a>
           <div className={classes.portfolioText}>
             <a href={ATRAE_FLOR_URL} target='_blank' rel='noopener noreferrer'>

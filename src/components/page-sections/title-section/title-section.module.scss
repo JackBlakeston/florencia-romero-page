@@ -14,14 +14,14 @@
     font-family: var(--font-light);
     color: var(--color-secondary);
     text-align: center;
-    // background-color: var(--color-primary-bright-3);
-    background-image: url(../../../assets/backgrounds/waves-header.svg);
+    background-image: url(../../../../public/backgrounds/waves-header.svg);
     background-size: cover;
 
     .logo {
       position: absolute;
       left: 3%;
       height: 330px;
+      width: 330px;
     }
 
     :nth-child(2) {

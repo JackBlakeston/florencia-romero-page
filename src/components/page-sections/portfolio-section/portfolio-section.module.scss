@@ -28,14 +28,10 @@
 
     .carrouselContainer {
       .carrouselItemContainer {
+        position: relative;
         display: flex !important;
         justify-content: center;
         align-items: center;
-
-        .carrouselItemImage {
-          height: 327px;
-          width: 245px;
-        }
       }
     }
   }

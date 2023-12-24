@@ -2,28 +2,29 @@ import React from 'react';
 
 import classes from './icon.module.scss';
 
-import phone from '../../assets/icons/phone.png';
-import mail from '../../assets/icons/mail.png';
-import accessibility from '../../assets/icons/accessibility.png';
-import audiovisual from '../../assets/icons/audiovisual.png';
-import videogames from '../../assets/icons/videogames.png';
-import gmail from '../../assets/icons/gmail.png';
-import linkedin from '../../assets/icons/linkedin.png';
-import software from '../../assets/icons/software.png';
-import proz from '../../assets/icons/proz.png';
-import revision from '../../assets/icons/revision.png';
-import skype from '../../assets/icons/skype.png';
-import text from '../../assets/icons/text.png';
-import twitter from '../../assets/icons/twitter.png';
-import skypeGreen from '../../assets/icons/skype-green.png';
-import gmailGreen from '../../assets/icons/gmail-green.png';
-import twitterGreen from '../../assets/icons/twitter-green.png';
-import linkedinGreen from '../../assets/icons/linkedin-green.png';
-import prozGreen from '../../assets/icons/proz-green.png';
-import phoneDark from '../../assets/icons/phone-dark.png';
-import mailDark from '../../assets/icons/mail-dark.png';
+import phone from '../../../public/icons/phone.png';
+import mail from '../../../public/icons/mail.png';
+import accessibility from '../../../public/icons/accessibility.png';
+import audiovisual from '../../../public/icons/audiovisual.png';
+import videogames from '../../../public/icons/videogames.png';
+import gmail from '../../../public/icons/gmail.png';
+import linkedin from '../../../public/icons/linkedin.png';
+import software from '../../../public/icons/software.png';
+import proz from '../../../public/icons/proz.png';
+import revision from '../../../public/icons/revision.png';
+import skype from '../../../public/icons/skype.png';
+import text from '../../../public/icons/text.png';
+import twitter from '../../../public/icons/twitter.png';
+import skypeGreen from '../../../public/icons/skype-green.png';
+import gmailGreen from '../../../public/icons/gmail-green.png';
+import twitterGreen from '../../../public/icons/twitter-green.png';
+import linkedinGreen from '../../../public/icons/linkedin-green.png';
+import prozGreen from '../../../public/icons/proz-green.png';
+import phoneDark from '../../../public/icons/phone-dark.png';
+import mailDark from '../../../public/icons/mail-dark.png';
 
 import { SERVICES } from '../../constants/enums';
+import Image, { StaticImageData } from 'next/image';
 
 type IconNameType =
   | 'phone'
@@ -48,7 +49,7 @@ type IconNameType =
   | 'mailDark';
 
 type IconObjectType = {
-  [key in IconNameType]: string;
+  [key in IconNameType]: StaticImageData;
 };
 
 const iconObject: IconObjectType = {
@@ -82,7 +83,7 @@ type IconProps = {
 const Icon = ({ name, className }: IconProps) => {
   const imgSource = iconObject[name as IconNameType];
 
-  return <img src={imgSource} className={`${classes.icon} ${classes[className as string]}`} alt={name} />;
+  return <Image src={imgSource} className={`${classes.icon} ${classes[className as string]}`} alt={name} />;
 };
 
 export default Icon;

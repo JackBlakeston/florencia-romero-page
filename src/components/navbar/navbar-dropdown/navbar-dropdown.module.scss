@@ -15,3 +15,9 @@
     color: var(--color-primary-dark-1);
   }
 }
+
+@media (min-width: 870px) {
+  .mainContainer {
+    display: none;
+  }
+}

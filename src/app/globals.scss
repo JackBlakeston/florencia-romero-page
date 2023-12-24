@@ -1,26 +1,26 @@
 @font-face {
   font-family: visbyr;
-  src: url(../assets/fonts/VisbyRoundCF-Regular.otf);
+  src: url(../../public/fonts/VisbyRoundCF-Regular.otf);
 }
 @font-face {
   font-family: visbyr-light;
-  src: url(../assets/fonts/VisbyRoundCF-Light.otf);
+  src: url(../../public/fonts/VisbyRoundCF-Light.otf);
 }
 @font-face {
   font-family: visbyr-medium;
-  src: url(../assets/fonts/VisbyRoundCF-Medium.otf);
+  src: url(../../public/fonts/VisbyRoundCF-Medium.otf);
 }
 @font-face {
   font-family: visbyr-bold;
-  src: url(../assets/fonts/VisbyRoundCF-Bold.otf);
+  src: url(../../public/fonts/VisbyRoundCF-Bold.otf);
 }
 @font-face {
   font-family: visbyr-demibold;
-  src: url(../assets/fonts/VisbyRoundCF-DemiBold.otf);
+  src: url(../../public/fonts/VisbyRoundCF-DemiBold.otf);
 }
 @font-face {
   font-family: visbyr-heavy;
-  src: url(../assets/fonts/VisbyRoundCF-Heavy.otf);
+  src: url(../../public/fonts/VisbyRoundCF-Heavy.otf);
 }
 
 :root {
@@ -79,7 +79,6 @@
   --spacing-20xl: 12rem;
 
   // Colors
-
   --color-primary-dark-3: #6da19c;
   --color-primary-dark-2: #2c6660;
   --color-primary-dark-1: #4f9991;

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { ChangeEvent, forwardRef, useContext, useState } from 'react';
 
 import { useIntl } from 'react-intl';
@@ -6,7 +8,7 @@ import classes from './contact-section.module.scss';
 
 import Icon from '../../icon/icon.component';
 
-import { ReactComponent as Blob1 } from '../../../assets/shapes/blob-1.svg';
+import Blob1 from '../../../../public/shapes/blob-1.svg';
 
 import { EMAIL, FORM_SUBMIT_URL, GMAIL_URL, PHONE_NUMBER, PHONE_URL } from '../../../constants/strings';
 import { LEGAL_SECTIONS } from '../../../constants/enums';

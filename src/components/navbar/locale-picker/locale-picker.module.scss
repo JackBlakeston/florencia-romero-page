@@ -19,8 +19,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
   .mainContainer {
+    display: none;
     position: relative;
     padding: 15px;
   }

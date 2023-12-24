@@ -25,7 +25,7 @@ import {
 } from '../../constants/strings';
 import { TARGET_BLANK } from '../../constants/constants';
 
-import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
+import Logo from '../../../public/logos/logo.svg';
 import { ModalContext } from '../../context/modal-context';
 import { LEGAL_SECTIONS } from '../../constants/enums';
 import { openLegalModal } from '../../utils/open-modal';

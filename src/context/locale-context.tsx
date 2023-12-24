@@ -1,3 +1,5 @@
+'use client';
+
 import React, { createContext, ReactNode, useState } from 'react';
 
 import { IntlProvider } from 'react-intl';
@@ -44,7 +46,6 @@ function LocaleProvider({ children }: LocaleProviderProps) {
     if (err.code === 'MISSING_TRANSLATION') {
       return;
     }
-    console.error(err);
   };
 
   return (

@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import Image from 'next/image';
 
 import { useIntl } from 'react-intl';
 
@@ -6,8 +7,8 @@ import classes from './about-me-section.module.scss';
 
 import Icon from '../../icon/icon.component';
 
-import portrait from '../../../assets/images/portrait.jpg';
-import atraeLogoBig from '../../../assets/images/atrae-logo-big.png';
+import portrait from '../../../../public/images/portrait.jpg';
+import atraeLogoBig from '../../../../public/images/atrae-logo-big.png';
 import {
   ATRAE_ABOUT_URL,
   ATRAE_FLOR_URL,
@@ -135,7 +136,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <div className={classes.sectionTitle}>{title}</div>
       <div className={classes.sectionBodyContainer}>
         <div className={classes.linkSectionContainer}>
-          <img src={portrait} alt='florencia-romero-portrait' className={classes.portrait} />
+          <Image src={portrait} alt='florencia-romero-portrait' className={classes.portrait} />
           <div className={classes.linkRow}>
             <a href={GMAIL_URL} target='_blank' rel='noopener noreferrer'>
               <Icon name='gmail' />
@@ -154,7 +155,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
             </a>
           </div>
           <a href={ATRAE_FLOR_URL} target='_blank' rel='noopener noreferrer'>
-            <img src={atraeLogoBig} alt='atrae' className={classes.atraeLogo} />
+            <Image src={atraeLogoBig} alt='atrae' className={classes.atraeLogo} />
           </a>
           {renderAwardsText()}
         </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef } from 'react';
 
 import classes from './main-layout.module.scss';
@@ -30,7 +32,7 @@ const MainLayout = () => {
   const isAboutMeSectionInViewport = useIsInViewport(aboutMeSectionRef);
   const isContactSectionInViewport = useIsInViewport(contactSectionRef);
 
-  let viewportStatus: ViewportStatusType = {
+  const viewportStatus: ViewportStatusType = {
     [SECTIONS.TITLE]: isTitleSectionInViewport,
     [SECTIONS.SERVICES]: isServicesSectionInViewport,
     [SECTIONS.PORTFOLIO]: isPortfolioSectionInViewport,

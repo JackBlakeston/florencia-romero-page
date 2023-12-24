@@ -2,7 +2,7 @@ import React, { MouseEvent, ReactElement } from 'react';
 
 import classes from './modal.module.scss';
 
-import { ReactComponent as CloseButton } from '../../assets/icons/close-modal.svg';
+import CloseButton from '../../../public/icons/close-modal.svg';
 
 type ModalProps = {
   children: React.ReactNode;

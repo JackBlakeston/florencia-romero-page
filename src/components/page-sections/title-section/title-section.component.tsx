@@ -4,9 +4,10 @@ import { useIntl } from 'react-intl';
 
 import classes from './title-section.module.scss';
 
-import logo from '../../../assets/images/logo.png';
+import logo from '../../../../public/images/logo.png';
 
 import { NAME } from '../../../constants/strings';
+import Image from 'next/image';
 
 const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   const intl = useIntl();
@@ -156,7 +157,7 @@ const TitleSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
   return (
     <div className={classes.mainContainer} ref={ref}>
       <div className={classes.titleContainer}>
-        <img src={logo} alt='logo-florencia-romero' className={classes.logo} />
+        <Image src={logo} alt='logo-florencia-romero' className={classes.logo} priority={true} />
         <span>{NAME}</span>
         <span>{titleLine2}</span>
       </div>
