@@ -3,12 +3,10 @@
 .mainContainer {
   .sectionTitle {
     @include mixins.sectionTitle;
-    @include mixins.sectionTitleLeft;
   }
 
   .sectionBodyContainer {
     @include mixins.sectionBody;
-    padding-top: 3rem;
 
     .portfolioLinkContainer {
       display: flex;

@@ -53,6 +53,7 @@ const MainLayout = () => {
     if (targetSection) {
       const elementPosition = targetSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - HEADER_OFFSET;
+      console.log({ elementPosition, offsetPosition, pageYoffset: window.pageYOffset });
 
       window.scrollTo({
         top: offsetPosition,

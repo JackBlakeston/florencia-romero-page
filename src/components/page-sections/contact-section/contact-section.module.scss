@@ -8,12 +8,10 @@
   }
   .sectionTitle {
     @include mixins.sectionTitle;
-    @include mixins.sectionTitleLeft;
   }
 
   .sectionBodyContainer {
     @include mixins.sectionBody;
-    padding-top: 6rem;
     padding-bottom: 10rem;
     display: flex;
     flex-direction: column;
