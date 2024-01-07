@@ -1,13 +1,10 @@
 @use '../../../styles/mixins.scss';
 
 .mainContainer {
-  display: flex;
-  flex-direction: column;
-
   .sectionTitle {
     position: relative;
     @include mixins.sectionTitle;
-    @include mixins.sectionTitleRight;
+    margin-top: 6rem;
   }
 
   .sectionBodyContainer {

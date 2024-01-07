@@ -1,11 +1,8 @@
 @use '../../../styles/mixins.scss';
 
 .mainContainer {
-  display: flex;
-  flex-direction: column;
   .sectionTitle {
     @include mixins.sectionTitle;
-    @include mixins.sectionTitleRight;
   }
 
   .sectionBodyContainer {

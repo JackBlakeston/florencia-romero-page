@@ -7,21 +7,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 32rem;
     gap: var(--spacing-xs);
     margin: 0 0 var(--spacing-2xl);
-    padding: var(--spacing-9xl) var(--spacing-20xl);
+    padding: var(--spacing-xs) var(--spacing-9xl) var(--spacing-10xl);
     box-shadow: var(--shadow-primary);
     font-family: var(--font-light);
     color: var(--color-secondary);
     text-align: center;
-    // background-color: var(--color-primary-bright-3);
     background-image: url(../../../assets/backgrounds/waves-header.svg);
     background-size: cover;
 
     .logo {
-      position: absolute;
-      left: 3%;
+      position: relative;
+      left: 0;
       height: 330px;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
     }
 
     :nth-child(2) {
@@ -58,74 +63,11 @@
     }
   }
 
-  .wordSoupContainer {
+  .headerDivider {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 0;
     z-index: 2;
-    padding: var(--spacing-2xs) var(--spacing-20xl);
-    margin-bottom: var(--spacing-2xl);
-    color: var(--color-secondary);
-    font-size: var(--font-size-2xl);
-    font-family: var(--font-light);
-    gap: var(--spacing-2xl);
-    line-height: 37px;
-
-    p {
-      margin: 0;
-    }
-
-    b {
-      font-family: var(--font-demibold);
-    }
-
-    .wordSoupContainer1 {
-      display: flex;
-      justify-content: space-between;
-
-      .wordSoup1 {
-        p {
-          &:first-child {
-            margin-left: 8.533vw;
-          }
-          &:nth-child(2) {
-            margin-left: 4.267vw;
-          }
-        }
-      }
-
-      .wordSoup2 {
-        text-align: right;
-        p {
-          &:first-child {
-            margin-right: 8.533vw;
-          }
-          &:nth-child(2) {
-            margin-right: 4.267vw;
-          }
-        }
-      }
-    }
-
-    .wordSoupContainer2 {
-      display: flex;
-      justify-content: space-evenly;
-
-      .wordSoup3 {
-        text-align: center;
-      }
-      .wordSoup4 {
-        text-align: center;
-      }
-    }
-
-    .wordSoupContainer3 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
     &::before {
       content: '';
       position: absolute;
@@ -134,22 +76,6 @@
       background-color: var(--color-background-1);
       width: 188.5px;
       height: 1rem;
-    }
-  }
-}
-
-@media (max-width: 1600px) {
-  .mainContainer {
-    .wordSoupContainer {
-      padding: var(--spacing-2xs) var(--spacing-10xl);
-    }
-  }
-}
-
-@media (max-width: 1350px) {
-  .mainContainer {
-    .wordSoupContainer {
-      padding: var(--spacing-2xs) var(--spacing-3xl);
     }
   }
 }
@@ -164,50 +90,14 @@
         left: 0;
       }
     }
-
-    .wordSoupContainer {
-      padding: var(--spacing-2xs) var(--spacing-xs);
-    }
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
   .mainContainer {
-    .wordSoupContainer {
-      padding: var(--spacing-2xs) var(--spacing-3xl);
-      gap: var(--spacing-xs);
-
-      div {
-        gap: var(--spacing-xs);
-      }
-
-      .wordSoupContainer1 {
-        flex-direction: column;
-        p {
-          margin: 0 !important;
-        }
-
-        .wordSoup2 {
-          text-align: right;
-          p {
-            &:first-child {
-              margin-right: 8.533vw;
-            }
-            &:nth-child(2) {
-              margin-right: 4.267vw;
-            }
-          }
-        }
-      }
-
-      .wordSoupContainer2 {
-        flex-direction: column;
-      }
-
-      .wordSoupContainer3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .titleContainer {
+      &::after {
+        display: none;
       }
     }
   }
@@ -223,27 +113,11 @@
       &::before {
         right: calc(50% - 6rem);
       }
-
-      &::after {
-        display: none;
-      }
     }
 
-    .wordSoupContainer {
+    .headerDivider {
       &::before {
         right: calc(50% - 6rem);
-      }
-
-      .wordSoupContainer1 {
-        align-items: center;
-
-        .wordSoup1 {
-          text-align: center;
-        }
-
-        .wordSoup2 {
-          text-align: center;
-        }
       }
     }
   }

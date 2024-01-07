@@ -48,7 +48,7 @@
   --icon-size: 2.25rem;
   --services-icons-size: 5rem;
 
-  --section-body-padding: 8rem var(--spacing-20xl);
+  --section-body-padding: 0 var(--spacing-20xl);
 
   --navbar-height: 3.5rem;
   --navbar-padding-vertical: 1rem;
@@ -119,18 +119,18 @@ body {
 
 @media (max-width: 1240px) {
   :root {
-    --section-body-padding: 6rem var(--spacing-3xl);
+    --section-body-padding: 0 var(--spacing-3xl);
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --section-body-padding: 4rem var(--spacing-s);
+    --section-body-padding: 0 var(--spacing-s);
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --section-body-padding: 4rem var(--spacing-4xs);
+    --section-body-padding: 0 var(--spacing-4xs);
   }
 }
