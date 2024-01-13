@@ -3,7 +3,7 @@
 .mainContainer {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: var(--navbar-height);
   padding: var(--navbar-padding-vertical) 3rem;
@@ -16,12 +16,8 @@
   z-index: 100;
 
   .logoContainer {
-    position: absolute;
-    padding: inherit;
-    left: 0;
-
     .logo {
-      width: 60px;
+      width: 56px;
       fill: var(--color-primary);
       cursor: pointer;
     }
@@ -64,7 +60,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .mainContainer {
     justify-content: space-between;
 

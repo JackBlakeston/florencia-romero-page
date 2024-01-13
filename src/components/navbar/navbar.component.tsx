@@ -16,8 +16,10 @@ import { ReactComponent as Logo } from '../../assets/logos/logo.svg';
 
 import { sections } from '../../constants/constants';
 
-import { SCREENS, SECTIONS } from '../../constants/enums';
+import { SECTIONS } from '../../constants/enums';
 import { ViewportStatusType } from '../../types';
+
+const COMPACT_NAVBAR_BREAKPOINT = 864;
 
 type NavbarProps = {
   goToSection: (section: SECTIONS) => void;
@@ -26,9 +28,11 @@ type NavbarProps = {
 
 const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
   const intl = useIntl();
-  const { screenType } = useScreenType();
+  const { windowWidth } = useScreenType();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const isCompactNavbar = windowWidth <= COMPACT_NAVBAR_BREAKPOINT;
 
   const handleBurgerMenuClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -60,8 +64,8 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
   };
 
   const renderLocalePicker = () => {
-    if (screenType === SCREENS.MOBILE || screenType === SCREENS.TABLET) {
-      return null;
+    if (isCompactNavbar) {
+      return <></>;
     } else {
       return <LocalePicker />;
     }
@@ -77,7 +81,12 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
       <div className={classes.dropdownIconContainer} onClick={handleBurgerMenuClick}>
         {renderDropdownButton()}
       </div>
-      <NavbarDropdown setIsOpen={setIsDropdownOpen} isOpen={isDropdownOpen} goToSection={goToSection} />
+      <NavbarDropdown
+        setIsOpen={setIsDropdownOpen}
+        isOpen={isDropdownOpen}
+        goToSection={goToSection}
+        isCompactNavbar={isCompactNavbar}
+      />
     </div>
   );
 };

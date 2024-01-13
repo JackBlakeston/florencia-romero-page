@@ -76,6 +76,8 @@
   --spacing-9xl: 4.5rem;
   --spacing-10xl: 6rem;
   --spacing-11xl: 7rem;
+  --spacing-15xl: 9rem;
+  --spacing-18xl: 11rem;
   --spacing-20xl: 12rem;
 
   // Colors
@@ -115,6 +117,24 @@ body {
   color: var(--color-text-gray);
   font-size: var(--font-size-m);
   letter-spacing: 3px;
+}
+
+@media (max-width: 1600px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-18xl);
+  }
+}
+
+@media (max-width: 1500px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-15xl);
+  }
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --section-body-padding: 0 var(--spacing-10xl);
+  }
 }
 
 @media (max-width: 1240px) {
