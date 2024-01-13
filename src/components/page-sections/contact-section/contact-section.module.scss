@@ -27,6 +27,10 @@
       align-items: center;
       gap: var(--spacing-5xs);
       margin: 0 0 var(--spacing-10xl);
+
+      strong {
+        color: var(--color-primary-dark-2);
+      }
     }
 
     .sectionBodyColumnsContainer {

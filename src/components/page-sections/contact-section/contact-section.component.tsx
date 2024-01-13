@@ -76,7 +76,7 @@ const ContactSection = forwardRef<HTMLDivElement, unknown>((_, ref) => {
       <div className={classes.sectionBodyContainer}>
         <div className={classes.sectionSubtitle}>
           <span>{contactSectionText}</span>
-          <span>{letsTalkText}</span>
+          <strong>{letsTalkText}</strong>
         </div>
         <div className={classes.sectionBodyColumnsContainer}>
           <div className={classes.contactInfoContainer}>
