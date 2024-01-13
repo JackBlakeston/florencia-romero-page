@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useIntl } from 'react-intl';
 
 import classes from './navbar-dropdown.module.scss';
@@ -15,12 +15,15 @@ type NavbarDropdownProps = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   goToSection: (section: SECTIONS) => void;
+  isCompactNavbar: boolean;
 };
 
-const NavbarDropdown = ({ isOpen, setIsOpen, goToSection }: NavbarDropdownProps) => {
+const NavbarDropdown = ({ isOpen, setIsOpen, goToSection, isCompactNavbar }: NavbarDropdownProps) => {
   const intl = useIntl();
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    if (!isCompactNavbar) setIsOpen(false);
+  }, [isCompactNavbar, setIsOpen]);
 
   const handleSectionClick = (section: SECTIONS) => () => {
     setIsOpen(false);
@@ -38,6 +41,7 @@ const NavbarDropdown = ({ isOpen, setIsOpen, goToSection }: NavbarDropdownProps)
     });
   };
 
+  if (!isOpen) return <></>;
   return (
     <div className={classes.mainContainer}>
       {renderSections()}

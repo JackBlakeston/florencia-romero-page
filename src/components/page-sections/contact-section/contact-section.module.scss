@@ -27,6 +27,10 @@
       align-items: center;
       gap: var(--spacing-5xs);
       margin: 0 0 var(--spacing-10xl);
+
+      strong {
+        color: var(--color-primary-dark-2);
+      }
     }
 
     .sectionBodyColumnsContainer {
@@ -163,9 +167,6 @@
 @media (max-width: 1240px) {
   .mainContainer {
     .sectionBodyContainer {
-      padding-top: 4rem;
-      padding-bottom: 8rem;
-
       .sectionSubtitle {
         margin-bottom: var(--spacing-5xl);
       }
