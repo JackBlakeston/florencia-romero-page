@@ -5,20 +5,24 @@ import classes from './navbar-dropdown.module.scss';
 
 import LocalePicker from '../locale-picker/locale-picker.component';
 
-import { formatSectionName } from '../utils';
+import { formatSectionName, getCurrentViewedSection } from '../utils';
 
 import { sections } from '../../../constants/constants';
 
 import { SECTIONS } from '../../../constants/enums';
+import { SECTIONS_NAVIGATION_LABEL, getSectionButtonLabel } from '../navbar.aria';
+import { ViewportStatusType } from '../../../types';
+import { MOBILE_NAVBAR_DROPDOWN_MENU_LABEL } from './navbar-dropdown.aria';
 
 type NavbarDropdownProps = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   goToSection: (section: SECTIONS) => void;
   isCompactNavbar: boolean;
+  viewportStatus: ViewportStatusType;
 };
 
-const NavbarDropdown = ({ isOpen, setIsOpen, goToSection, isCompactNavbar }: NavbarDropdownProps) => {
+const NavbarDropdown = ({ isOpen, setIsOpen, goToSection, isCompactNavbar, viewportStatus }: NavbarDropdownProps) => {
   const intl = useIntl();
 
   useEffect(() => {
@@ -31,10 +35,20 @@ const NavbarDropdown = ({ isOpen, setIsOpen, goToSection, isCompactNavbar }: Nav
   };
 
   const renderSections = () => {
+    const currentViewedSection = getCurrentViewedSection(viewportStatus);
+
     return sections.map((section) => {
+      const isCurrentSection = currentViewedSection === section;
       const sectionName = formatSectionName(intl, section);
+
       return (
-        <li className={classes.sectionButton} onClick={handleSectionClick(section)} key={section}>
+        <li
+          key={sectionName}
+          onClick={handleSectionClick(section)}
+          aria-label={getSectionButtonLabel(sectionName)}
+          role='option'
+          aria-selected={isCurrentSection}
+        >
           {sectionName}
         </li>
       );
@@ -43,10 +57,12 @@ const NavbarDropdown = ({ isOpen, setIsOpen, goToSection, isCompactNavbar }: Nav
 
   if (!isOpen) return <></>;
   return (
-    <ul className={classes.mainContainer}>
-      {renderSections()}
+    <section className={classes.mainContainer} aria-label={MOBILE_NAVBAR_DROPDOWN_MENU_LABEL}>
+      <menu className={classes.sectionsContainer} aria-label={SECTIONS_NAVIGATION_LABEL}>
+        {renderSections()}
+      </menu>
       <LocalePicker />
-    </ul>
+    </section>
   );
 };
 

@@ -10,8 +10,12 @@
   padding-bottom: var(--spacing-2xs);
   box-shadow: var(--shadow-primary);
 
-  .sectionButton {
-    padding: var(--spacing-2xs) 0;
-    color: var(--color-primary-dark-1);
+  .sectionsContainer {
+    text-align: center;
+
+    li {
+      padding: var(--spacing-2xs) 0;
+      color: var(--color-primary-dark-1);
+    }
   }
 }

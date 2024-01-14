@@ -6,6 +6,11 @@ import esMessages from '../translations/es.json';
 import enMessages from '../translations/en.json';
 import { LOCALES } from '../constants/enums';
 
+export const LOCALES_TO_LANGUAGE_NAMES_MAP = {
+  [LOCALES.EN]: 'English',
+  [LOCALES.ES]: 'Spanish',
+} as const;
+
 type JSONType = {
   [key: string]: string;
 };
@@ -19,6 +24,7 @@ type IntlFormatError = Error & { code?: string };
 type LocaleContextType = {
   locale: LOCALES;
   setLocale: React.Dispatch<React.SetStateAction<LOCALES>>;
+  getLanguageName: (locale: LOCALES) => string;
 };
 
 type LocaleProviderProps = {
@@ -30,9 +36,14 @@ const messages: LocaleMessagesType = {
   es: esMessages as JSONType,
 };
 
+const getLanguageName = (locale: LOCALES) => {
+  return LOCALES_TO_LANGUAGE_NAMES_MAP[locale];
+};
+
 const defaultLocaleContextState: LocaleContextType = {
   locale: LOCALES.ES,
   setLocale: () => {},
+  getLanguageName,
 };
 
 const LocaleContext = createContext<LocaleContextType>(defaultLocaleContextState);
@@ -48,7 +59,7 @@ function LocaleProvider({ children }: LocaleProviderProps) {
   };
 
   return (
-    <LocaleContext.Provider value={{ locale, setLocale }}>
+    <LocaleContext.Provider value={{ locale, setLocale, getLanguageName }}>
       <IntlProvider onError={handleError} locale={locale} messages={messages[locale]}>
         {children}
       </IntlProvider>
