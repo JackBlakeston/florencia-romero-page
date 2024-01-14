@@ -48,46 +48,35 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
       const sectionButtonClasses = currentViewedSection === section ? classes.currentSection : '';
       const sectionName = formatSectionName(intl, section);
       return (
-        <div className={sectionButtonClasses} key={sectionName} onClick={handleSectionClick(section)}>
+        <li className={sectionButtonClasses} key={sectionName} onClick={handleSectionClick(section)}>
           {sectionName}
-        </div>
+        </li>
       );
     });
   };
 
   const renderDropdownButton = () => {
-    if (isDropdownOpen) {
-      return <CloseIcon />;
-    } else {
-      return <BurgerMenuIcon />;
-    }
+    const iconProps = { className: classes.dropdownIcon, onClick: handleBurgerMenuClick };
+    return isDropdownOpen ? <CloseIcon {...iconProps} /> : <BurgerMenuIcon {...iconProps} />;
   };
 
   const renderLocalePicker = () => {
-    if (isCompactNavbar) {
-      return <></>;
-    } else {
-      return <LocalePicker />;
-    }
+    return isCompactNavbar ? <></> : <LocalePicker />;
   };
 
   return (
-    <div className={classes.mainContainer}>
-      <div className={classes.logoContainer}>
-        <Logo className={classes.logo} onClick={handleSectionClick(SECTIONS.TITLE)} />
-      </div>
-      <div className={classes.sectionsContainer}>{renderSectionButtons()}</div>
+    <nav className={classes.mainContainer}>
+      <Logo className={classes.logo} onClick={handleSectionClick(SECTIONS.TITLE)} />
+      <ul className={classes.sectionsContainer}>{renderSectionButtons()}</ul>
       {renderLocalePicker()}
-      <div className={classes.dropdownIconContainer} onClick={handleBurgerMenuClick}>
-        {renderDropdownButton()}
-      </div>
+      {renderDropdownButton()}
       <NavbarDropdown
         setIsOpen={setIsDropdownOpen}
         isOpen={isDropdownOpen}
         goToSection={goToSection}
         isCompactNavbar={isCompactNavbar}
       />
-    </div>
+    </nav>
   );
 };
 

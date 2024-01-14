@@ -9,26 +9,25 @@ import { LOCALES } from '../../../constants/enums';
 const LocalePicker = () => {
   const { setLocale, locale } = useContext(LocaleContext);
 
-  const handleEnglishClick = () => {
-    setLocale(LOCALES.EN);
+  const handleLocaleButtonClick = (newLocale: LOCALES) => () => {
+    setLocale(newLocale);
   };
 
-  const handleSpanishClick = () => {
-    setLocale(LOCALES.ES);
-  };
+  const renderLocaleButton = (buttonLocale: LOCALES) => {
+    const className = locale === buttonLocale ? classes.selectedLocale : '';
 
-  const enClasses = locale === LOCALES.EN ? classes.selectedLocale : '';
-  const esClasses = locale === LOCALES.ES ? classes.selectedLocale : '';
+    return (
+      <button onClick={handleLocaleButtonClick(buttonLocale)} className={className}>
+        {buttonLocale.toUpperCase()}
+      </button>
+    );
+  };
 
   return (
-    <div className={classes.mainContainer}>
-      <div onClick={handleEnglishClick} className={enClasses}>
-        {LOCALES.EN.toUpperCase()}
-      </div>
-      <div onClick={handleSpanishClick} className={esClasses}>
-        {LOCALES.ES.toUpperCase()}
-      </div>
-    </div>
+    <fieldset className={classes.mainContainer}>
+      {renderLocaleButton(LOCALES.EN)}
+      {renderLocaleButton(LOCALES.ES)}
+    </fieldset>
   );
 };
 

@@ -34,19 +34,19 @@ const NavbarDropdown = ({ isOpen, setIsOpen, goToSection, isCompactNavbar }: Nav
     return sections.map((section) => {
       const sectionName = formatSectionName(intl, section);
       return (
-        <div className={classes.sectionButton} onClick={handleSectionClick(section)} key={section}>
+        <li className={classes.sectionButton} onClick={handleSectionClick(section)} key={section}>
           {sectionName}
-        </div>
+        </li>
       );
     });
   };
 
   if (!isOpen) return <></>;
   return (
-    <div className={classes.mainContainer}>
+    <ul className={classes.mainContainer}>
       {renderSections()}
       <LocalePicker />
-    </div>
+    </ul>
   );
 };
 
