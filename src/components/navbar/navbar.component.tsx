@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { SVGProps, useState } from 'react';
 
 import { useIntl } from 'react-intl';
 
@@ -18,6 +18,13 @@ import { sections } from '../../constants/constants';
 
 import { SECTIONS } from '../../constants/enums';
 import { ViewportStatusType } from '../../types';
+import {
+  DROPDOWN_MENU_BUTTON_LABEL,
+  LOGO_LABEL,
+  NAVBAR_LABEL,
+  SECTIONS_NAVIGATION_LABEL,
+  getSectionButtonLabel,
+} from './navbar.aria';
 
 const COMPACT_NAVBAR_BREAKPOINT = 864;
 
@@ -45,49 +52,61 @@ const Navbar = ({ goToSection, viewportStatus }: NavbarProps) => {
   const renderSectionButtons = () => {
     const currentViewedSection = getCurrentViewedSection(viewportStatus);
     return sections.map((section) => {
-      const sectionButtonClasses = currentViewedSection === section ? classes.currentSection : '';
+      const isCurrentSection = currentViewedSection === section;
+      const sectionButtonClasses = isCurrentSection ? classes.currentSection : '';
       const sectionName = formatSectionName(intl, section);
       return (
-        <div className={sectionButtonClasses} key={sectionName} onClick={handleSectionClick(section)}>
+        <li
+          className={sectionButtonClasses}
+          key={sectionName}
+          onClick={handleSectionClick(section)}
+          aria-label={getSectionButtonLabel(sectionName)}
+          role='option'
+          aria-selected={isCurrentSection}
+        >
           {sectionName}
-        </div>
+        </li>
       );
     });
   };
 
   const renderDropdownButton = () => {
-    if (isDropdownOpen) {
-      return <CloseIcon />;
-    } else {
-      return <BurgerMenuIcon />;
-    }
+    const iconProps: SVGProps<SVGSVGElement> = {
+      className: classes.dropdownIcon,
+      onClick: handleBurgerMenuClick,
+      role: 'button',
+      'aria-label': DROPDOWN_MENU_BUTTON_LABEL,
+      'aria-expanded': isDropdownOpen,
+      'aria-haspopup': true,
+    };
+    return isDropdownOpen ? <CloseIcon {...iconProps} /> : <BurgerMenuIcon {...iconProps} />;
   };
 
   const renderLocalePicker = () => {
-    if (isCompactNavbar) {
-      return <></>;
-    } else {
-      return <LocalePicker />;
-    }
+    return isCompactNavbar ? <></> : <LocalePicker />;
   };
 
   return (
-    <div className={classes.mainContainer}>
-      <div className={classes.logoContainer}>
-        <Logo className={classes.logo} onClick={handleSectionClick(SECTIONS.TITLE)} />
-      </div>
-      <div className={classes.sectionsContainer}>{renderSectionButtons()}</div>
+    <nav className={classes.mainContainer} aria-label={NAVBAR_LABEL}>
+      <Logo
+        className={classes.logo}
+        onClick={handleSectionClick(SECTIONS.TITLE)}
+        role='button'
+        aria-label={LOGO_LABEL}
+      />
+      <menu className={classes.sectionsContainer} role='list' aria-label={SECTIONS_NAVIGATION_LABEL}>
+        {renderSectionButtons()}
+      </menu>
       {renderLocalePicker()}
-      <div className={classes.dropdownIconContainer} onClick={handleBurgerMenuClick}>
-        {renderDropdownButton()}
-      </div>
+      {renderDropdownButton()}
       <NavbarDropdown
         setIsOpen={setIsDropdownOpen}
         isOpen={isDropdownOpen}
         goToSection={goToSection}
         isCompactNavbar={isCompactNavbar}
+        viewportStatus={viewportStatus}
       />
-    </div>
+    </nav>
   );
 };
 
